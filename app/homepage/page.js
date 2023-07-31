@@ -6,7 +6,7 @@ import selectImageWhereILive from 'public/images/selections/where i live.jpg'
 import selectImageFamily from 'public/images/selections/family.jpg'
 
 
-export default function Page() {
+export default function Homepage() {
   return (
     <>
       <div className={styles.homepageLayout}>

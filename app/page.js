@@ -95,3 +95,7 @@
 //     </main>
 //   )
 // }
+
+export default function Start() {
+    return <h1> This is the root from website: MyLife</h1>
+}
