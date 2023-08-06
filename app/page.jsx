@@ -1,101 +1,77 @@
-//Behind is standard code after making a new nextjs project
+import styles from 'styles/homepage.modules.css'
+import { Selection } from 'components/selections/selection'
+import { SelectionName } from 'components/selections/selectionName'
+import { SidebarBase } from 'components/sidebar/base'
+import selectImageWhereILive from 'public/assets/images/selections/where i live.jpg'
+import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
-//import Image from 'next/image'
-// import styles from './page.module.css'
 
-// export default function Home() {
-//   return (
-//     <main className={styles.main}>
-//       <div className={styles.description}>
-//         <p>
-//           Get started by editing&nbsp;
-//           <code className={styles.code}>app/page.js</code>
-//         </p>
-//         <div>
-//           <a
-//             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             By{' '}
-//             <Image
-//               src="/vercel.svg"
-//               alt="Vercel Logo"
-//               className={styles.vercelLogo}
-//               width={100}
-//               height={24}
-//               priority
-//             />
-//           </a>
-//         </div>
-//       </div>
-
-//       <div className={styles.center}>
-//         <Image
-//           className={styles.logo}
-//           src="/next.svg"
-//           alt="Next.js Logo"
-//           width={180}
-//           height={37}
-//           priority
-//         />
-//       </div>
-
-//       <div className={styles.grid}>
-//         <a
-//           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//           className={styles.card}
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2>
-//             Docs <span>-&gt;</span>
-//           </h2>
-//           <p>Find in-depth information about Next.js features and API.</p>
-//         </a>
-
-//         <a
-//           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//           className={styles.card}
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2>
-//             Learn <span>-&gt;</span>
-//           </h2>
-//           <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-//         </a>
-
-//         <a
-//           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//           className={styles.card}
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2>
-//             Templates <span>-&gt;</span>
-//           </h2>
-//           <p>Explore the Next.js 13 playground.</p>
-//         </a>
-
-//         <a
-//           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//           className={styles.card}
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2>
-//             Deploy <span>-&gt;</span>
-//           </h2>
-//           <p>
-//             Instantly deploy your Next.js site to a shareable URL with Vercel.
-//           </p>
-//         </a>
-//       </div>
-//     </main>
-//   )
-// }
-
-export default function Start() {
-    return <h1> This is the root from website: MyLife</h1>
+export default function Homepage() {
+  return (
+    <>
+      <div className={styles.homepageLayout}>
+        <div id={styles.sidebar}>
+          <SidebarBase/>
+        </div>
+        <div id={styles.dialog}></div>
+        <div id={styles.figureFamily}>
+              <Selection 
+                src={selectImageFamily}
+                alt="image respresending my family and friends"
+              />
+        </div>
+        <div id={styles.figcaptionFamily}>
+          <SelectionName>
+            Family and Friends
+          </SelectionName>
+        </div>
+        <div id={styles.figureHome}>
+          <Selection
+            src={selectImageWhereILive} 
+            alt="images represending my place to live"
+          /> 
+        </div>
+        <div id={styles.figcaptionHome}>
+          <SelectionName>
+            Where I live
+          </SelectionName>
+        </div>
+        <div id={styles.figureEatAndDrink}></div>
+        <div id={styles.figcaptionEatAndDrink}></div>
+      
+        <div id={styles.figureMySchedule}></div>
+        <div id={styles.figcaptionMySchedule}></div>
+      
+        <div id={styles.figurePersonalSituation}></div>
+        <div id={styles.figcaptionPersonalSituation}></div>
+      
+        <div id={styles.figureFinance}></div>
+        <div id={styles.figcaptionFinance}></div>
+      
+        <div id={styles.figureInsurance}></div>
+        <div id={styles.figcaptionInsurance}></div>
+      
+        <div id={styles.figureSleep}></div>
+        <div id={styles.figcaptionSleep}></div>
+      
+        <div id={styles.figureSubscribtions}></div>
+        <div id={styles.figcaptionSubscribtions}></div>
+      
+        <div id={styles.figureInstalledApps}></div>
+        <div id={styles.figcaptionInstalledApps}></div>
+      
+        <div id={styles.figureUsedWebsites}></div>
+        <div id={styles.figcaptionUsedWebsites}></div>
+      
+        <div id={styles.figureReminders}></div>
+        <div id={styles.figcaptionReminders}></div>
+      
+        <div id={styles.figureRightsAndObligations}></div>
+        <div id={styles.figcaptionRightsAndObligations}></div>
+      
+        <div id={styles.figureDailyRoutine}></div>
+        <div id={styles.figcaptionDailyRoutine}></div>
+      </div>
+    </>
+  )
 }
