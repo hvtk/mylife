@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './sidebarStyles.module.css'
 import { MylifeLogo } from './mylifeLogo'
-import SidebarList from 'public/icons/sidebar/list.svg'
+import SidebarList from 'public/assets/icons/sidebar/list.svg'
 
 
 export function SidebarBase() {

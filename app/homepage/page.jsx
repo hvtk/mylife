@@ -1,9 +1,11 @@
+
+
 import styles from './homepage.modules.css'
-import { Selection } from '../component/selections/selection'
-import { SelectionName } from '../component/selections/selectionName'
-import { SidebarBase } from '../component/sidebar/base'
-import selectImageWhereILive from 'public/images/selections/where i live.jpg'
-import selectImageFamily from 'public/images/selections/family.jpg'
+import { Selection } from 'components/selections/selection'
+import { SelectionName } from 'components/selections/selectionName'
+import { SidebarBase } from 'components/sidebar/base'
+import selectImageWhereILive from 'public/assets/images/selections/where i live.jpg'
+import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
 
 export default function Homepage() {
