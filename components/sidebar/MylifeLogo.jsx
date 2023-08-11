@@ -52,6 +52,5 @@ export function MylifeLogo() {
         />
       </div>
     </div>
-   
   )
 }

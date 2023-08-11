@@ -18,9 +18,9 @@
   "sidebar . . . . . . . . . . .";
 }
 
-#sidebar {
+/* #sidebar {
   grid-area: sidebar;
-}
+} */
 
 #dialog {
   grid-area: dialog;

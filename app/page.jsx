@@ -1,18 +1,18 @@
-import styles from 'styles/homepage.modules.css'
-import { Selection } from 'components/selections/selection'
-import { SelectionName } from 'components/selections/selectionName'
-import { SidebarBase } from 'components/sidebar/base'
+import styles from '../styles/homepage.modules.css'
+import { Selection } from 'components/selections/Selection'
+import { SelectionName } from 'components/selections/SelectionName'
+import { SidebarBase } from 'components/sidebar/SidebarBase'
 import selectImageWhereILive from 'public/assets/images/selections/where i live.jpg'
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
 
 export default function Homepage() {
   return (
-    <>
+   
       <div className={styles.homepageLayout}>
-        <div id={styles.sidebar}>
+        
           <SidebarBase/>
-        </div>
+        
         <div id={styles.dialog}></div>
         <div id={styles.figureFamily}>
               <Selection 
@@ -72,6 +72,6 @@ export default function Homepage() {
         <div id={styles.figureDailyRoutine}></div>
         <div id={styles.figcaptionDailyRoutine}></div>
       </div>
-    </>
+    
   )
 }

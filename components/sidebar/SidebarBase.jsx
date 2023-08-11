@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import styles from './sidebarStyles.module.css'
-import { MylifeLogo } from './mylifeLogo'
+import { MylifeLogo } from 'components/sidebar/MylifeLogo'
 import SidebarList from 'public/assets/icons/sidebar/list.svg'
 
 
 export function SidebarBase() {
   return (
-    <div>
+    <div id={styles.sidebar}>
       <MylifeLogo /> 
-      <div className={styles.SidebarList}>
+      <div className={styles.divSidebarList}>
       <Image
           src={SidebarList}
           alt="icon for list options/selection"
