@@ -6,7 +6,7 @@ import SidebarList from 'public/assets/icons/sidebar/list.svg'
 
 export function SidebarBase() {
   return (
-    <div id={styles.sidebar}>
+    <div className="d-flex flex-column align-items-start">
       <MylifeLogo /> 
       <div className={styles.divSidebarList}>
       <Image

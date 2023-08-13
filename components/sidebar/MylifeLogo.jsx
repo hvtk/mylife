@@ -9,7 +9,7 @@ import MylifeLogoImageBottomLeft from 'public/assets/images/mylife-logo/happy.jp
 export function MylifeLogo() {
   return (
     <div className={styles.divLogo} >
-      <div>
+      <div className="img-fluid">
         <Image
           src={MylifeLogoImageFill}
           alt="image that fills the parent element"
