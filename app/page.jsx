@@ -28,14 +28,18 @@ export default function Homepage() {
         </div>
         <div className="col-sm-11 bg-success">
           <div className="row">
-            <div className="d-flex flex-column align-items-start col-sm-4 bg-warning">
-              <p>
-                Everything that influences who you are, what you can do your daily activities, organized in one place
-              </p>
-              <MylifeImage/>
-              <p>
-                In order to be able to manage everything that life demands as well as possible
-              </p>
+            <div className="col-sm-4 bg-warning">
+              <div className="d-flex align-items-start flex-column gap-3">
+                <div>
+                  Everything that influences who you are, what you can do your daily activities, organized in one place
+                </div>
+                <div>
+                  <MylifeImage/>
+                </div>
+                <div>
+                  In order to be able to manage everything that life demands as well as possible
+                </div>
+              </div>
             </div>
             <div className="col-sm-8">
               <div className="row">
