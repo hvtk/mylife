@@ -21,10 +21,12 @@ import selectImageMySchedule from 'public/assets/images/selections/my schedule.j
 
 export default function Homepage() {
   return (
-    <div className="container bg-body">
+    <div className="container-fluid bg-body">
       <div className="row">
         <div className="col-sm-1 bg-secondary">
-          <SidebarBase/>
+          <div className="d-flex flex-column justify-content-between align-items-center flex-column gap-3">
+            <SidebarBase/>
+          </div>
         </div>
         <div className="col-sm-11 bg-success">
           <div className="row">

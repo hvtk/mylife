@@ -14,6 +14,7 @@ export function MylifeImage() {
           alt="image that fills the parent element"
           width={200}
           height={200}
+          priority
         />
         <div className="position-absolute top-0 start-0">
           <Image
