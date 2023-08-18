@@ -5,7 +5,7 @@ import SidebarPerson from 'public/assets/icons/sidebar/person.svg'
 
 export function SidebarBase() {
   return (
-    <div>
+    <>
       <MylifeLogo /> 
       <div>
         <Image
@@ -23,7 +23,7 @@ export function SidebarBase() {
             height={60}
           />
       </div>
-    </div>
+    </>
   )
 }
 
