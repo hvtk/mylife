@@ -24,25 +24,21 @@ export default function Homepage() {
     <>
       <div className="container-fluid bg-body">
         <div className="row">
-          <div className="col-sm-1 bg-secondary">
-            <div className="d-flex flex-column align-items-center justify-content-between">
-              <SidebarBase/>
-            </div>
+          <div className="col-sm-1 bg-secondary d-flex flex-column justify-content-center">
+            <SidebarBase/>
           </div>
           <div className="col-sm-11 bg-success">
             <div className="row">
-              <div className="col-sm-4 bg-warning">
-                <div className="d-flex flex-column align-items-start">
-                  <div>
+              <div className="col-sm-4 bg-warning d-flex flex-column justify-content-center">
+                <figure className="d-flex flex-column align-items-center">
+                  <figcaption>
                     Everything that influences who you are, what you can do your daily activities, organized in one place
-                  </div>
-                  <div>
+                  </figcaption>
                     <MylifeImage/>
-                  </div>
-                  <div>
+                  <figcaption>
                     In order to be able to manage everything that life demands as well as possible
-                  </div>
-                </div>
+                  </figcaption>
+                </figure>
               </div>
               <div className="col-sm-8">
                 <div className="row">
