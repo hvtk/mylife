@@ -1,5 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css'
-
 import { MylifeImage } from '@/components/homepage/MylifeImage'
 import { Selection } from 'components/selections/Selection'
 import { SelectionName } from 'components/selections/SelectionName'
@@ -22,15 +20,15 @@ import selectImageMySchedule from 'public/assets/images/selections/my schedule.j
 export default function Homepage() {
   return (
     <>
-      <div className="container-fluid bg-body">
+      <div className="container min-vw-100 bg-body">
         <div className="row">
-          <div className="col-sm-1 bg-secondary d-flex flex-column justify-content-center">
+          <div className="col-sm-1 bg-secondary d-flex flex-column justify-content-center min-vh-100">
             <SidebarBase/>
           </div>
           <div className="col-sm-11 bg-success">
             <div className="row">
-              <div className="col-sm-4 bg-warning d-flex flex-column justify-content-center">
-                <figure className="d-flex flex-column align-items-center">
+              <div className="col-sm-4 bg-warning d-flex flex-column justify-content-center min-vh-100">
+                <figure  className="d-flex flex-column align-items-center">
                   <figcaption>
                     Everything that influences who you are, what you can do your daily activities, organized in one place
                   </figcaption>
