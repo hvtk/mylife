@@ -26,7 +26,7 @@ export default function Homepage() {
             <SidebarBase/>
           </div>
           <div className="col-sm-11 bg-success">
-            <div className="row">
+            <div className="row m-1">
               <div className="col-sm-4 bg-warning d-flex flex-column justify-content-center min-vh-100">
                 <figure  className="d-flex flex-column align-items-center">
                   <figcaption>
@@ -38,27 +38,27 @@ export default function Homepage() {
                   </figcaption>
                 </figure>
               </div>
-              <div className="col-sm-8">
+              <div className="col-sm-8 bg-info">
                 <div className="row">
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageFamily}
                       alt="image respresending my family and friends"
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection
                     src={selectImageWhereILive} 
                       alt="images represending my place to live"
                     /> 
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageEatAndDrink}
                       alt="image respresending what I eat and drink"
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection
                     src={selectImagePersonalSituation} 
                       alt="images represending on my personal situation"
@@ -66,48 +66,47 @@ export default function Homepage() {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName >
                       Family and Friends
                     </SelectionName>
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName>
                       Where I live
                     </SelectionName>
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName >
                       Eat and Drink
                     </SelectionName>
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName>
                       Personal Situation
                     </SelectionName>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageSleep}
                       alt="image respresending what my sleep routine is"
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageDailyRoutine}
                       alt="image respresending on my daily routine"
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center ">
                     <Selection
                     src={selectImageMyFinance} 
                       alt="images represending my finance"
                     /> 
                   </div>
-                  
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center ">
                     <Selection
                     src={selectImageInsurance} 
                       alt="images represending my insurances"
@@ -115,47 +114,47 @@ export default function Homepage() {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center ">
                     <SelectionName >
                       Sleep Routine
                     </SelectionName>
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName>
                       Daily Routine
                     </SelectionName>
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName >
                       Finance
                     </SelectionName>
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName>
                       Insurances
                     </SelectionName>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageSubcriptions}
                       alt="image respresending my subcriptions"
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection
                     src={selectImageUsedWebsites} 
                       alt="images represending my used websites"
                     /> 
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageInstalledApps}
                       alt="image respresending my installed apps"
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection
                     src={selectImageReminders} 
                       alt="images represending my reminders"
@@ -163,35 +162,35 @@ export default function Homepage() {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName >
                       Subcriptions
                     </SelectionName>
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center ">
                     <SelectionName>
                       Used Websites
                     </SelectionName>
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center ">
                     <SelectionName >
                       Installed Apps
                     </SelectionName>
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName>
                       Reminders
                     </SelectionName>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageRightsAndObligations}
                       alt="image respresending my rights and obligations"
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection
                     src={selectImageMySchedule} 
                       alt="images represending my schedule"
@@ -199,12 +198,12 @@ export default function Homepage() {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center ">
                     <SelectionName >
                       Rights and Obligations
                     </SelectionName>
                   </div>
-                  <div className="col-3">
+                  <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName>
                       My Schedule
                     </SelectionName>
