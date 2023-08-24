@@ -3,6 +3,7 @@
 
 // module.exports = nextConfig
 
+//For customized bootstrap css
 const path = require('path')
 
 module.exports = {

@@ -39,7 +39,7 @@ export default function Homepage() {
                 </figure>
               </div>
               <div className="col-sm-8 bg-info">
-                <div className="row">
+                <div className="row h-20">
                   <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageFamily}
@@ -65,7 +65,7 @@ export default function Homepage() {
                     /> 
                   </div>
                 </div>
-                <div className="row">
+                <div className="row h-5">
                   <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName >
                       Family and Friends
@@ -87,7 +87,7 @@ export default function Homepage() {
                     </SelectionName>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row h-20">
                   <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageSleep}
@@ -113,7 +113,7 @@ export default function Homepage() {
                     /> 
                   </div>
                 </div>
-                <div className="row">
+                <div className="row h-5">
                   <div className="col-sm-3 d-flex flex-row justify-content-center ">
                     <SelectionName >
                       Sleep Routine
@@ -135,7 +135,7 @@ export default function Homepage() {
                     </SelectionName>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row h-20">
                   <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageSubcriptions}
@@ -161,7 +161,7 @@ export default function Homepage() {
                     /> 
                   </div>
                 </div>
-                <div className="row">
+                <div className="row h-5">
                   <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <SelectionName >
                       Subcriptions
@@ -183,7 +183,7 @@ export default function Homepage() {
                     </SelectionName>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row h-20">
                   <div className="col-sm-3 d-flex flex-row justify-content-center">
                     <Selection 
                     src={selectImageRightsAndObligations}
@@ -197,7 +197,7 @@ export default function Homepage() {
                     /> 
                   </div>
                 </div>
-                <div className="row">
+                <div className="row h-5">
                   <div className="col-sm-3 d-flex flex-row justify-content-center ">
                     <SelectionName >
                       Rights and Obligations
