@@ -6,21 +6,29 @@ import SidebarPerson from 'public/assets/icons/sidebar/person.svg'
 export function SidebarBase() {
   return (
     <>
-      <div className="d-flex flex-column align-items-center">
-        <MylifeLogo /> 
-        <Image
-            src={SidebarList}
-            alt="icon for list options/selection"
-            width={60}
-            height={60}
-          />
-        <Image
-            src={SidebarPerson}
-            alt="icon for account user"
-            width={60}
-            height={60}
-          />
-     </div>
+      <div className="d-flex flex-column h-90">
+        <div className="d-flex flex-column align-items-center justify-content-between h-100">
+          <div>
+            <MylifeLogo /> 
+          </div>
+          <div>
+            <Image
+                src={SidebarList}
+                alt="icon for list options/selection"
+                width={60}
+                height={60}
+              />
+          </div>
+          <div>
+            <Image
+                src={SidebarPerson}
+                alt="icon for account user"
+                width={60}
+                height={60}
+              />
+          </div>
+        </div>
+      </div>
     </>
   )
 }
