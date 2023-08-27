@@ -9,7 +9,7 @@ import MylifeLogoImageBottomLeft from 'public/assets/images/mylife-logo/happy.jp
 export function MylifeLogo() {
   return (
     <>
-      <div className="position-relative border border-dark border-2 ">
+      <div className='position-relative border border-dark border-2'>
         <Image
           src={MylifeLogoImageFill}
           alt="image that fills the parent element"
@@ -17,7 +17,7 @@ export function MylifeLogo() {
           height={80}
           priority
         />
-        <div className="position-absolute top-0 start-0">
+        <div className='position-absolute top-0 start-0'>
           <Image
             src={MylifeLogoImageTopLeft}
             alt="image on top left in the parent element"
@@ -25,7 +25,7 @@ export function MylifeLogo() {
             height={30}
           />
         </div>
-        <div className="position-absolute top-0 end-0">
+        <div className='position-absolute top-0 end-0'>
           <Image
             src={MylifeLogoImageTopRight}
             alt="image on top right in the parent element"
@@ -33,7 +33,7 @@ export function MylifeLogo() {
             height={32}
           />
         </div>
-        <div className="position-absolute bottom-0 end-0">
+        <div className='position-absolute bottom-0 end-0'>
           <Image
             src={MylifeLogoImageBottomRight}
             alt="image on bottom right in the parent element"
@@ -41,7 +41,7 @@ export function MylifeLogo() {
             height={30}
           />
         </div>
-        <div className="position-absolute bottom-0 start-0">
+        <div className='position-absolute bottom-0 start-0'>
           <Image
             src={MylifeLogoImageBottomLeft}
             alt="image on bottom left in the parent element"

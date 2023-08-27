@@ -20,194 +20,194 @@ import selectImageMySchedule from 'public/assets/images/selections/my schedule.j
 export default function ListSelections() {
   return (
     <>
-      <div className="container min-vw-100 bg-body">
-        <div className="row">
-          <div className="col-sm-3 bg-secondary min-vh-100 d-flex flex-column justify-content-center">
+      <div className='container min-vw-100 bg-body'>
+        <div className='row'>
+          <div className='col-sm-3 bg-secondary min-vh-100 d-flex flex-column justify-content-center'>
             <SidebarListSelections/>
           </div>
-          <div className="col-sm-9 bg-success min-vh-100">
-            <div className="row">
-              <div className="col-sm-4 min-vh-100 d-flex flex-column justify-content-center">
-                <div className="bg-warning h-75 rounded-5">
-                  <figure className="d-flex flex-column align-items-center justify-content-between h-100">
-                    <figcaption className="d-flex align-items-center text-center fs-3 w-75 h-25">
+          <div className='col-sm-9 bg-success min-vh-100'>
+            <div className='row'>
+              <div className='col-sm-4 min-vh-100 d-flex flex-column justify-content-center'> 
+                <div className='bg-warning h-75 rounded-5'>
+                  <figure className='d-flex flex-column align-items-center justify-content-between h-100'>
+                    <figcaption className='d-flex align-items-center text-center fs-3 w-75 h-25'>
                       All that influences who you are, what you can do, your daily activities, organized at one place.
                     </figcaption>
-                    <div className="d-flex align-items-center h-50">
+                    <div className='d-flex align-items-center h-50'>
                       <MylifeImage/>
                     </div>
-                    <figcaption className="d-flex align-items-center text-center fs-3 w-75 h-25">
+                    <figcaption className='d-flex align-items-center text-center fs-3 w-75 h-25'>
                       In order to be able to manage all that life demands as good as possible!
                     </figcaption>
                   </figure>
                 </div>
               </div>
-              <div className="col-sm-8">
-                <div className="row h-20">
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+              <div className='col-sm-8'>
+                <div className='row h-20'>
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection 
                     src={selectImageFamily}
                       alt="image respresending my family and friends"
                     />
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection
                     src={selectImageWhereILive} 
                       alt="images represending my place to live"
                     /> 
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection 
                     src={selectImageEatAndDrink}
                       alt="image respresending what I eat and drink"
                     />
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection
                     src={selectImagePersonalSituation} 
                       alt="images represending on my personal situation"
                     /> 
                   </div>
                 </div>
-                <div className="row h-5">
-                  <div className="col-sm-3 d-flex flex-row justify-content-center">
+                <div className='row h-5'>
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
                       Family and Friends
                     </SelectionName>
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
                       Where I live
                     </SelectionName>
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
                       Eat and Drink
                     </SelectionName>
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
                       Personal Situation
                     </SelectionName>
                   </div>
                 </div>
-                <div className="row h-20">
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                <div className='row h-20'>
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection 
                     src={selectImageSleep}
                       alt="image respresending what my sleep routine is"
                     />
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection 
                     src={selectImageDailyRoutine}
                       alt="image respresending on my daily routine"
                     />
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection
                     src={selectImageMyFinance} 
                       alt="images represending my finance"
                     /> 
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection
                     src={selectImageInsurance} 
                       alt="images represending my insurances"
                     /> 
                   </div>
                 </div>
-                <div className="row h-5">
-                  <div className="col-sm-3 d-flex flex-row justify-content-center ">
+                <div className='row h-5'>
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
                       Sleep Routine
                     </SelectionName>
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
                       Daily Routine
                     </SelectionName>
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
                       Finance
                     </SelectionName>
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
                       Insurances
                     </SelectionName>
                   </div>
                 </div>
-                <div className="row h-20">
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                <div className='row h-20'>
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection 
                     src={selectImageSubcriptions}
                       alt="image respresending my subcriptions"
                     />
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection
                     src={selectImageUsedWebsites} 
                       alt="images represending my used websites"
                     /> 
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection 
                     src={selectImageInstalledApps}
                       alt="image respresending my installed apps"
                     />
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection
                     src={selectImageReminders} 
                       alt="images represending my reminders"
                     /> 
                   </div>
                 </div>
-                <div className="row h-5">
-                  <div className="col-sm-3 d-flex flex-row justify-content-center">
+                <div className='row h-5'>
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
                       Subcriptions
                     </SelectionName>
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center ">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
                       Used Websites
                     </SelectionName>
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center ">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
                       Installed Apps
                     </SelectionName>
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
                       Reminders
                     </SelectionName>
                   </div>
                 </div>
-                <div className="row h-20">
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                <div className='row h-20'>
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection 
                     src={selectImageRightsAndObligations}
                       alt="image respresending my rights and obligations"
                     />
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center align-items-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
                     <Selection
                     src={selectImageMySchedule} 
                       alt="images represending my schedule"
                     /> 
                   </div>
                 </div>
-                <div className="row h-5">
-                  <div className="col-sm-3 d-flex flex-row justify-content-center ">
+                <div className='row h-5'>
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
                       Rights and Obligations
                     </SelectionName>
                   </div>
-                  <div className="col-sm-3 d-flex flex-row justify-content-center">
+                  <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
                       My Schedule
                     </SelectionName>

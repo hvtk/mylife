@@ -7,8 +7,8 @@ import SidebarPerson from 'public/assets/icons/sidebar/person.svg'
 export function SidebarBase() {
   return (
     <>
-      <div className="d-flex flex-column h-90">
-        <div className="d-flex flex-column align-items-center justify-content-between h-100">
+      <div className='d-flex flex-column h-90'>
+        <div className='d-flex flex-column align-items-center justify-content-between h-100'>
           <div>
             <MylifeLogo /> 
           </div>
