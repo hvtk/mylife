@@ -1,21 +1,21 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { MylifeLogo } from 'components/sidebar/MylifeLogo'
-import SidebarList from 'public/assets/icons/sidebar/list.svg'
+import SidebarViewList from 'public/assets/icons/sidebar/view-list.svg'
 import SidebarPerson from 'public/assets/icons/sidebar/person.svg'
 
-export function SidebarBase() {
+export function SidebarListSelections() {
   return (
     <>
       <div className="d-flex flex-column h-90">
-        <div className="d-flex flex-column align-items-center justify-content-between h-100">
+        <div className="d-flex flex-column align-items-end justify-content-between h-100">
           <div>
             <MylifeLogo /> 
           </div>
           <div>
-            <Link href="/listSelections">
+            <Link href="/">
               <Image
-                  src={SidebarList}
+                  src={SidebarViewList}
                   alt="icon for list options/selection"
                   width={60}
                   height={60}
@@ -37,5 +37,3 @@ export function SidebarBase() {
     </>
   )
 }
-
-
