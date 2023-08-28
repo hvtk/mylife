@@ -32,7 +32,9 @@ export function SidebarListSelections() {
           <div className='col-sm-4 d-flex flex-column justify-content-center min-vh-100'>
             <div className='h-90 d-flex flex-column align-items-center justify-content-between'>
             <div>
-              <MylifeLogo /> 
+              <Link href="/">
+                <MylifeLogo /> 
+              </Link>
             </div>
             <div>
               <Link href="/">
