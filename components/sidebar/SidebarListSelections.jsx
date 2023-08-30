@@ -12,7 +12,11 @@ export function SidebarListSelections() {
           <div className='col-sm-8 d-flex flex-column justify-content-center min-vh-100'>
             <div className='h-90 d-flex flex-column justify-content-center'>
               <dl className='fs-5'>
-                <dt>A: Family and Friends</dt>
+                <dt>
+                  <Link href="/selectionFamilyAndFriends">
+                  A: Family and Friends
+                  </Link>
+                </dt>
                 <dt>B: Where I Live</dt>
                 <dt>C: Eat and Drink</dt>
                 <dt>D: Personal Situation</dt>
