@@ -7,7 +7,7 @@ import { SelectionOptions } from '@/components/selections/SelectionOptions'
 import { SelectionInfo } from '@/components/selections/SelectionInfo'
 import { SelectionImage } from '@/components/selections/SelectionImage'
 
-import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import selectImageMySchedule from 'public/assets/images/selections/my schedule.jpg'
 
 export default function SelectionFamilyAndFriends() {
   return (
@@ -26,7 +26,7 @@ export default function SelectionFamilyAndFriends() {
                       All your information about your friends and family in one place
                     </SelectionInfo>
                     <SelectionImage
-                      src={selectImageFamily}
+                      src={selectImageMySchedule}
                       alt="image respresending my family and friends"
                     />
                   </figure>

@@ -48,13 +48,13 @@ export function SidebarListSelections() {
                   </Link>
                 </dt>
                 <dt>
-                  <Link href="/selectionInsurance">
+                  <Link href="/selectionInsurances">
                     H: Insurances
                   </Link>
                 </dt>
                 <dt>
-                  <Link href="/selectionSubscriptions">
-                    I: Subscriptions
+                  <Link href="/selectionSubcriptions">
+                    I: Subcriptions
                   </Link>
                 </dt>
                 <dt>
@@ -73,7 +73,7 @@ export function SidebarListSelections() {
                   </Link>
                 </dt>
                 <dt>
-                  <Link href="/selectionRightsAndOpligations">
+                  <Link href="/selectionRightsAndObligations">
                     M: Rights and Obligations
                   </Link>
                 </dt>
