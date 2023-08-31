@@ -7,9 +7,9 @@ import { SelectionOptions } from '@/components/selections/SelectionOptions'
 import { SelectionInfo } from '@/components/selections/SelectionInfo'
 import { SelectionImage } from '@/components/selections/SelectionImage'
 
-import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import selectImageWhereILive from 'public/assets/images/selections/where i live.jpg'
 
-export default function SelectionFamilyAndFriends() {
+export default function SelectionWhereILife() {
   return (
     <>
       <div className='container min-vw-100 bg-body'>
@@ -23,11 +23,11 @@ export default function SelectionFamilyAndFriends() {
                 <div className='bg-warning h-75 w-75 rounded-5'>
                   <figure className='d-flex flex-column align-items-center h-100'>
                     <SelectionInfo>
-                      All your information about your friends and family in one place
+                      All your information about your the place you live
                     </SelectionInfo>
                     <SelectionImage
-                      src={selectImageFamily}
-                      alt="image respresending my family and friends"
+                      src={selectImageWhereILive}
+                      alt="image represending my place to live"
                     />
                   </figure>
                 </div>
@@ -37,31 +37,31 @@ export default function SelectionFamilyAndFriends() {
                   <div className='d-flex flex-column align-items-center h-100'>
                     <SelectionExplenation />
                     <SelectionOptionName>
-                      MY FAMILY AND FRIENDS
+                      WHERE I LIVE
                     </SelectionOptionName>
                     <SelectionOptions>
                       <Link href="/selectionOptionsAA">
-                        A: Those who raised you
+                        A: The adress
                       </Link>
                     </SelectionOptions>
                     <SelectionOptions>
                       <Link href="/selectionOptionsAB">
-                        B: Brothers and Sisters
+                        B: My inventory
                       </Link>
                     </SelectionOptions>
                     <SelectionOptions>
                       <Link href="/selectionOptionsAC">
-                        C: Uncles and Aunts
+                        C: How do I pay it
                       </Link>
                     </SelectionOptions>
                     <SelectionOptions>
                       <Link href="/selectionOptionsAD">
-                        D: Grandpa's and Grandma's
+                        D: Maintenance require within my responsibility
                       </Link>
                     </SelectionOptions>
                     <SelectionOptions>
                       <Link href="/selectionOptionsAE">
-                        E: Friends
+                        E: Create an option yourself
                       </Link>
                     </SelectionOptions>
                     <SelectionOptions>

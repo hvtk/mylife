@@ -14,22 +14,74 @@ export function SidebarListSelections() {
               <dl className='fs-5'>
                 <dt>
                   <Link href="/selectionFamilyAndFriends">
-                  A: Family and Friends
+                    A: Family and Friends
                   </Link>
                 </dt>
-                <dt>B: Where I Live</dt>
-                <dt>C: Eat and Drink</dt>
-                <dt>D: Personal Situation</dt>
-                <dt>E: Sleep Routine</dt>
-                <dt>F: Daily Routine</dt>
-                <dt>G: Finance</dt>
-                <dt>H: Insurances</dt>
-                <dt>I: Subscriptions</dt>
-                <dt>J: Used Websites</dt>
-                <dt>K: Installed Apps</dt>
-                <dt>L: Reminders</dt>
-                <dt>M: Rights and Obligations</dt>
-                <dt>N: My Schedule</dt>
+                <dt>
+                  <Link href="/selectionWhereILife">
+                    B: Where I Live
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionEatAndDrink">
+                    C: Eat and Drink
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionPersonalSituation">
+                    D: Personal Situation
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionSleepRoutine">
+                    E: Sleep Routine
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionDailyRoutine">
+                    F: Daily Routine
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionFinance">
+                    G: Finance
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionInsurance">
+                    H: Insurances
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionSubscriptions">
+                    I: Subscriptions
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionUsedWebsites">
+                    J: Used Websites
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionInstalledApps">
+                    K: Installed Apps
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionReminders">
+                    L: Reminders
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionRightsAndOpligations">
+                    M: Rights and Obligations
+                  </Link>
+                </dt>
+                <dt>
+                  <Link href="/selectionMySchedule">
+                    N: My Schedule
+                  </Link>
+                </dt>
               </dl>
             </div>
           </div>
