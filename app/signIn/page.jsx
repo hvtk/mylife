@@ -1,9 +1,9 @@
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 
-import { FormSignUp } from '@/components/Account/FormSignUp'
+import { FormSignIn } from '@/components/Account/FormSignIn'
 import { FormMylifeImage } from '@/components/Account/FormMylifeImage'
 
-export default function SignUp() {
+export default function SignIn() {
   return (
     <>
       <div className='container min-vw-100 bg-body'>
@@ -20,7 +20,7 @@ export default function SignUp() {
               </div>
               <div className='col-sm-7 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
                 <div className='bg-secondary w-75 h-75 d-flex flex-column align-items-center justify-content-center '>
-                  <FormSignUp/>
+                  <FormSignIn/>
                 </div>
               </div>
             </div>
