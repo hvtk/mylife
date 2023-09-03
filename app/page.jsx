@@ -19,11 +19,13 @@ export default function Homepage() {
                 <MylifeImageAndCaption />
               </div>
               <div className='col-sm-8'>
-                <div className='h-4 d-flex justify-content-end align-items-center'> 
-                  <HeaderPageName>
-                    Homepage
-                  </HeaderPageName>
-                  <HeaderBase/>
+                <div className='h-4 d-flex justify-content-end '> 
+                  <div className='d-flex align-items-center'>
+                    <HeaderPageName>
+                      Homepage
+                    </HeaderPageName>
+                    <HeaderBase/>
+                  </div>
                 </div>
                 <SelectionOptionsView />
               </div>
