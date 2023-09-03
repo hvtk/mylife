@@ -1,6 +1,8 @@
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
+import { HeaderBase } from '@/components/header/HeaderBase'
+import { HeaderPageName } from '@/components/header/HeaderPageName'
 
 export default function Homepage() {
   return (
@@ -11,11 +13,18 @@ export default function Homepage() {
             <SidebarBase/>
           </div>
           <div className='col-sm-11 bg-success min-vh-100'>
+            
             <div className='row'>
               <div className='col-sm-4 min-vh-100 d-flex flex-column justify-content-center'>
                 <MylifeImageAndCaption />
               </div>
               <div className='col-sm-8'>
+                <div className='h-4 d-flex justify-content-end align-items-center'> 
+                  <HeaderPageName>
+                    Homepage
+                  </HeaderPageName>
+                  <HeaderBase/>
+                </div>
                 <SelectionOptionsView />
               </div>
             </div>

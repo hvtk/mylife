@@ -1,6 +1,7 @@
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarListSelections } from '@/components/sidebar/SidebarListSelections'
+import { HeaderBase } from '@/components/header/HeaderBase'
 
 export default function ListSelections() {
   return (
@@ -16,6 +17,7 @@ export default function ListSelections() {
                 <MylifeImageAndCaption />
               </div>
               <div className='col-sm-8'>
+                <HeaderBase/>
                 <SelectionOptionsView />
               </div>
             </div>

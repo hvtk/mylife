@@ -2,49 +2,49 @@
 
 // import { useState } from "react"
 
-export function FormSignIn() {
+export function FormSignUp() {
     return(
         <>
             <div className='bg-warning h-75 w-75 d-flex flex-column align-items-center justify-content-center '>
                 <form className='d-flex flex-column align-items-center justify-content-center'>
                     <div className='fs-3 mb-3'>
-                        PLEASE SIGN IN
+                        PLEASE SIGN UP
                     </div>
-                    <label for="emailadress"
+                    <label htmlFor="username"
                         className='form-label'
                         > 
-                            Enter your emailadress:
+                            Enter your name:
+                    <input
+                        type="text"
+                        name="username"
+                        className='form-control'
+                        id="inputForm"
+                        placeholder="Type your full name"
+                    />
+                    </label>
+                    <label htmlFor="email"
+                        className='form-label'
+                        > 
+                            Enter your email:
                     <input
                         type="email"
                         name="email"
                         className='form-control'
                         id="inputForm"
-                        placeholder="Type your emailadress"
-                    />
-                    </label >
-                    <label for="password"
-                        className='form-label'
-                        > 
-                            Enter your password:
-                    <input
-                        type="password"
-                        name="password"
-                        className='form-control'
-                        id="inputForm"
-                        placeholder="Type your password"
+                        placeholder="Type your email"
                     />
                     </label >
                     <button type="submit"
                             className='btn btn-primary w-100'
                             >
-                                Confirm SignIn
+                                Confirm SignUp
                     </button>
                     <div className="mt-3">
                         <p>
-                            Don't you have an account?
+                            Already an account?
                             <a className='text-primaryblue-600'
-                            href="/signUp">
-                                SignUp
+                            href="/signIn">
+                                SignIn
                             </a>
                         </p>
                     </div>

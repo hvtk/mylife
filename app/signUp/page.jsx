@@ -1,7 +1,7 @@
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 
-import { FormSignUp } from '@/components/Account/FormSignUp'
-import { FormMylifeImage } from '@/components/Account/FormMylifeImage'
+import { FormSignUp } from '@/components/account/FormSignUp'
+import { FormMylifeImage } from '@/components/account/FormMylifeImage'
 
 export default function SignUp() {
   return (

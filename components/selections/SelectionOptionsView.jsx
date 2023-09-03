@@ -46,7 +46,7 @@ export function SelectionOptionsView() {
                 /> 
                 </div>
             </div>
-            <div className='row h-5'>
+            <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                 <SelectionName >
                     <Link href="/selectionFamilyAndFriends">
@@ -102,7 +102,7 @@ export function SelectionOptionsView() {
                 /> 
                 </div>
             </div>
-            <div className='row h-5'>
+            <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                 <SelectionName >
                     <Link href="/selectionSleepRoutine">
@@ -158,7 +158,7 @@ export function SelectionOptionsView() {
                 /> 
                 </div>
             </div>
-            <div className='row h-5'>
+            <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                 <SelectionName >
                     <Link href="/selectionSubcriptions">
@@ -202,7 +202,7 @@ export function SelectionOptionsView() {
                 /> 
                 </div>
             </div>
-            <div className='row h-5'>
+            <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                 <SelectionName >
                     <Link href="/selectionRightsAndObligations">
