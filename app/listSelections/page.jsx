@@ -17,7 +17,14 @@ export default function ListSelections() {
                 <MylifeImageAndCaption />
               </div>
               <div className='col-sm-8'>
-                <HeaderBase/>
+                <div className='row h-4'>
+                  <div className='d-flex align-items-center justify-content-end '>
+                    <div className='fs-5 me-4'>
+                      List Selections
+                    </div>
+                    <HeaderBase/>
+                  </div>
+                </div>
                 <SelectionOptionsView />
               </div>
             </div>
