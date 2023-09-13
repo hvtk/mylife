@@ -1,19 +1,32 @@
-import NextAuth from "next-auth/next"
-import { EmailProvider } from "next-auth/providers/email"
+import NextAuth from "next-auth"
+import { authenticate } from "@/services/authService"
+import CredentialsProvider from "next-auth/providers/credentials"
 
-const handler = NextAuth({
+export const authOptions = {
     providers: [
-        EmailProvider({
-            clientId: '',
-            clientSecret: '',
-        })
+        CredentialsProvider = {
+            name: 'Credentials',
+            credentials: {
+                email: { label: "Email", type: "text" },
+                password: { label: "Password", type: "password"}
+            },
+            async authorize (credentials, req) {
+                if (typeof credentials !== "undefined") {
+                    const res = await authenticate(credentials.email, credentials.password )
+                    if (typeof res !== "undefined") {
+                        return { ...res.user, apiToken: res.token }
+                    } else {
+                        return null
+                    }
+                } else {
+                    return null
+                }
+            }
+        }
     ],
-    async session({ session }) {
+    session: { strategy: "jwt"}
+}
 
-    },
-    async signIn({ signIn }) {
-
-    }
-})
+const handler = NextAuth(authOptions)
 
 export { handler as GET, handler as POST }
