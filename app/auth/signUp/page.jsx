@@ -1,9 +1,11 @@
-import { SidebarBase } from '@/components/sidebar/SidebarBase'
 
+
+import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { FormSignUp } from '@/components/account/FormSignUp'
 import { FormMylifeImage } from '@/components/account/FormMylifeImage'
 
 export default function SignUp() {
+
   return (
     <>
       <div className='container min-vw-100 bg-body'>
