@@ -7,9 +7,9 @@ export function FormSignUp() {
 
         const router = useRouter()
         const [data, setData] = useState({
-            name: '',
-            email: '',
-            password: ''
+            name: "",
+            email: "",
+            password: ""
         })
 
         const signUpUser = async (e) => {
