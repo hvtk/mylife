@@ -7,14 +7,14 @@ export function FormSignUp() {
 
         const router = useRouter()
         const [data, setData] = useState({
-            name: "",
-            email: "",
-            password: ""
+            name: '',
+            email: '',
+            password: ''
         })
 
         const signUpUser = async (e) => {
             e.preventDefault()
-            const response = await fetch('/api/auth/signUp', {
+            const response = await fetch('/api/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -24,7 +24,7 @@ export function FormSignUp() {
 
             const userInfo = await response.json()
             console.log(userInfo)
-            router.push('/api/auth/signIn')
+            router.push('/api/auth/signin')
         }
 
     return(

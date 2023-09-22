@@ -7,21 +7,21 @@ const prisma = new PrismaClient();
 export async function POST(request) {
 
     const body = await request.json();
-    const { name, email, password } = body;
-    console.log(body);
+    const { name, email, password } = body.data;
+    console.log(body.data);
 
     if(!name || !email || !password) {
         return new NextResponse("Missing name, email, password", { status: 400});
     }
 
-    const exist = prisma.user.findUnique({
+    const exist = await prisma.user.findUnique({
         where: {
             email: email
         }
     });
 
     if(exist) {
-        return new NextResponse("User already exists", { status: 400});
+        return new NextResponse("User already exists", { status: 400 });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
