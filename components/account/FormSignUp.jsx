@@ -24,7 +24,7 @@ export function FormSignUp() {
 
             const userInfo = await response.json()
             console.log(userInfo)
-            router.push('/api/auth/signin')
+            router.push('/auth/signIn')
         }
 
     return(

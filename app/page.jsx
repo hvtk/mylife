@@ -1,10 +1,18 @@
+'use client'
+
+import { useSession } from 'next-auth/react'
+
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { HeaderBase } from '@/components/header/HeaderBase'
 
 export default function Homepage() {
+
+  const { data: session, status } = useSession();
+  console.log(session);
   return (
+
     <>
       <div className='container min-vw-100 bg-body'>
         <div className='row'>
@@ -21,6 +29,9 @@ export default function Homepage() {
                  <div className='d-flex align-items-center justify-content-end '>
                     <div className='fs-5 me-4'>
                       Homepage
+                      <p>
+                        Hi {session?.user.name}
+                      </p>
                     </div>
                     <HeaderBase/>
                   </div>

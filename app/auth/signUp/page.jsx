@@ -1,5 +1,3 @@
-
-
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { FormSignUp } from '@/components/account/FormSignUp'
 import { FormMylifeImage } from '@/components/account/FormMylifeImage'

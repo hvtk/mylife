@@ -17,13 +17,39 @@ export const authOptions = {
             // e.g. domain, username, password, 2FA token, etc.
             // You can pass any HTML attribute to the <input> tag through the object.
             credentials: {
-                username: { label: "Username", type: "text", placeholder: "full name" },
-                password: { label: "Password", type: "password"}
+                username: { label: "Username", type: "text", placeholder: "full name test" },
+                password: { label: "Password", type: "password"},
+                email: { label: "Email", type: "email"}
             },
 
             async authorize (credentials) {
                // You need to provide your own logic here to look up the user from the credentials supplied
-            
+               // Check to see if email and password is valid
+               if(credentials.email || credentials.password) {
+                    return null;
+               }
+
+               // Check to see if user exists
+               const user = await prisma.user.findUnique({
+                  where: {
+                      email: credentials.email
+                  }
+               });
+
+               if(!user) {
+                return null;
+               }
+
+               // Check to see if password match
+               const passwordMatch = await bcrypt.compare(credentials.password, user.hashedPassword);
+
+               if(!passwordMatch) {
+                return null;
+               }
+
+               // Return user opject if everything is valid
+               return user;
+
             }
 
         })

@@ -1,12 +1,32 @@
-// 'use client'
+'use client'
 
-// import { useState } from "react"
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { signIn } from "next-auth/react"
 
 export function FormSignIn() {
+
+    const router = useRouter();
+    const [data, setData] = useState({
+        email: "",
+        password: ""
+    });
+
+    const signInUser = async (e) => {
+        e.preventDefault();
+        signIn('credentials', {
+            ...data,
+            redirect:false,
+        })
+        router.push("/");
+    };
+
     return(
         <>
             <div className='bg-warning h-75 w-75 d-flex flex-column align-items-center justify-content-center '>
-                <form className='d-flex flex-column align-items-center justify-content-center'>
+                <form className='d-flex flex-column align-items-center justify-content-center'
+                      onSubmit={signInUser} 
+                    >
                     <div className='fs-3 mb-3'>
                         PLEASE SIGN IN
                     </div>
