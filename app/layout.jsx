@@ -19,7 +19,7 @@
 // }
 
 import '../styles/globals.css'
-import { Provider } from './context/Provider'
+import { Provider } from './context/Provider' 
 
 //Customized bootstrap css
 import '../styles/customBootstrapHomepage.scss'
@@ -32,6 +32,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
+        
         <html lang="en">
             <Provider>
                 <body>
@@ -39,5 +40,6 @@ export default function RootLayout({ children }) {
                 </body>
             </Provider>
         </html>
+
     )
 }
