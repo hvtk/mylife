@@ -28,7 +28,7 @@ export default function Homepage() {
                 <div className='row h-4'>
                  <div className='d-flex align-items-center justify-content-end '>
                     <div className='fs-5 me-4'>
-                      <h1>Homepage</h1>
+                      <h5>Homepage</h5>
                       <p>
                         Hi {session?.user.name}
                       </p>

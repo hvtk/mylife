@@ -1,6 +1,8 @@
 import Link from "next/link"
+import { signOut } from "next-auth/react"
 
 export function HeaderBase() {
+
     return(
         <>
             <div>
@@ -17,6 +19,18 @@ export function HeaderBase() {
                     SignIn
                 </Link>
             </div>
+            <div>
+                <Link href="/homepage"
+                      className='fs-5'
+                    >
+                        <button onClick={() => signOut()}
+                              > 
+                                 SignOut
+                        </button>
+
+                </Link>
+            </div>
+
         </>
     )
 }

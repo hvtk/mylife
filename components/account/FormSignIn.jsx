@@ -18,7 +18,7 @@ export function FormSignIn() {
             ...data,
             redirect:false,
         })
-        router.push("/");
+        router.push("/homepage");
     };
 
     return(
