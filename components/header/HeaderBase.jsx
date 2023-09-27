@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from "react"
 import Link from "next/link"
 import { signOut } from "next-auth/react"
 
@@ -6,14 +9,14 @@ export function HeaderBase() {
     return(
         <>
             <div>
-                <Link href="/signUp"
+                <Link href="/auth/signUp"
                     className='fs-5 me-2'
                     >
                     SignUp
                 </Link>
             </div>
             <div>
-                <Link href="/signIn"
+                <Link href="/auth/signIn"
                     className='fs-5'
                     >
                     SignIn

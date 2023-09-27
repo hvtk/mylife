@@ -20,11 +20,11 @@ export function FormSignUp() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({data})
-            })
+            });
 
-            const userInfo = await response.json()
-            console.log(userInfo)
-            router.push('/auth/signIn')
+            const userInfo = await response.json();
+            console.log(userInfo);
+            router.push('/auth/signIn');
         }
 
     return(
@@ -90,7 +90,7 @@ export function FormSignUp() {
                         <p>
                             Already an account?
                             <a className='text-primaryblue-600'
-                            href="/signIn">
+                            href="/auth/signIn">
                                 SignIn
                             </a>
                         </p>

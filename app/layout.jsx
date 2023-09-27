@@ -1,25 +1,7 @@
-//To use bootstrap styles without customization
-// import 'bootstrap/dist/css/bootstrap.min.css'
-
-//To use bootstrap styles with customization
-// export function MyApp({ Component, pageProps}) {
-
-//     return <Component {...pageProps} />
-// }
-
-// //To use bootstrap with JS
-// import { useEffect } from 'react'
-
-// export function MyApp({ Component, pageProps }) {
-//     useEffect(() => {
-//         import('bootstrap/dist/js/bootstrap')
-//     }, [])
-
-//     return <Component {...pageProps} />
-// }
+// 'use client'
 
 import '../styles/globals.css'
-import { Provider } from './context/Provider' 
+import { Provider } from './context/Provider'
 
 //Customized bootstrap css
 import '../styles/customBootstrapHomepage.scss'

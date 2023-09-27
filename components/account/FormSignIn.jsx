@@ -40,6 +40,7 @@ export function FormSignIn() {
                         className='form-control'
                         id="inputForm"
                         placeholder="Type your emailadress"
+                        onChange={(e) => {setData({...data, email: e.target.value })}}
                     />
                     </label >
                     <label htmlFor="password"
@@ -52,6 +53,7 @@ export function FormSignIn() {
                         className='form-control'
                         id="inputForm"
                         placeholder="Type your password"
+                        onChange={(e) => {setData({...data, password: e.target.value })}}
                     />
                     </label >
                     <button type="submit"
@@ -63,7 +65,7 @@ export function FormSignIn() {
                         <p>
                             Don't you have an account?
                             <a className='text-primaryblue-600'
-                            href="/signUp">
+                            href="/auth/signUp">
                                 SignUp
                             </a>
                         </p>

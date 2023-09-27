@@ -3,6 +3,8 @@ import { PrismaAdapter } from "@auth/prisma-adapter"
 import { PrismaClient } from "@prisma/client"
 import CredentialsProvider from "next-auth/providers/credentials"
 
+import bcrypt from "bcrypt"
+
 const prisma = new PrismaClient();
 
 export const authOptions = {
@@ -23,9 +25,11 @@ export const authOptions = {
             },
 
             async authorize (credentials) {
+                console.log(credentials);
+
                // You need to provide your own logic here to look up the user from the credentials supplied
                // Check to see if email and password is valid
-               if(credentials.email || credentials.password) {
+               if(!credentials.email || !credentials.password) {
                     return null;
                }
 
@@ -36,16 +40,24 @@ export const authOptions = {
                   }
                });
 
+               console.log(user);
+
                if(!user) {
-                return null;
+                    console.log("User not found");
+                    return null;
                }
 
                // Check to see if password match
-               const passwordMatch = await bcrypt.compare(credentials.password, user.hashedPassword);
+               const passwordsMatch = await bcrypt.compare(credentials.password, user.hashedPassword);
 
-               if(!passwordMatch) {
-                return null;
+               console.log(passwordsMatch);
+
+               if(!passwordsMatch) {
+                    console.log("Passwords do not match")
+                    return null;
                }
+
+               console.log("Authenticated");
 
                // Return user opject if everything is valid
                return user;

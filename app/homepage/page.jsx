@@ -10,7 +10,10 @@ import { HeaderBase } from '@/components/header/HeaderBase'
 export default function Homepage() {
 
   const { data: session, status } = useSession();
+
   console.log(session);
+  console.log(status);
+
   return (
 
     <>
@@ -28,10 +31,10 @@ export default function Homepage() {
                 <div className='row h-4'>
                  <div className='d-flex align-items-center justify-content-end '>
                     <div className='fs-5 me-4'>
-                      <h5>Homepage</h5>
-                      <p>
+                      Homepage
+                    </div>  
+                    <div>
                         Hi {session?.user.name}
-                      </p>
                     </div>
                     <HeaderBase/>
                   </div>
