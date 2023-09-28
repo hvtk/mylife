@@ -1,9 +1,8 @@
 import NextAuth from "next-auth"
+import bcrypt from "bcrypt"
+import CredentialsProvider from "next-auth/providers/credentials"
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import { PrismaClient } from "@prisma/client"
-import CredentialsProvider from "next-auth/providers/credentials"
-
-import bcrypt from "bcrypt"
 
 const prisma = new PrismaClient();
 
@@ -40,24 +39,16 @@ export const authOptions = {
                   }
                });
 
-               console.log(user);
-
                if(!user) {
-                    console.log("User not found");
                     return null;
                }
 
                // Check to see if password match
                const passwordsMatch = await bcrypt.compare(credentials.password, user.hashedPassword);
 
-               console.log(passwordsMatch);
-
                if(!passwordsMatch) {
-                    console.log("Passwords do not match")
                     return null;
                }
-
-               console.log("Authenticated");
 
                // Return user opject if everything is valid
                return user;

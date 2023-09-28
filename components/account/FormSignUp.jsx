@@ -23,7 +23,6 @@ export function FormSignUp() {
             });
 
             const userInfo = await response.json();
-            console.log(userInfo);
             router.push('/auth/signIn');
         }
 
