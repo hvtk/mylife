@@ -16,7 +16,7 @@ export function HeaderBase() {
             </div>
             <div>
                 <Link href="/auth/signIn"
-                    className='fs-5'
+                    className='fs-5 me-2'
                     >
                     SignIn
                 </Link>
@@ -24,12 +24,9 @@ export function HeaderBase() {
             <div>
                 <Link href="/homepage"
                       className='fs-5'
-                    >
-                        <button onClick={() => signOut()}
-                              > 
-                                 SignOut
-                        </button>
-
+                      onClick={() => signOut()}
+                    > 
+                        SignOut
                 </Link>
             </div>
 

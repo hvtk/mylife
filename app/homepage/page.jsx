@@ -11,9 +11,6 @@ export default function Homepage() {
 
   const { data: session, status } = useSession();
 
-  console.log(session);
-  console.log(status);
-
   return (
 
     <>
@@ -29,12 +26,12 @@ export default function Homepage() {
               </div>
               <div className='col-sm-8'>
                 <div className='row h-4'>
-                 <div className='d-flex align-items-center justify-content-end '>
+                  <div className='d-flex align-items-center justify-content-end '>
                     <div className='fs-5 me-4'>
                       Homepage
                     </div>  
-                    <div>
-                        Hi {session?.user.name}
+                    <div className='fs-5 me-4'>
+                        Hi... {session?.user.name}
                     </div>
                     <HeaderBase/>
                   </div>
