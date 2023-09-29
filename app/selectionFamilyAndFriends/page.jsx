@@ -59,7 +59,7 @@ export default function SelectionFamilyAndFriends() {
                       MY FAMILY AND FRIENDS
                     </SelectionOptionName>
                     <SelectionOptions>
-                      <Link href="/selectionOptionsAA">
+                      <Link href="/selectionFamilyAndFriends/selectionOptionA">
                         A: Those who raised you
                       </Link>
                     </SelectionOptions>

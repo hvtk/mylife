@@ -34,27 +34,27 @@ export function FormSignIn() {
                         className='form-label'
                         > 
                             Enter your emailadress:
-                    <input
-                        type="email"
-                        name="email"
-                        className='form-control'
-                        id="inputForm"
-                        placeholder="Type your emailadress"
-                        onChange={(e) => {setData({...data, email: e.target.value })}}
-                    />
+                        <input
+                            type="email"
+                            name="email"
+                            className='form-control'
+                            id="inputForm"
+                            placeholder="Type your emailadress"
+                            onChange={(e) => {setData({...data, email: e.target.value })}}
+                        />
                     </label >
                     <label htmlFor="password"
                         className='form-label'
                         > 
                             Enter your password:
-                    <input
-                        type="password"
-                        name="password"
-                        className='form-control'
-                        id="inputForm"
-                        placeholder="Type your password"
-                        onChange={(e) => {setData({...data, password: e.target.value })}}
-                    />
+                        <input
+                            type="password"
+                            name="password"
+                            className='form-control'
+                            id="inputForm"
+                            placeholder="Type your password"
+                            onChange={(e) => {setData({...data, password: e.target.value })}}
+                        />
                     </label >
                     <button type="submit"
                             className='btn btn-primary w-100'
