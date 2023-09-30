@@ -1,5 +1,7 @@
 'use client'
 
+
+
 import { useSession } from 'next-auth/react'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
@@ -49,47 +51,44 @@ export default function SelectionFamilyAndFriends() {
                     <div className='dropdown'>
                       <button type="button"
                               className='btn btn-primary dropdown-toggle'
-                              data-mdb-toggle="dropdown"
+                              data-bs-toggle="dropdown"
                               aria-expanded="false"
+                              data-bs-auto-close="outside"
                             >
                               Info Person
-                      </button>
-                      <div className='dropdown-menu'
-                          >
-                        <form className='p-4'>
-                          <div className='form-outline mb-3'>
-                            <label htmlFor="dropdownFormFirstName"
-                                  className='form-label'
-                                  >
-                                    First Name
-                            </label> 
-                            <input type="text"
-                                  className='form-control' 
-                                  id="dropdownFormFirstName"
-                                  placeholder="Henk"
-                            />
-                          </div>
-                          <div className='form-outline mb-3'>
-                            <label htmlFor="dropdownFormLastName"
-                                  className='form-label'
-                                  >
-                                    Last Name
-                            </label> 
-                            <input type="text"
-                                  className='form-control' 
-                                  id="dropdownFormLastName"
-                                  placeholder="van t Kruijs"
-                            />
-                          </div>
-                          <button type="submit"
-                                  className='btn btn-primary'
+                      </button> 
+                      <form className='dropdown-menu p-4'>
+                        <div className='mb-3'>
+                          <label htmlFor="dropdownFormFirstName"
+                                className='form-label'
                                 >
-                                    Save Info Person 
-                          </button>
-                        </form>
-                      </div>
+                                  First Name
+                          </label> 
+                          <input type="text"
+                                 className='form-label' 
+                                 id="dropdownFormFirstName"
+                                 placeholder="Henk"
+                          />
+                        </div>
+                        <div className='mb-3'>
+                          <label htmlFor="dropdownFormLastName"
+                                 className='form-label'
+                                >
+                                  Last Name
+                          </label> 
+                          <input type="text"
+                                 className='form-control' 
+                                 id="dropdownFormLastName"
+                                 placeholder="van t Kruijs"
+                          />
+                        </div>
+                        <button type="submit"
+                                className='btn btn-primary'
+                              >
+                                  Save Info Person 
+                        </button>
+                      </form>
                     </div>
-                    
                   </div>
                 </div>
               </div>
@@ -97,6 +96,7 @@ export default function SelectionFamilyAndFriends() {
           </div>
         </div>
       </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </>
   )
 }

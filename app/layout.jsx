@@ -3,8 +3,6 @@ import '../styles/globals.css'
 // Customized bootstrap css
 import '../styles/customBootstrapHomepage.scss'
 
-import ImportBsJS from './scripts/importBsJS'
-
 import { Provider } from './context/Provider'
 
 export const metadata = {
@@ -18,7 +16,6 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <Provider>
                 <body>
-                    <ImportBsJS/>
                     {children}
                 </body>
             </Provider>
