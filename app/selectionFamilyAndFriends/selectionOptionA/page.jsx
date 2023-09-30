@@ -4,6 +4,8 @@
 
 import { useSession } from 'next-auth/react'
 
+import { InfoPersonCreate } from '@/components/selections/selection-options/InfoPersonCreate'
+
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/SelectionOptionImage'
@@ -57,7 +59,8 @@ export default function SelectionFamilyAndFriends() {
                             >
                               Info Person
                       </button> 
-                      <form className='dropdown-menu p-4'>
+                      <InfoPersonCreate/>
+                      {/* <form className='dropdown-menu p-4'>
                         <div className='mb-3'>
                           <label htmlFor="dropdownFormFirstName"
                                 className='form-label'
@@ -87,7 +90,7 @@ export default function SelectionFamilyAndFriends() {
                               >
                                   Save Info Person 
                         </button>
-                      </form>
+                      </form> */}
                     </div>
                   </div>
                 </div>
