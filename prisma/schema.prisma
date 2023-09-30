@@ -38,3 +38,10 @@ model User {
   profile Profile?
 }
 
+model InfoPerson {
+  id        Int      @id @default(autoincrement())
+  firstName String
+  lastName  String
+}
+
+
