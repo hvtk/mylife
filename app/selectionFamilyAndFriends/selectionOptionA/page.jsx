@@ -1,7 +1,5 @@
 'use client'
 
-
-
 import { useSession } from 'next-auth/react'
 
 import { InfoPersonCreate } from '@/components/selections/selection-options/InfoPersonCreate'
@@ -60,37 +58,6 @@ export default function SelectionFamilyAndFriends() {
                               Info Person
                       </button> 
                       <InfoPersonCreate/>
-                      {/* <form className='dropdown-menu p-4'>
-                        <div className='mb-3'>
-                          <label htmlFor="dropdownFormFirstName"
-                                className='form-label'
-                                >
-                                  First Name
-                          </label> 
-                          <input type="text"
-                                 className='form-label' 
-                                 id="dropdownFormFirstName"
-                                 placeholder="Henk"
-                          />
-                        </div>
-                        <div className='mb-3'>
-                          <label htmlFor="dropdownFormLastName"
-                                 className='form-label'
-                                >
-                                  Last Name
-                          </label> 
-                          <input type="text"
-                                 className='form-control' 
-                                 id="dropdownFormLastName"
-                                 placeholder="van t Kruijs"
-                          />
-                        </div>
-                        <button type="submit"
-                                className='btn btn-primary'
-                              >
-                                  Save Info Person 
-                        </button>
-                      </form> */}
                     </div>
                   </div>
                 </div>
@@ -99,7 +66,11 @@ export default function SelectionFamilyAndFriends() {
           </div>
         </div>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+              integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+              crossorigin="anonymous"
+            >
+      </script>
     </>
   )
 }

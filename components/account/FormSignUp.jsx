@@ -36,7 +36,7 @@ export function FormSignUp() {
                         PLEASE SIGN UP
                     </div>
                     <label htmlFor="username"
-                        className='form-label'
+                           className='form-label'
                         > 
                             Enter your name:
                         <input

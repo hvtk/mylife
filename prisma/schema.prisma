@@ -40,8 +40,8 @@ model User {
 
 model InfoPerson {
   id        Int      @id @default(autoincrement())
-  firstName String
-  lastName  String
+  firstName String?
+  lastName  String?
 }
 
 

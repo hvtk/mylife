@@ -5,56 +5,71 @@ import { useRouter } from "next/navigation"
 
 export function InfoPersonCreate() {
     
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-
     const router = useRouter()
+    const [data, setData] = useState({
+        firstName: '',
+        lastName: ''
+    })
 
-    const handleInfoPersonCreation = async (e) => {
-        if(!firstName || !lastName)
-        return alert('Please fill in the fields!')
-        
+    const InfoPersonCreation = async (e) => {
         e.preventDefault()
         const response = await fetch('/api/selections/familyandfriends/create-infoperson', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({firstName, lastName})
+            body: JSON.stringify({data})
         })
+
+        if(response.ok) {
+            alert('The info person is created succesfully!')
+            setData({
+                firstName: '',
+                lastName: ''
+            })
+            router.push('/selectionFamilyAndFriends')
+        } else {
+            alert('Something went wrong when creating info person!')
+        }
+
+        // const infoPerson = await response.json();
+        // router.push('/selectionFamilyAndFriends/selectionOptionA');
     }
+    
     return (
         <form className='dropdown-menu p-4'
-              onSubmit={handleInfoPersonCreation}  
+              onSubmit={InfoPersonCreation}  
             >
             <div className='mb-3'>
                 <label htmlFor="dropdownFormFirstName"
-                    className='form-label'
+                       className='form-label'
                     >
                         First Name
                 </label> 
                 <input type="text"
-                       className='form-label' 
+                       name="dropdownFormFirstName"
+                       className='form-control' 
                        id="dropdownFormFirstName"
                        placeholder="Henk"
-                       name="firstName"
-                       value={firstName}
-                       onChange={(e) => setFirstName(e.target.value)}
+                       required
+                       value={data.firstName}
+                       onChange={(e) => {setData({...data, firstName: e.target.value})}}
                 />
             </div>
             <div className='mb-3'>
                 <label htmlFor="dropdownFormLastName"
-                        className='form-label'
+                       className='form-label'
                     >
                         Last Name
                 </label> 
                 <input type="text"
+                       name="dropdownFormLastName"
                        className='form-control' 
                        id="dropdownFormLastName"
                        placeholder="van t Kruijs"
-                       name="lastName"
-                       value={lastName}
-                       onChange={(e) => setLastName(e.target.value)}
+                       required
+                       value={data.lastName}
+                       onChange={(e) => {setData({...data, lastName: e.target.value})}}
                 />
             </div>
             <button type="submit"
