@@ -36,13 +36,37 @@ export default function SelectionFamilyAndFriends() {
             </div>
             <div className='row'>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
-                <div className='bg-warning h-75 w-75 rounded-5'>
-                  <figure className='d-flex flex-column align-items-start h-100'>
-                    <SelectionOptionImage
-                      src={selectImageFamily}
-                      alt="image respresending my family and friends"
-                    />
-                  </figure>
+                <div className='bg-warning h-75 w-75 rounded-5 d-flex flex-column align-items-center'>
+                  <div className='row h-35'>
+                    <div className='col-sm-6 d-flex flex-column align-items-center justify-content-center'>
+                      <figure>
+                        <SelectionOptionImage
+                          src={selectImageFamily}
+                          alt="image respresending my family and friends"
+                        />
+                      </figure>
+                    </div>
+                    <div className='col-sm-6 d-flex flex-column align-items-center justify-content-center fs-5'>
+                      <div>
+                        SELECTION OPTION A:
+                      </div> 
+                      <div>
+                        "Those who raised you"
+                      </div>
+                    </div> 
+                  </div>
+                  <div className='row h-4'>
+                    <div className='col-sm-6 d-flex flex-row justify-content-center'>
+                      
+                        position info person
+                      
+                    </div>
+                    <div className='col-sm-6 d-flex flex-row justify-content-center'>
+                      
+                        position info person
+                    
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
