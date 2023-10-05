@@ -12,7 +12,7 @@ export async function POST(request) {
     const infoPerson = await prisma.infoPerson.create({
         data: {
             firstName,
-            lastName
+            lastName,
         }
     });
 
