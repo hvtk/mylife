@@ -3,6 +3,7 @@
 import { useSession } from 'next-auth/react'
 
 import { InfoPersonCreate } from '@/components/selections/selection-options/InfoPersonCreate'
+import { InfoPersonList } from '@/components/selections/selection-options/InfoPersonList'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
@@ -10,9 +11,21 @@ import { SelectionOptionImage } from '@/components/selections/SelectionOptionIma
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
+async function getData() {
+  const res = await fetch("http://localhost:3000/api/selections/familyandfriends/create-infoperson");
+
+  if(!res.ok) {
+    throw new Error("Failed to fetch data")
+  }
+
+  return res.json();
+}
+
 export default function SelectionFamilyAndFriends() {
 
   const { data: session, status } = useSession();
+
+  const infoPerson = getData();
 
   return (
 
@@ -62,6 +75,7 @@ export default function SelectionFamilyAndFriends() {
                   <div className='row h-4'>
                     <div className='d-flex align-items-center justify-content-center'>
                       <div className='fs-5 me-5'>
+                        {/* <InfoPersonList infoPerson={infoPerson}/> */}
                           position info person
                       </div>
                       <div className='fs-5 ms-5'>
