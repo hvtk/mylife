@@ -3,7 +3,7 @@ import '../styles/globals.css'
 // Customized bootstrap css
 import '../styles/customBootstrapHomepage.scss'
 
-import { Provider } from './context/Provider'
+import { Provider } from './lib/Provider'
 
 export const metadata = {
     title: "MyLife",

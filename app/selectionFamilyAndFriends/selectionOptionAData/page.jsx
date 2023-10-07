@@ -1,8 +1,9 @@
-'use client'
+// 'use client'
 
-import { useSession } from 'next-auth/react'
+// import { useSession } from 'next-auth/react'
 
-import { InfoPersonCreate } from '@/components/selections/selection-options/InfoPersonCreate'
+// import { InfoPersonCreate } from '@/components/selections/selection-options/InfoPersonCreate'
+import { InfoPersonList } from '@/components/selections/selection-options/InfoPersonList'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
@@ -10,9 +11,10 @@ import { SelectionOptionImage } from '@/components/selections/SelectionOptionIma
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
-export default function SelectionOptionA() {
+export default function SelectionOptionAData() {
 
-  const { data: session, status } = useSession();
+  
+  // const { data: session, status } = useSession();
 
   return (
 
@@ -29,7 +31,7 @@ export default function SelectionOptionA() {
                   Selection option A: "Those who raised you"
                 </div>  
                 <div className='fs-5 me-5'>
-                    Hi... {session?.user.name}
+                    {/* Hi... {session?.user.name} */}
                 </div>
                 <HeaderSignOut/>
               </div>
@@ -59,7 +61,18 @@ export default function SelectionOptionA() {
                       </div>
                     </div>
                   </div>
-                  
+                  <div className='row h-4'>
+                    <div className='d-flex align-items-center justify-content-center'>
+                      <div className='fs-5 me-5'>
+                        {/* <InfoPersonList infoPersons={infoPersons}/> */}
+                        <InfoPersonList/>
+                          position info person
+                        </div>
+                      <div className='fs-5 ms-5'>
+                          position info person
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
@@ -74,7 +87,7 @@ export default function SelectionOptionA() {
                             >
                               Info Person
                       </button> 
-                      <InfoPersonCreate/>
+                      {/* <InfoPersonCreate/> */}
                     </div>
                   </div>
                 </div>
