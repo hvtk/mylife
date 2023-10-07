@@ -11,21 +11,22 @@ import { SelectionOptionImage } from '@/components/selections/SelectionOptionIma
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
-async function getData() {
-  const res = await fetch("http://localhost:3000/api/selections/familyandfriends/create-infoperson");
+// async function getData() {
+//   const res = await fetch("http://localhost:3000/api/selections/familyandfriends/create-infoperson");
 
-  if(!res.ok) {
-    throw new Error("Failed to fetch data")
-  }
+//   if(!res.ok) {
+//     throw new Error("Failed to fetch data")
+//   }
 
-  return res.json();
-}
+//   return res.json();
+// }
 
-export default function SelectionFamilyAndFriends() {
+export default function SelectionOptionA() {
+
+  // const infoPersons = await getData();
+  // console.log(infoPersons);
 
   const { data: session, status } = useSession();
-
-  const infoPerson = getData();
 
   return (
 
@@ -75,9 +76,10 @@ export default function SelectionFamilyAndFriends() {
                   <div className='row h-4'>
                     <div className='d-flex align-items-center justify-content-center'>
                       <div className='fs-5 me-5'>
-                        {/* <InfoPersonList infoPerson={infoPerson}/> */}
+                        {/* <InfoPersonList infoPersons={infoPersons}/> */}
+                        <InfoPersonList/>
                           position info person
-                      </div>
+                        </div>
                       <div className='fs-5 ms-5'>
                           position info person
                       </div>

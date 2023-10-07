@@ -1,11 +1,26 @@
-import { InfoPerson } from "@/components/selections/selection-options/InfoPerson"
+import InfoPerson from '@/components/selections/selection-options/InfoPerson'
 
-export function InfoPersonList({ InfoPerson }) {
+async function getData() {
+  const res = await fetch("http://localhost:3000/api/selections/familyandfriends/create-infoperson");
+
+  if(!res.ok) {
+    throw new Error("Failed to fetch data")
+  }
+
+  return res.json();
+}
+
+
+export async function InfoPersonList() {
+
+    const infoPersons = await getData();
+    console.log(infoPersons);
+    
     return (
       <div>
         {
-            InfoPerson.map(InfoPerson => (
-                <InfoPerson key={InfoPerson.id} InfoPerson={InfoPerson}/>
+            infoPersons.map(infoPerson => (
+                <InfoPerson key={infoPerson.id} infoPerson={infoPerson}/>
             ))
         }
       </div>
