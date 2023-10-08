@@ -59,7 +59,6 @@ export default function SelectionOptionA() {
                       </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>

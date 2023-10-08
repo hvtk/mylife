@@ -1,20 +1,27 @@
-// 'use client'
 
-// import { useSession } from 'next-auth/react'
 
-// import { InfoPersonCreate } from '@/components/selections/selection-options/InfoPersonCreate'
-import { InfoPersonList } from '@/components/selections/selection-options/InfoPersonList'
+import { InfoPersonList } from '@/components/selections/selection-options/InfoPersonList';
 
-import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/SelectionOptionImage'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
-export default function SelectionOptionAData() {
 
-  
-  // const { data: session, status } = useSession();
+
+async function getData() {
+  const res = await fetch("http://localhost:3000/api/selections/familyandfriends/create-infoperson");
+
+  if(!res.ok) {
+    throw new Error("Failed to fetch data")
+  }
+
+  return res.json();
+}
+
+const SelectionOptionAData = async () => {
+
+  const infoPersons = await getData();
 
   return (
 
@@ -30,10 +37,6 @@ export default function SelectionOptionAData() {
                 <div className='fs-5 me-5'>
                   Selection option A: "Those who raised you"
                 </div>  
-                <div className='fs-5 me-5'>
-                    {/* Hi... {session?.user.name} */}
-                </div>
-                <HeaderSignOut/>
               </div>
             </div>
             <div className='row'>
@@ -64,8 +67,9 @@ export default function SelectionOptionAData() {
                   <div className='row h-4'>
                     <div className='d-flex align-items-center justify-content-center'>
                       <div className='fs-5 me-5'>
-                        {/* <InfoPersonList infoPersons={infoPersons}/> */}
-                        <InfoPersonList/>
+                        
+                        <InfoPersonList infoPersons={infoPersons}/>
+                      
                           position info person
                         </div>
                       <div className='fs-5 ms-5'>
@@ -104,3 +108,5 @@ export default function SelectionOptionAData() {
     </>
   )
 }
+
+export default SelectionOptionAData
