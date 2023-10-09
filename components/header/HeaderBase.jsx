@@ -22,12 +22,15 @@ export function HeaderBase() {
                 </Link>
             </div>
             <div>
-                <Link href="/homepage"
+                {/* <Link href="/homepage"
                       className='fs-5'
                       onClick={() => signOut()}
                     > 
                         SignOut
-                </Link>
+                </Link> */}
+                <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/homepage'})}>
+                    SignOut
+                </button>
             </div>
 
         </>
