@@ -7,7 +7,7 @@ export function InfoPersonList({ infoPersons}) {
       <ul>
         {
             infoPersons.map(infoPerson => (
-                <InfoPerson key={infoPerson.id} infoPerson={infoPerson}/>
+                <InfoPerson />
             ))
         }
       </ul>

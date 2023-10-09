@@ -10,7 +10,9 @@ import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/selections/familyandfriends/create-infoperson");
+  const res = await fetch("http://localhost:3000/api/selections/familyandfriends/create-infoperson", {
+    cache: "no-store",
+  });
 
   if(!res.ok) {
     throw new Error("Failed to fetch data")
@@ -66,12 +68,21 @@ const SelectionOptionAData = async () => {
                   </div>
                   <div className='row h-4'>
                     <div className='d-flex align-items-center justify-content-center'>
-                      <div className='fs-5 me-5'>
-                        
-                        <InfoPersonList infoPersons={infoPersons}/>
+                      {infoPersons.map((item) => (
+                      <div className='fs-5 me-5'
+                           key={item.id} 
+                      >
+                         <h1>
+                            {item.firstName}
+                          </h1>
+                          <h1>
+                            {item.lastName}
+                           </h1>
+                        {/* <InfoPersonList infoPersons={infoPersons}/> */}
                       
                           position info person
                         </div>
+                      ))}
                       <div className='fs-5 ms-5'>
                           position info person
                       </div>
