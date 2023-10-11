@@ -18,10 +18,3 @@ export async function POST(request) {
 
     return NextResponse.json(infoPerson)
 }
-
-export async function GET() {
-
-    const infoPersons = await prisma.infoPerson.findMany();
-
-    return NextResponse.json(infoPersons)
-}
