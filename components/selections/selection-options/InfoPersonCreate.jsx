@@ -8,7 +8,8 @@ export function InfoPersonCreate() {
     const router = useRouter()
     const [data, setData] = useState({
         firstName: '',
-        lastName: ''
+        lastName: '',
+        user: ''
     })
 
     const InfoPersonCreation = async (e) => {
@@ -25,7 +26,8 @@ export function InfoPersonCreate() {
             alert('The info person is created succesfully!')
             setData({
                 firstName: '',
-                lastName: ''
+                lastName: '',
+                user: ''
             })
             router.push('/selectionFamilyAndFriends')
         } else {

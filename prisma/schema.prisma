@@ -12,38 +12,84 @@ datasource db {
 }
 
 model Post {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  title     String   @db.VarChar(255)
+  id        String      @id @default(cuid())
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  title     String      @db.VarChar(255)
   content   String?
-  published Boolean  @default(false)
-  author    User     @relation(fields: [authorId], references: [id])
-  authorId  Int
+  published Boolean     @default(false)
+  user      User        @relation(fields: [userId], references: [id])
+  userId    String
 }
 
 model Profile {
-  id     Int     @id @default(autoincrement())
+  id     String    @id @default(cuid())
   bio    String?
-  user   User    @relation(fields: [userId], references: [id])
-  userId Int     @unique
+  user   User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String    @unique
 }
 
 model User {
-  id      Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  email   String   @unique
-  name    String?
-  hashedPassword String?
-  posts   Post[]
-  profile Profile?
+  id              String     @id @default(cuid())
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+  email           String?      @unique
+  name            String?
+  hashedPassword  String?
+  accounts        Account[]
+  sessions        Session[]
+  posts           Post[]
+  profile         Profile?
+  infoPersons     InfoPerson[]
 }
 
 model InfoPerson {
-  id        Int      @id @default(autoincrement())
+  id        String      @id @default(cuid())
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
   firstName String?
   lastName  String?
+  published Boolean     @default(false)
+  userId    String
+  user      User        @relation(fields: [userId], references: [id])
+}
+
+//Account creation in the database is automatic and happens when the user is logging in for the first time with a privider (using Auth.js)
+model Account {
+  id                  String  @id @default(cuid())
+  userId              String
+  type                String
+  provider            String
+  providerAccountId   String
+  refresh_token       String? @db.Text
+  access_token        String? @db.Text
+  expires_at          Int?
+  token_type          String?
+  scope               String?
+  id_token            String? @db.Text
+  session_state       String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+//The session model is used for database sessions. It is not used if JSON Web Tokens are enabled. (see Auth.js)
+model Session {
+  id            String    @id @default(cuid())
+  sessionToken  String    @unique
+  userId        String
+  expires       DateTime
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+//The Verification Token model is used to store tokens for passwordless sign in. (see Auth.js)
+model VerificationToken {
+  identifier    String
+  token         String  @unique
+  expires       DateTime
+
+  @@unique([identifier, token])
 }
 
 
