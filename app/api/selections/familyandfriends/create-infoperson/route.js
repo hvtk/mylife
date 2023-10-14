@@ -13,6 +13,12 @@ export async function POST(request) {
         data: {
             firstName,
             lastName,
+        },
+        include: {
+            user: {
+                select: {
+                    email: true}
+            }
         }
     });
 
