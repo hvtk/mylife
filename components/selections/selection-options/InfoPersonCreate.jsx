@@ -13,7 +13,7 @@ export function InfoPersonCreate() {
 
     const InfoPersonCreation = async (e) => {
         e.preventDefault()
-        const response = await fetch('/api/selections/familyandfriends/create-infoperson', {
+        const response = await fetch('/api/selections/familyandfriends/create-infoperson/[id]', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
