@@ -3,6 +3,7 @@
 import { useSession } from 'next-auth/react'
 
 import { InfoPersonCreate } from '@/components/selections/selection-options/InfoPersonCreate'
+// import { InfoPersonList } from '@/components/selections/selection-options/InfoPersonList'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
@@ -59,6 +60,7 @@ export default function SelectionOptionA() {
                       </div>
                     </div>
                   </div>
+                  {/* <InfoPersonList /> */}
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>

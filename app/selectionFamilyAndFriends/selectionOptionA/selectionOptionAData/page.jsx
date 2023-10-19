@@ -10,7 +10,7 @@ import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/selections/familyandfriends/create-infoperson", {
+  const res = await fetch("http://localhost:3000/api/selections/familyandfriends/read-infoperson", {
     cache: "no-store",
   });
 

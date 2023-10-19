@@ -85,7 +85,7 @@ model Session {
 
 //The Verification Token model is used to store tokens for passwordless sign in. (see Auth.js)
 model VerificationToken {
-  identifier    String
+  identifier    String   
   token         String  @unique
   expires       DateTime
 
