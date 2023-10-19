@@ -1,5 +1,8 @@
 'use client'
 
+// import { authOptions } from '../api/auth/[...nextauth]/options'
+// import { getServerSession } from 'next-auth'
+
 import { useSession } from 'next-auth/react'
 
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
@@ -10,6 +13,7 @@ import { HeaderBase } from '@/components/header/HeaderBase'
 export default function Homepage() {
 
   const { data: session, status } = useSession();
+  // const session = await getServerSession(authOptions)
 
   return (
 
