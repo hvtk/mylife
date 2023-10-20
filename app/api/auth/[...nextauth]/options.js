@@ -54,6 +54,17 @@ export const authOptions = {
          strategy: "jwt",
     },
 
+    // When using custom signIn page (not the generic signin page from auth) 
+    pages: {
+        signIn: "/auth/signIn",
+    },
+
+    database: {
+        type: "mysql",
+        database: ":memory:",
+        synchronize: true,
+    },
+
     // callbacks: {
     //     async jwt({ token, account }) {
     //         // Persist the OAuth access_token to the token right after signin

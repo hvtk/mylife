@@ -12,9 +12,10 @@ import { HeaderBase } from '@/components/header/HeaderBase'
 
 export default function Homepage() {
 
-  const { data: session, status } = useSession();
+  // const { data: session, status } = useSession();
   // const session = await getServerSession(authOptions)
-
+  const [ session ] = useSession();
+  
   return (
 
     <>
@@ -34,9 +35,16 @@ export default function Homepage() {
                     <div className='fs-5 me-4'>
                       Homepage
                     </div>  
-                    <div className='fs-5 me-4'>
-                        Hi... {session?.user.name}
-                    </div>
+                    {!session && (
+                      <div className='fs-5 me-4'>
+                          Hi... You are not signedIn!
+                      </div>
+                    )}
+                    {session && (
+                      <div className='fs-5 me-4'>
+                          Hi... {session?.user.name}
+                      </div>
+                    )}
                     <HeaderBase/>
                   </div>
                 </div>

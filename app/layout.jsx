@@ -3,24 +3,24 @@ import '../styles/globals.css'
 // Customized bootstrap css
 import '../styles/customBootstrapHomepage.scss'
 
-import { Provider } from './lib/Provider'
+import { ProviderMylife } from './lib/ProviderMylife'
 
 export const metadata = {
     title: "MyLife",
     description: "All info about my life on one place",
 }
 
-export default function RootLayout({ children }) {  
+export default function RootLayout({children}) {  
     return (
         
         <html lang="en">
-            <Provider>
+            <ProviderMylife>
                 
                 <body>
                     {children}
                 </body>
                 
-            </Provider>
+            </ProviderMylife>
         </html>
 
     )

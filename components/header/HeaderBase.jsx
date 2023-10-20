@@ -1,8 +1,8 @@
 'use client'
 
 import Link from "next/link"
-import { signOut, useSession } from "next-auth/react"
-import { useRouter } from "next/router"
+import { signOut, signIn, useSession } from "next-auth/react"
+// import { useRouter } from "next/router"
 
 export function HeaderBase() {
 
@@ -20,6 +20,8 @@ export function HeaderBase() {
 
     // let 
 
+    const [ session ] = useSession();
+
     return(
         <>
             <div>
@@ -29,19 +31,25 @@ export function HeaderBase() {
                     SignUp
                 </Link>
             </div>
-            <div>
-                <Link href="/auth/signIn"
-                    className='fs-5 me-2'
-                    >
-                    SignIn
-                </Link>
-            </div>
-            <div>
-                <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/homepage'})}>
-                    SignOut
-                </button>
-            </div>
-
+            {!session && (
+                <div>
+                    {/* <Link href="/auth/signIn"
+                        className='fs-5 me-2'
+                        >
+                        SignIn
+                    </Link> */}
+                    <button onClick={() => signIn({ callbackUrl: 'http://localhost:3000/auth/signIn'})}>
+                        SignIn
+                    </button>
+                </div>
+            )}
+            {session && (
+                <div>
+                    <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/homepage'})}>
+                        SignOut
+                    </button>
+                </div>
+            )}    
         </>
     )
 }
