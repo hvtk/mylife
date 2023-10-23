@@ -1,24 +1,54 @@
 'use client'
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
+// import { useState } from "react"
+// import { useRouter } from "next/navigation"
 import { signIn } from "next-auth/react"
+import { useRouter } from "next/navigation";
 
 export function FormSignIn() {
 
+    // const router = useRouter();
+    // const [data, setData] = useState({
+    //     email: "",
+    //     password: ""
+    // });
+
+    // const signInUser = async (e) => {
+    //     e.preventDefault();
+    //     signIn('credentials', {
+    //         ...data,
+    //         redirect:false,
+    //     })
+    //     router.push("/homepage");
+    // };
+
+    // const [err, setErr] = useState(false);
+
+    // const signInUser = async (e) => {
+    //     e.preventDefault();
+    //     const email = e.target[0].value;
+    //     const password = e.target[1].value;
+
+    //     try{
+    //         const res = await fetch("/api/auth/")
+
+    //     }catch(err){
+    //         setErr(true);
+    //     }
+    // }
+
     const router = useRouter();
-    const [data, setData] = useState({
-        email: "",
-        password: ""
-    });
 
     const signInUser = async (e) => {
         e.preventDefault();
-        signIn('credentials', {
-            ...data,
-            redirect:false,
-        })
+
+        const email = e.target[0].value;
+        const password = e.target[1].value;
+
+        signIn("credentials", { email, password});
+
         router.push("/homepage");
+
     };
 
     return(
@@ -40,7 +70,8 @@ export function FormSignIn() {
                             className='form-control'
                             id="inputForm"
                             placeholder="Type your emailadress"
-                            onChange={(e) => {setData({...data, email: e.target.value })}}
+                            required
+                            // onChange={(e) => {setData({...data, email: e.target.value })}}
                         />
                     </label >
                     <label htmlFor="password"
@@ -53,7 +84,8 @@ export function FormSignIn() {
                             className='form-control'
                             id="inputForm"
                             placeholder="Type your password"
-                            onChange={(e) => {setData({...data, password: e.target.value })}}
+                            required
+                            // onChange={(e) => {setData({...data, password: e.target.value })}}
                         />
                     </label >
                     <button type="submit"
@@ -71,6 +103,7 @@ export function FormSignIn() {
                         </p>
                     </div>
                 </form>
+                {/* {err && "Something went wrong!"} */}
             </div>
         </>
     )

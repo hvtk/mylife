@@ -6,22 +6,33 @@
 // For customized bootstrap css
 const path = require('path')
 
-module.exports = {
+const nextConfig = {
 
-    reactStrictMode: true,
+  reactStrictMode: true,
+  
+  sassOptions: {
+      includePaths: [path.join(__dirname, 'styles')],
+  },
 
-    sassOptions: {
-        includePaths: [path.join(__dirname, 'styles')]
-    }
+  // experimental: {
+  //     // To tell nextjs to do not save bcrypt info into the browser 
+  //     serverComponentsExternalPackages: [ '@prisma/client', 'bcrypt']
+  // },
 
+  // webpack: (config, { isServer }) => {
+  //   if (!isServer) {
+  //     // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
+  //     config.resolve.fallback = {
+  //       fs: false,
+  //     };
+  //   }
+
+  //   return config;
+  // },
+  
 }
 
-// export function distinguishedName() {
-//     reactStrictMode= true,
-//     sassOptions= {
-//         includePaths: [path.join(__dirname, 'styles')]
-//     }
-// }
+module.exports = nextConfig
 
 
 

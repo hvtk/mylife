@@ -1,30 +1,62 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 export function FormSignUp() {
 
-        const router = useRouter()
-        const [data, setData] = useState({
-            name: '',
-            email: '',
-            password: ''
-        })
+        // const router = useRouter()
+        // const [data, setData] = useState({
+        //     name: '',
+        //     email: '',
+        //     password: ''
+        // })
+
+        // const signUpUser = async (e) => {
+        //     e.preventDefault()
+        //     const response = await fetch('/api/auth/signup', {
+        //         method: 'POST',
+        //         // headers: {
+        //         //     'Content-Type': 'application/json'
+        //         // },
+        //         body: JSON.stringify({data})
+        //     });
+
+        //     const userInfo = await response.json();
+        //     router.push('/auth/signIn');
+        // }
+
+        const router = useRouter();
+
+        const [err, setErr] = useState(false);
 
         const signUpUser = async (e) => {
-            e.preventDefault()
-            const response = await fetch('/api/auth/signup', {
-                method: 'POST',
-                // headers: {
-                //     'Content-Type': 'application/json'
-                // },
-                body: JSON.stringify({data})
-            });
+            e.preventDefault();
+            const name = e.target[0].value;
+            const email = e.target[1].value;
+            const password = e.target[2].value;
 
-            const userInfo = await response.json();
-            router.push('/auth/signIn');
+            try {
+                const res = await fetch("/api/auth/signup", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        password,
+                    }),
+                });
+
+                res.status === 201 && router.push("/auth/signIn");
+
+            } catch (err) {
+                setErr(true);
+            }
         }
+
 
     return(
         <>
@@ -46,8 +78,8 @@ export function FormSignUp() {
                             id="inputForm"
                             placeholder="Type your full name"
                             required
-                            value={data.name}
-                            onChange={(e) => {setData({...data, name: e.target.value })}}
+                            // value={data.name}
+                            // onChange={(e) => {setData({...data, name: e.target.value })}}
                         />
                     </label>
                     <label htmlFor="email"
@@ -61,8 +93,8 @@ export function FormSignUp() {
                             id="inputForm"
                             placeholder="Type your email"
                             required
-                            value={data.email}
-                            onChange={(e) => {setData({...data, email: e.target.value })}}
+                            // value={data.email}
+                            // onChange={(e) => {setData({...data, email: e.target.value })}}
                         />
                     </label >
                     <label htmlFor="password"
@@ -76,8 +108,8 @@ export function FormSignUp() {
                             id="inputForm"
                             placeholder="Type your password"
                             required
-                            value={data.password}
-                            onChange={(e) => {setData({...data, password: e.target.value })}}
+                            // value={data.password}
+                            // onChange={(e) => {setData({...data, password: e.target.value })}}
                         />
                     </label >
                     <button type="submit"
@@ -86,15 +118,21 @@ export function FormSignUp() {
                                 Confirm SignUp
                     </button>
                     <div className="mt-3">
-                        <p>
+                        {/* <p>
                             Already an account?
                             <a className='text-primaryblue-600'
                             href="/auth/signIn">
                                 SignIn
                             </a>
-                        </p>
+                        </p> */}
+                        <Link className = 'text-primaryblue-600'
+                              href="/auth/signIn"
+                            >
+                                Already an account?
+                        </Link>  
                     </div>
                 </form>
+                {err && "Something went wrong!"}
             </div>
         </>
     )

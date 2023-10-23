@@ -1,20 +1,22 @@
 'use client'
 
+import useSWR from 'swr'
 // import { authOptions } from '../api/auth/[...nextauth]/options'
 // import { getServerSession } from 'next-auth'
-
-import { useSession } from 'next-auth/react'
 
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { HeaderBase } from '@/components/header/HeaderBase'
+import { useSession } from 'next-auth/react'
 
-export default function Homepage() {
+export default async function Homepage() {
 
-  // const { data: session, status } = useSession();
+  // const session = useSession()
+
+  // const fetcher = (...args) => fetch(...args).then(res => res.json())
+  // const { data, error, isLoading} = useSWR("http://localhost:3000/homepage", fetcher)
   // const session = await getServerSession(authOptions)
-  const [ session ] = useSession();
   
   return (
 
@@ -35,16 +37,16 @@ export default function Homepage() {
                     <div className='fs-5 me-4'>
                       Homepage
                     </div>  
-                    {!session && (
+                    
                       <div className='fs-5 me-4'>
                           Hi... You are not signedIn!
                       </div>
-                    )}
-                    {session && (
+                    
+                    
                       <div className='fs-5 me-4'>
-                          Hi... {session?.user.name}
+                          {/* Hi... {session?.user.name} */}
                       </div>
-                    )}
+                    
                     <HeaderBase/>
                   </div>
                 </div>

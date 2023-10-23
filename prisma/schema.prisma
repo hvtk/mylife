@@ -35,7 +35,7 @@ model User {
   updatedAt       DateTime   @updatedAt
   email           String?    @unique
   name            String?
-  hashedPassword  String?
+  password        String?
   accounts        Account[]
   sessions        Session[]
   posts           Post[]

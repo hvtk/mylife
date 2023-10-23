@@ -2,9 +2,9 @@
 
 import { SessionProvider } from "next-auth/react"
 
-export function ProviderMylife({ children, session }) {
+export function AuthProvider ({ children }) {
     return (
-        <SessionProvider session={session}>
+        <SessionProvider>
            {children}
         </SessionProvider>
     )
