@@ -12,11 +12,11 @@ import { useSession } from 'next-auth/react'
 
 export default async function Homepage() {
 
-  // const session = useSession()
+  const session = useSession()
 
-  // const fetcher = (...args) => fetch(...args).then(res => res.json())
-  // const { data, error, isLoading} = useSWR("http://localhost:3000/homepage", fetcher)
-  // const session = await getServerSession(authOptions)
+  const fetcher = (...args) => fetch(...args).then(res => res.json())
+  const { data, error, isLoading} = useSWR("http://localhost:3000/api/homepage", fetcher)
+ 
   
   return (
 
@@ -44,7 +44,7 @@ export default async function Homepage() {
                     
                     
                       <div className='fs-5 me-4'>
-                          {/* Hi... {session?.user.name} */}
+                          Hi... {session?.user.name}
                       </div>
                     
                     <HeaderBase/>
