@@ -4,6 +4,7 @@ import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export function FormSignIn() {
 
@@ -64,13 +65,11 @@ export function FormSignIn() {
                                 Confirm SignIn
                     </button>
                     <div className="mt-3">
-                        <p>
-                            Don't you have an account?
-                            <a className='text-primaryblue-600'
-                            href="/auth/signUp">
-                                SignUp
-                            </a>
-                        </p>
+                        <Link className = 'text-primaryblue-600'
+                              href="/auth/signUp"
+                            >
+                                Don´t you have an account?
+                        </Link> 
                     </div>
                 </form>
                 {err && "Something went wrong!"}

@@ -6,16 +6,16 @@ export function HeaderMylifeIntro() {
         <>
             <div>
                 <Link href="/auth/signUp"
-                    className='fs-5 me-2'
+                    className='fs-5 me-3 text-dark'
                     >
                     SignUp
                 </Link>
             </div>
             <div>
                 <Link href="/auth/signIn"
-                    className='fs-5 me-2'
+                    className='fs-5 me-2 text-dark'
                     >
-                    SignUp
+                    SignIn
                 </Link>
             </div>
             

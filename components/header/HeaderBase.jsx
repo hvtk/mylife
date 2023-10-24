@@ -1,26 +1,8 @@
 'use client'
 
 import Link from "next/link"
-// import { signOut, signIn, useSession } from "next-auth/react"
-// import { useRouter } from "next/router"
 
 export function HeaderBase() {
-
-    // const router = useRouter()
-    // const isActive = (pathname) => Boolean = (pathname) => router.pathname === pathname;
-    // const { session, status} = useSession()
-
-    // let usingWebsite = (
-    //     <div>
-    //         <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/homepage'})}>
-    //             SignOut
-    //         </button>
-    //     </div>
-    // )
-
-    // let 
-
-    // const [ session ] = useSession();
 
     return(
         <>
@@ -45,7 +27,7 @@ export function HeaderBase() {
             {/* )} */}
             {/* {session && ( */}
                 <div>
-                    <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/homepage'})}>
+                    <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/'})}>
                         SignOut
                     </button>
                 </div>

@@ -7,7 +7,7 @@ export function HeaderSignOut() {
     return(
         <>
             <div>
-                <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/homepage'})}>
+                <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/'})}>
                     SignOut
                 </button>
             </div>

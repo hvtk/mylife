@@ -91,13 +91,6 @@ export function FormSignUp() {
                                 Confirm SignUp
                     </button>
                     <div className="mt-3">
-                        {/* <p>
-                            Already an account?
-                            <a className='text-primaryblue-600'
-                            href="/auth/signIn">
-                                SignIn
-                            </a>
-                        </p> */}
                         <Link className = 'text-primaryblue-600'
                               href="/auth/signIn"
                             >
