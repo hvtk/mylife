@@ -1,43 +1,15 @@
 'use client'
 
-// import { useState } from "react"
-// import { useRouter } from "next/navigation"
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation";
 
+import { useState } from "react";
+
 export function FormSignIn() {
 
-    // const router = useRouter();
-    // const [data, setData] = useState({
-    //     email: "",
-    //     password: ""
-    // });
-
-    // const signInUser = async (e) => {
-    //     e.preventDefault();
-    //     signIn('credentials', {
-    //         ...data,
-    //         redirect:false,
-    //     })
-    //     router.push("/homepage");
-    // };
-
-    // const [err, setErr] = useState(false);
-
-    // const signInUser = async (e) => {
-    //     e.preventDefault();
-    //     const email = e.target[0].value;
-    //     const password = e.target[1].value;
-
-    //     try{
-    //         const res = await fetch("/api/auth/")
-
-    //     }catch(err){
-    //         setErr(true);
-    //     }
-    // }
-
     const router = useRouter();
+
+    const [err, setErr] = useState(false);
 
     const signInUser = async (e) => {
         e.preventDefault();
@@ -71,7 +43,6 @@ export function FormSignIn() {
                             id="inputForm"
                             placeholder="Type your emailadress"
                             required
-                            // onChange={(e) => {setData({...data, email: e.target.value })}}
                         />
                     </label >
                     <label htmlFor="password"
@@ -85,7 +56,6 @@ export function FormSignIn() {
                             id="inputForm"
                             placeholder="Type your password"
                             required
-                            // onChange={(e) => {setData({...data, password: e.target.value })}}
                         />
                     </label >
                     <button type="submit"
@@ -103,7 +73,7 @@ export function FormSignIn() {
                         </p>
                     </div>
                 </form>
-                {/* {err && "Something went wrong!"} */}
+                {err && "Something went wrong!"}
             </div>
         </>
     )

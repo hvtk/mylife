@@ -1,8 +1,6 @@
 'use client'
 
 import useSWR from 'swr'
-// import { authOptions } from '../api/auth/[...nextauth]/options'
-// import { getServerSession } from 'next-auth'
 
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'

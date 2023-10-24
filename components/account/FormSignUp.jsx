@@ -6,27 +6,6 @@ import { useRouter } from 'next/navigation'
 
 export function FormSignUp() {
 
-        // const router = useRouter()
-        // const [data, setData] = useState({
-        //     name: '',
-        //     email: '',
-        //     password: ''
-        // })
-
-        // const signUpUser = async (e) => {
-        //     e.preventDefault()
-        //     const response = await fetch('/api/auth/signup', {
-        //         method: 'POST',
-        //         // headers: {
-        //         //     'Content-Type': 'application/json'
-        //         // },
-        //         body: JSON.stringify({data})
-        //     });
-
-        //     const userInfo = await response.json();
-        //     router.push('/auth/signIn');
-        // }
-
         const router = useRouter();
 
         const [err, setErr] = useState(false);
@@ -77,9 +56,7 @@ export function FormSignUp() {
                             className='form-control'
                             id="inputForm"
                             placeholder="Type your full name"
-                            required
-                            // value={data.name}
-                            // onChange={(e) => {setData({...data, name: e.target.value })}}
+                            required   
                         />
                     </label>
                     <label htmlFor="email"
@@ -93,8 +70,6 @@ export function FormSignUp() {
                             id="inputForm"
                             placeholder="Type your email"
                             required
-                            // value={data.email}
-                            // onChange={(e) => {setData({...data, email: e.target.value })}}
                         />
                     </label >
                     <label htmlFor="password"
@@ -108,8 +83,6 @@ export function FormSignUp() {
                             id="inputForm"
                             placeholder="Type your password"
                             required
-                            // value={data.password}
-                            // onChange={(e) => {setData({...data, password: e.target.value })}}
                         />
                     </label >
                     <button type="submit"

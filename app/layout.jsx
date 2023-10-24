@@ -3,7 +3,7 @@ import '../styles/globals.css'
 // Customized bootstrap css
 import '../styles/customBootstrapHomepage.scss'
 
-// import { ProviderMylife } from './lib/ProviderMylife'
+
 import { AuthProvider } from '@/components/account/AuthProvider'
 
 export const metadata = {
@@ -15,15 +15,11 @@ export default function RootLayout({children}) {
     return (
         
         <html lang="en">
-            {/* <ProviderMylife> */}
-               
-                <body>
-                    <AuthProvider>
-                        {children}
-                    </AuthProvider>
-                </body>
-                
-            {/* </ProviderMylife> */}
+            <body>
+                <AuthProvider>
+                    {children}
+                </AuthProvider>
+            </body>
         </html>
 
     )
