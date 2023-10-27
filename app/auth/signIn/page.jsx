@@ -5,6 +5,7 @@ import { FormSignIn } from '@/components/account/FormSignIn'
 import { FormMylifeImage } from '@/components/account/FormMylifeImage'
 
 export default function SignIn() {
+  
   return (
     <>
       <div className='container min-vw-100 bg-body'>
@@ -31,3 +32,4 @@ export default function SignIn() {
     </>
   )
 }
+

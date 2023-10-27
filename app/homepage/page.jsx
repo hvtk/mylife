@@ -2,7 +2,6 @@
 
 import useSWR from 'swr'
 
-import Link from 'next/link'
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
@@ -23,7 +22,7 @@ import { useRouter } from 'next/navigation'
 // }
 
 
-const Homepage = () => {
+export default function Homepage() {
 
   const session = useSession();
 
@@ -60,19 +59,16 @@ const Homepage = () => {
                     <div className='d-flex align-items-center justify-content-end '>
                       <div className='fs-5 me-4'>
                         Homepage
-                      </div>  
-                      {data.map((user) => (
-                        <Link href={user.id} key={user.id}>
-                        <div className='fs-5 me-4'>
-                            Hi... You are not signedIn!
-                        </div>
-                      
-                      
-                        <div className='fs-5 me-4'>
-                            {user.name}
-                        </div>
-                      </Link>
-                      ))}
+                      </div> 
+                      <div> 
+                        {isLoading
+                          ? "loading"
+                          : data?.map((user) => (
+                          <div className='fs-5 me-4' key={user.id}>
+                              Hi...{user.name}
+                          </div>
+                        ))}
+                      </div>
                       <HeaderBase/>
                     </div>
                   </div>
@@ -87,4 +83,4 @@ const Homepage = () => {
   }
 }
 
-export default Homepage
+

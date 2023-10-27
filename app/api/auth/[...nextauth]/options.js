@@ -15,7 +15,7 @@ export const authOptions = {
             async authorize(credentials) {
 
                 try {
-                    const user = user.findOne({ email: credentials.email });
+                    const user = await user.findOne({ email: credentials.email });
 
                     if(user) {
                         //check password
