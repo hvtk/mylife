@@ -18,7 +18,7 @@ export function FormSignIn() {
         const email = e.target[0].value;
         const password = e.target[1].value;
 
-        signIn("credentials", { email, password});
+        signIn("credentials", { email, password });
 
         router.push("/homepage");
 
@@ -68,7 +68,7 @@ export function FormSignIn() {
                         <Link className = 'text-primaryblue-600'
                               href="/auth/signUp"
                             >
-                                Don´t you have an account?
+                                Don't you have an account?
                         </Link> 
                     </div>
                 </form>

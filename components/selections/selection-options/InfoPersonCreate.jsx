@@ -1,40 +1,41 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 
 export function InfoPersonCreate() {
-    
-    const router = useRouter()
-    const [data, setData] = useState({
-        firstName: '',
-        lastName: ''
-    })
 
-    const InfoPersonCreation = async (e) => {
-        e.preventDefault()
-        const response = await fetch('/api/selections/familyandfriends/create-infoperson', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({data})
-        })
+        useEffect(() => {
+            require('/node_modules/bootstrap/dist/js/bootstrap.js');
+        }, []);
+        
+        const router = useRouter();
 
-        if(response.ok) {
-            alert('The info person is created succesfully!')
-            setData({
-                firstName: '',
-                lastName: ''
-            })
-            router.push('/selectionFamilyAndFriends')
-        } else {
-            alert('Something went wrong when creating info person!')
+        const [err, setErr] = useState(false);
+
+        const InfoPersonCreation = async (e) => {
+            e.preventDefault();
+            const firstName = e.target[0].value;
+            const lastName = e.target[1].value;
+
+            try {
+                const res = await fetch("/api/selections/familyandfriends/create-infoperson", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        firstName,
+                        lastName,
+                    }),
+                });
+
+                res.status === 201 && router.push("/selectionFamilyAndFriends");
+
+            } catch (err) {
+                setErr(true);
+            }
         }
-
-        // const infoPerson = await response.json();
-        // router.push('/selectionFamilyAndFriends/selectionOptionA');
-    }
     
     return (
         <form className='dropdown-menu p-4'
@@ -52,8 +53,6 @@ export function InfoPersonCreate() {
                        id="dropdownFormFirstName"
                        placeholder="Henk"
                        required
-                       value={data.firstName}
-                       onChange={(e) => {setData({...data, firstName: e.target.value})}}
                 />
             </div>
             <div className='mb-3'>
@@ -68,8 +67,8 @@ export function InfoPersonCreate() {
                        id="dropdownFormLastName"
                        placeholder="van t Kruijs"
                        required
-                       value={data.lastName}
-                       onChange={(e) => {setData({...data, lastName: e.target.value})}}
+                    //    value={data.lastName}
+                    //    onChange={(e) => {setData({...data, lastName: e.target.value})}}
                 />
             </div>
             <button type="submit"

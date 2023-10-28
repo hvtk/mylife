@@ -5,6 +5,7 @@ import '../styles/customBootstrapHomepage.scss'
 
 
 import { AuthProvider } from '@/components/account/AuthProvider'
+import StyledJsxStyleRegistry from './registry'
 
 export const metadata = {
     title: "MyLife",
@@ -16,9 +17,11 @@ export default function RootLayout({children}) {
         
         <html lang="en">
             <body>
-                <AuthProvider>
-                    {children}
-                </AuthProvider>
+                <StyledJsxStyleRegistry>
+                    <AuthProvider>
+                        {children}
+                    </AuthProvider>
+                </StyledJsxStyleRegistry>
             </body>
         </html>
 

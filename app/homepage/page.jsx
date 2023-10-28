@@ -8,38 +8,30 @@ import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { HeaderBase } from '@/components/header/HeaderBase'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-
-// async function getData() {
-//   const res = await fetch("http://localhost:3000/api/user", {
-//     cache: "no-store",
-//   });
-
-//   if (!res.ok) {
-//     throw new Error ("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
-
+import { useEffect } from 'react'
 
 export default function Homepage() {
 
-  const session = useSession();
+  useEffect(() => {
+    require('/node_modules/bootstrap/dist/js/bootstrap.js');
+  }, []);
 
-  const router = useRouter();
+  const { data: session, status } = useSession();
 
-  const fetcher = (...args) => fetch(...args).then(res => res.json());
-  const { data, error, isLoading} = useSWR(`/api/user?username=${session?.data?.user.name}`, fetcher);
+  // const router = useRouter();
 
-  if (session.status === "loading") {
-    return <p>Loading...</p>;
-  }
+  // const fetcher = (...args) => fetch(...args).then(res => res.json());
+  // const { data, error, isLoading} = useSWR(`/api/user?username=${session?.data?.user.name}`, fetcher);
 
-  if (session.status === "unauthenticated") {
-    router?.push("/auth/signIn");
-  }
+  // if (session.status === "loading") {
+  //   return <p>Loading...</p>;
+  // }
 
-  if (session.status === "authenticated") {
+  // if (session.status === "unauthenticated") {
+  //   router?.push("/auth/signIn");
+  // }
+
+  // if (session.status === "authenticated") {
   
     return (
 
@@ -61,13 +53,14 @@ export default function Homepage() {
                         Homepage
                       </div> 
                       <div> 
-                        {isLoading
+                        {/* {isLoading
                           ? "loading"
                           : data?.map((user) => (
                           <div className='fs-5 me-4' key={user.id}>
                               Hi...{user.name}
                           </div>
-                        ))}
+                        ))} */}
+                        Hi...{session?.user.name}
                       </div>
                       <HeaderBase/>
                     </div>
@@ -81,6 +74,6 @@ export default function Homepage() {
       </>
     )
   }
-}
+
 
 
