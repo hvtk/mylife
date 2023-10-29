@@ -1,11 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 export function FormSignUp() {
 
+        useEffect(() => {
+            require('/node_modules/bootstrap/dist/js/bootstrap.js');
+        }, []);
+    
         const router = useRouter();
 
         const [err, setErr] = useState(false);

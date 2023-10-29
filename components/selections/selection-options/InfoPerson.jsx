@@ -1,4 +1,4 @@
-export default function InfoPerson({ infoPerson }) {
+export function InfoPerson({ infoPerson }) {
     return (
       <li key={infoPerson.id}>
         <h1>

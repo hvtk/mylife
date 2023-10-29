@@ -1,11 +1,16 @@
 'use client'
 
 import Link from "next/link"
+import { useEffect } from "react"
 import { signOut } from "next-auth/react"
 import { signIn } from "next-auth/react"
 
 export function HeaderBase() {
 
+    useEffect(() => {
+        require('/node_modules/bootstrap/dist/js/bootstrap.js');
+      }, []);
+    
     return(
         <>
             <div>

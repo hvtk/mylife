@@ -1,11 +1,16 @@
 'use client'
 
+import { useEffect } from 'react'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { FormSignIn } from '@/components/account/FormSignIn'
 import { FormMylifeImage } from '@/components/account/FormMylifeImage'
 
 export default function SignIn() {
-  
+
+  useEffect(() => {
+    require('/node_modules/bootstrap/dist/js/bootstrap.js');
+  }, []);
+
   return (
     <>
       <div className='container min-vw-100 bg-body'>

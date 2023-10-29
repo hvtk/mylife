@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import prisma from "@/app/lib/prisma"
+import Email from "next-auth/providers/email";
 
 export const POST = async (request) => {
 
@@ -8,7 +9,10 @@ export const POST = async (request) => {
     const infoPersonCreate = await prisma.InfoPerson.create({
         data: {
             firstName,
-            lastName,  
+            lastName, 
+            user: {
+                connect: { email: Email}
+            } 
         },
     });
 
