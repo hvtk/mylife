@@ -14,12 +14,12 @@ export default function MylifeIntroPage() {
             </div>
             <div className='col-sm-8'>
               <div className='row h-4'>
-                  <div className='d-flex align-items-center justify-content-end'>
+                <div className='d-flex align-items-center justify-content-end'>
                   <div className='fs-5 me-5'>
                       MYLIFE INTRODUCTION PAGE
                   </div>  
                   <HeaderMylifeIntro/>
-                  </div>
+                </div>
               </div>
               <MylifeIntroSelectionOptionsView />
             </div>

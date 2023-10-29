@@ -41,28 +41,28 @@ export function FormSignIn() {
                         className='form-label'
                         > 
                             Enter your emailadress:
-                        <input
-                            type="email"
-                            name="email"
-                            className='form-control'
-                            id="inputForm"
-                            placeholder="Type your emailadress"
-                            required
-                        />
-                    </label >
+                    </label>
+                    <input
+                        type="email"
+                        name="email"
+                        className='form-control'
+                        id="inputForm"
+                        placeholder="Type your emailadress"
+                        required
+                    />
                     <label htmlFor="password"
                         className='form-label'
                         > 
                             Enter your password:
-                        <input
-                            type="password"
-                            name="password"
-                            className='form-control'
-                            id="inputForm"
-                            placeholder="Type your password"
-                            required
-                        />
-                    </label >
+                    </label>
+                    <input
+                        type="password"
+                        name="password"
+                        className='form-control'
+                        id="inputForm"
+                        placeholder="Type your password"
+                        required
+                    />
                     <button type="submit"
                             className='btn btn-primary w-100'
                             >

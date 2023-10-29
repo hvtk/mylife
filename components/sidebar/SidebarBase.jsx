@@ -13,24 +13,22 @@ export function SidebarBase() {
             <MylifeLogo /> 
           </div>
           <div>
-            <Link href="/listSelections">
-              <Image
-                  src={SidebarList}
-                  alt="icon for list options/selection"
-                  width={60}
-                  height={60}
-                />
-            </Link>
+            <Link href="/listSelections" />
+            <Image
+                src={SidebarList}
+                alt="icon for list options/selection"
+                width={60}
+                height={60}
+              />
           </div>
           <div>
-            <Link href="/account">
-              <Image
-                  src={SidebarPerson}
-                  alt="icon for account user"
-                  width={60}
-                  height={60}
-                />
-            </Link>
+            <Link href="/account" />
+            <Image
+                src={SidebarPerson}
+                alt="icon for account user"
+                width={60}
+                height={60}
+              />
           </div>
         </div>
       </div>

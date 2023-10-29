@@ -1,7 +1,7 @@
 export function SelectionName({ children }) {
   return (
-    <p>
+    <div>
       { children }
-    </p>
+    </div>
   )
 }

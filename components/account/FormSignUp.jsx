@@ -54,41 +54,41 @@ export function FormSignUp() {
                            className='form-label'
                         > 
                             Enter your name:
-                        <input
-                            type="text"
-                            name="username"
-                            className='form-control'
-                            id="inputForm"
-                            placeholder="Type your full name"
-                            required   
-                        />
                     </label>
+                    <input
+                        type="text"
+                        name="username"
+                        className='form-control'
+                        id="inputForm"
+                        placeholder="Type your full name"
+                        required   
+                    />
                     <label htmlFor="email"
                         className='form-label'
                         > 
                             Enter your email:
-                        <input
-                            type="email"
-                            name="email"
-                            className='form-control'
-                            id="inputForm"
-                            placeholder="Type your email"
-                            required
-                        />
-                    </label >
+                    </label>
+                    <input
+                        type="email"
+                        name="email"
+                        className='form-control'
+                        id="inputForm"
+                        placeholder="Type your email"
+                        required
+                    />
                     <label htmlFor="password"
                         className='form-label'
                         > 
                             Enter your password:
-                        <input
-                            type="password"
-                            name="password"
-                            className='form-control'
-                            id="inputForm"
-                            placeholder="Type your password"
-                            required
-                        />
-                    </label >
+                    </label>
+                    <input
+                        type="password"
+                        name="password"
+                        className='form-control'
+                        id="inputForm"
+                        placeholder="Type your password"
+                        required
+                    />
                     <button type="submit"
                             className='btn btn-primary w-100'
                             >
