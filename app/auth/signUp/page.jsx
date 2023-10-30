@@ -1,15 +1,15 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { FormSignUp } from '@/components/account/FormSignUp'
 import { FormMylifeImage } from '@/components/account/FormMylifeImage'
 
 export default function SignUp() {
 
-  useEffect(() => {
-    require('/node_modules/bootstrap/dist/js/bootstrap.js');
-  }, []);
+    useEffect(() => {
+      require('/node_modules/bootstrap/dist/js/bootstrap.js');
+    }, []); 
 
   return (
     <>

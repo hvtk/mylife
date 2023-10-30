@@ -1,15 +1,25 @@
+'use client'
+
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarListSelections } from '@/components/sidebar/SidebarListSelections'
 import { HeaderBase } from '@/components/header/HeaderBase'
+import { useEffect, useState } from 'react'
 
 export default function ListSelections() {
+
+    // const [isClient, setIsClient] = useState(false);
+
+    //   useEffect(() => {
+    //     setIsClient(true);
+    //   }, []);
+
   return (
     <>
       <div className='container min-vw-100 bg-body'>
         <div className='row'>
           <div className='col-sm-3 bg-secondary min-vh-100 d-flex flex-column justify-content-center'>
-            <SidebarListSelections/>
+            <SidebarListSelections/> 
           </div>
           <div className='col-sm-9 bg-success min-vh-100'>
             <div className='row'>

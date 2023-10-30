@@ -8,15 +8,21 @@ import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { HeaderBase } from '@/components/header/HeaderBase'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Homepage() {
 
-  useEffect(() => {
-    require('/node_modules/bootstrap/dist/js/bootstrap.js');
-  }, []);
+    useEffect(() => {
+      require('/node_modules/bootstrap/dist/js/bootstrap.js');
+    }, []);
 
-  const { data: session, status } = useSession();
+    // const [isClient, setIsClient] = useState(false);
+
+    // useEffect(() => {
+    //   setIsClient(true);
+    // }, []);
+
+    const { data: session, status } = useSession();
 
   // const router = useRouter();
 
@@ -39,7 +45,7 @@ export default function Homepage() {
         <div className='container min-vw-100 bg-body'>
           <div className='row'>
             <div className='col-sm-1 bg-secondary min-vh-100 d-flex flex-column justify-content-center'>
-              <SidebarBase/>
+              <SidebarBase/> 
             </div>
             <div className='col-sm-11 bg-success min-vh-100'>
               <div className='row'>

@@ -47,30 +47,22 @@ export function MylifeIntroSelectionOptionsView() {
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
-                        
-                            Family and Friends
-                        
+                        Family and Friends
                     </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
-                        
-                            Where I live
-                        
+                        Where I live
                     </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
-                        
-                            Eat and Drink
-                        
+                        Eat and Drink
                     </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
-                        
-                            Personal Situation
-                        
+                        Personal Situation
                     </SelectionName>
                 </div>
             </div>
@@ -103,30 +95,22 @@ export function MylifeIntroSelectionOptionsView() {
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
-                        
-                            Sleep Routine
-                        
+                        Sleep Routine
                     </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
-                    
-                            Daily Routine
-                    
+                        Daily Routine
                     </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
-                        
-                            Finance
-                        
+                        Finance
                     </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
-                    
-                            Insurances
-                        
+                        Insurances
                     </SelectionName>
                 </div>
             </div>
@@ -159,30 +143,22 @@ export function MylifeIntroSelectionOptionsView() {
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
-                        
-                            Subcriptions
-                        
+                        Subcriptions
                     </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
-                        
-                            Used Websites
-                        
+                        Used Websites
                     </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
-                    
-                            Installed Apps
-                        
+                        Installed Apps
                     </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
-                        
-                            Reminders
-                        
+                        Reminders
                     </SelectionName>
                 </div>
             </div>
@@ -203,16 +179,12 @@ export function MylifeIntroSelectionOptionsView() {
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName >
-                    
-                            Rights and Obligations
-                        
+                        Rights and Obligations
                     </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
                     <SelectionName>
-                        
-                            My Schedule
-                        
+                        My Schedule
                     </SelectionName>
                 </div>
             </div>

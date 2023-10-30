@@ -69,11 +69,11 @@ export function FormSignIn() {
                                 Confirm SignIn
                     </button>
                     <div className="mt-3">
-                        <Link className = 'text-primaryblue-600'
-                              href="/auth/signUp"
-                            >
+                        <a className = 'text-primaryblue-600'
+                           href="/auth/signUp"
+                          >
                                 Don't you have an account?
-                        </Link> 
+                        </a> 
                     </div>
                 </form>
                 {err && "Something went wrong!"}

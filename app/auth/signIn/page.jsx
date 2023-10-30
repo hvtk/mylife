@@ -1,16 +1,22 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { FormSignIn } from '@/components/account/FormSignIn'
 import { FormMylifeImage } from '@/components/account/FormMylifeImage'
 
 export default function SignIn() {
 
-  useEffect(() => {
-    require('/node_modules/bootstrap/dist/js/bootstrap.js');
-  }, []);
+    useEffect(() => {
+      require('/node_modules/bootstrap/dist/js/bootstrap.js');
+    }, []);
 
+    // const [isClient, setIsClient] = useState(false);
+
+    // useEffect(() => {
+    //   setIsClient(true);
+    // }, []);
+    
   return (
     <>
       <div className='container min-vw-100 bg-body'>
@@ -22,12 +28,12 @@ export default function SignIn() {
             <div className='row'>
               <div className='col-sm-5 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
                 <div className='bg-secondary w-75 h-75 d-flex flex-column align-items-center justify-content-center '> 
-                  <FormMylifeImage/>
+                  <FormMylifeImage />
                 </div>
               </div>
               <div className='col-sm-7 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
                 <div className='bg-secondary w-75 h-75 d-flex flex-column align-items-center justify-content-center '>
-                  <FormSignIn/>
+                  <FormSignIn />
                 </div>
               </div>
             </div>

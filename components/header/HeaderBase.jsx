@@ -20,9 +20,14 @@ export function HeaderBase() {
                 </a>
             </div>
             <div>
-                <button onClick={() => signIn({ callbackUrl: 'http://localhost:3000/auth/signIn'})}>
+                {/* <button onClick={() => signIn({ callbackUrl: 'http://localhost:3000/auth/signIn'})}>
                     SignIn
-                </button>
+                </button> */}
+                <a href="/auth/signIn"
+                   className='fs-5 me-2 text-dark'
+                  >
+                    SignIn
+                </a>
             </div>
             <div>
                 <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/'})}>
