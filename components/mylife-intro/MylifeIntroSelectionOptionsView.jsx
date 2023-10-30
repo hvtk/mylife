@@ -20,200 +20,200 @@ export function MylifeIntroSelectionOptionsView() {
         <>
             <div className='row h-20'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection 
-                src={selectImageFamily}
-                    alt="image respresending my family and friends"
-                />
+                    <Selection 
+                        src={selectImageFamily}
+                        alt="image respresending my family and friends"
+                    />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection
-                src={selectImageWhereILive} 
-                    alt="images represending my place to live"
-                /> 
+                    <Selection
+                        src={selectImageWhereILive} 
+                        alt="images represending my place to live"
+                    /> 
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection 
-                src={selectImageEatAndDrink}
-                    alt="image respresending what I eat and drink"
-                />
+                    <Selection 
+                        src={selectImageEatAndDrink}
+                        alt="image respresending what I eat and drink"
+                    />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection
-                src={selectImagePersonalSituation} 
-                    alt="images represending on my personal situation"
-                /> 
+                    <Selection
+                        src={selectImagePersonalSituation} 
+                        alt="images represending on my personal situation"
+                    /> 
                 </div>
             </div>
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName >
-                    
-                        Family and Friends
-                    
-                </SelectionName>
+                    <SelectionName >
+                        
+                            Family and Friends
+                        
+                    </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName>
-                    
-                        Where I live
-                    
-                </SelectionName>
+                    <SelectionName>
+                        
+                            Where I live
+                        
+                    </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName >
-                    
-                        Eat and Drink
-                    
-                </SelectionName>
+                    <SelectionName >
+                        
+                            Eat and Drink
+                        
+                    </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName>
-                    
-                        Personal Situation
-                    
-                </SelectionName>
+                    <SelectionName>
+                        
+                            Personal Situation
+                        
+                    </SelectionName>
                 </div>
             </div>
             <div className='row h-20'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection 
-                src={selectImageSleep}
-                    alt="image respresending what my sleep routine is"
-                />
+                    <Selection 
+                        src={selectImageSleep}
+                        alt="image respresending what my sleep routine is"
+                    />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection 
-                src={selectImageDailyRoutine}
-                    alt="image respresending on my daily routine"
-                />
+                    <Selection 
+                        src={selectImageDailyRoutine}
+                        alt="image respresending on my daily routine"
+                    />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection
-                src={selectImageMyFinance} 
-                    alt="images represending my finance"
-                /> 
+                    <Selection
+                        src={selectImageMyFinance} 
+                        alt="images represending my finance"
+                    /> 
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection
-                src={selectImageInsurance} 
-                    alt="images represending my insurances"
-                /> 
+                    <Selection
+                        src={selectImageInsurance} 
+                        alt="images represending my insurances"
+                    /> 
                 </div>
             </div>
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName >
-                    
-                        Sleep Routine
-                    
-                </SelectionName>
+                    <SelectionName >
+                        
+                            Sleep Routine
+                        
+                    </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName>
-                   
-                        Daily Routine
-                   
-                </SelectionName>
+                    <SelectionName>
+                    
+                            Daily Routine
+                    
+                    </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName >
-                    
-                        Finance
-                    
-                </SelectionName>
+                    <SelectionName >
+                        
+                            Finance
+                        
+                    </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName>
-                   
-                        Insurances
+                    <SelectionName>
                     
-                </SelectionName>
+                            Insurances
+                        
+                    </SelectionName>
                 </div>
             </div>
             <div className='row h-20'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection 
-                src={selectImageSubcriptions}
-                    alt="image respresending my subcriptions"
-                />
+                    <Selection 
+                        src={selectImageSubcriptions}
+                        alt="image respresending my subcriptions"
+                    />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection
-                src={selectImageUsedWebsites} 
-                    alt="images represending my used websites"
-                /> 
+                    <Selection
+                        src={selectImageUsedWebsites} 
+                        alt="images represending my used websites"
+                    /> 
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection 
-                src={selectImageInstalledApps}
-                    alt="image respresending my installed apps"
-                />
+                    <Selection 
+                        src={selectImageInstalledApps}
+                        alt="image respresending my installed apps"
+                    />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection
-                src={selectImageReminders} 
-                    alt="images represending my reminders"
-                /> 
+                    <Selection
+                        src={selectImageReminders} 
+                        alt="images represending my reminders"
+                    /> 
                 </div>
             </div>
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName >
-                    
-                        Subcriptions
-                    
-                </SelectionName>
+                    <SelectionName >
+                        
+                            Subcriptions
+                        
+                    </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName>
-                    
-                        Used Websites
-                    
-                </SelectionName>
+                    <SelectionName>
+                        
+                            Used Websites
+                        
+                    </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName >
-                   
-                        Installed Apps
+                    <SelectionName >
                     
-                </SelectionName>
+                            Installed Apps
+                        
+                    </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName>
-                    
-                        Reminders
-                    
-                </SelectionName>
+                    <SelectionName>
+                        
+                            Reminders
+                        
+                    </SelectionName>
                 </div>
             </div>
             <div className='row h-20'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection 
-                src={selectImageRightsAndObligations}
-                    alt="image respresending my rights and obligations"
-                />
+                    <Selection 
+                        src={selectImageRightsAndObligations}
+                        alt="image respresending my rights and obligations"
+                    />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                <Selection
-                src={selectImageMySchedule} 
-                    alt="images represending my schedule"
-                /> 
+                    <Selection
+                        src={selectImageMySchedule} 
+                        alt="images represending my schedule"
+                    /> 
                 </div>
             </div>
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName >
-                   
-                        Rights and Obligations
+                    <SelectionName >
                     
-                </SelectionName>
+                            Rights and Obligations
+                        
+                    </SelectionName>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                <SelectionName>
-                    
-                        My Schedule
-                    
-                </SelectionName>
+                    <SelectionName>
+                        
+                            My Schedule
+                        
+                    </SelectionName>
                 </div>
             </div>
         </>

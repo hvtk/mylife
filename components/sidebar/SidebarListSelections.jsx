@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
+
 import { MylifeLogo } from 'components/sidebar/MylifeLogo'
 import SidebarViewList from 'public/assets/icons/sidebar/view-list.svg'
 import SidebarPerson from 'public/assets/icons/sidebar/person.svg'
@@ -13,74 +13,74 @@ export function SidebarListSelections() {
             <div className='h-90 d-flex flex-column justify-content-center'>
               <dl className='fs-5'>
                 <dt>
-                  <Link href="/selectionFamilyAndFriends">
+                  <a href="/selectionFamilyAndFriends">
                     A: Family and Friends
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionWhereILife">
+                  <a href="/selectionWhereILife">
                     B: Where I Live
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionEatAndDrink">
+                  <a href="/selectionEatAndDrink">
                     C: Eat and Drink
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionPersonalSituation">
+                  <a href="/selectionPersonalSituation">
                     D: Personal Situation
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionSleepRoutine">
+                  <a href="/selectionSleepRoutine">
                     E: Sleep Routine
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionDailyRoutine">
+                  <a href="/selectionDailyRoutine">
                     F: Daily Routine
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionFinance">
+                  <a href="/selectionFinance">
                     G: Finance
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionInsurances">
+                  <a href="/selectionInsurances">
                     H: Insurances
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionSubcriptions">
+                  <a href="/selectionSubcriptions">
                     I: Subcriptions
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionUsedWebsites">
+                  <a href="/selectionUsedWebsites">
                     J: Used Websites
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionInstalledApps">
+                  <a href="/selectionInstalledApps">
                     K: Installed Apps
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionReminders">
+                  <a href="/selectionReminders">
                     L: Reminders
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionRightsAndObligations">
+                  <a href="/selectionRightsAndObligations">
                     M: Rights and Obligations
-                  </Link>
+                  </a>
                 </dt>
                 <dt>
-                  <Link href="/selectionMySchedule">
+                  <a href="/selectionMySchedule">
                     N: My Schedule
-                  </Link>
+                  </a>
                 </dt>
               </dl>
             </div>
@@ -88,26 +88,29 @@ export function SidebarListSelections() {
           <div className='col-sm-4 d-flex flex-column justify-content-center min-vh-100'>
             <div className='h-90 d-flex flex-column align-items-center justify-content-between'>
               <div>
-                <Link href="/homepage" />
-                <MylifeLogo /> 
+                <a href="/homepage">
+                  <MylifeLogo />  
+                </a>
               </div>
               <div>
-                <Link href="/homepage" />
-                <Image
-                    src={SidebarViewList}
-                    alt="icon for list options/selection"
-                    width={60}
-                    height={60}
-                  />
+                <a href="/homepage">
+                  <Image
+                      src={SidebarViewList}
+                      alt="icon for list options/selection"
+                      width={60}
+                      height={60}
+                    />
+                </a>
               </div>
               <div>
-                <Link href="/account" />
-                <Image
-                    src={SidebarPerson}
-                    alt="icon for account user"
-                    width={60}
-                    height={60}
-                  />
+                <a href="/account">
+                  <Image
+                      src={SidebarPerson}
+                      alt="icon for account user"
+                      width={60}
+                      height={60}
+                    />
+                </a>
               </div>
             </div>
           </div>

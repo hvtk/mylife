@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
@@ -40,7 +39,7 @@ export default function SelectionFamilyAndFriends() {
             <div className='row'>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
                 <div className='bg-warning h-75 w-75 rounded-5'>
-                  <figure className='d-flex flex-column align-items-center h-100'>
+                  <div className='d-flex flex-column align-items-center h-100'>
                     <SelectionInfo>
                       All your information about your friends and family in one place
                     </SelectionInfo>
@@ -48,7 +47,7 @@ export default function SelectionFamilyAndFriends() {
                       src={selectImageFamily}
                       alt="image respresending my family and friends"
                     />
-                  </figure>
+                  </div>
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
@@ -59,34 +58,34 @@ export default function SelectionFamilyAndFriends() {
                       MY FAMILY AND FRIENDS
                     </SelectionOptionName>
                     <SelectionOptions>
-                      <Link href="/selectionFamilyAndFriends/selectionOptionA">
+                      <a href="/selectionFamilyAndFriends/selectionOptionA">
                         A: Those who raised you
-                      </Link>
+                      </a>
                     </SelectionOptions>
                     <SelectionOptions>
-                      <Link href="/selectionOptionsAB">
+                      <a href="/selectionOptionsAB">
                         B: Brothers and Sisters
-                      </Link>
+                      </a>
                     </SelectionOptions>
                     <SelectionOptions>
-                      <Link href="/selectionOptionsAC">
+                      <a href="/selectionOptionsAC">
                         C: Uncles and Aunts
-                      </Link>
+                      </a>
                     </SelectionOptions>
                     <SelectionOptions>
-                      <Link href="/selectionOptionsAD">
+                      <a href="/selectionOptionsAD">
                         D: Grandpa's and Grandma's
-                      </Link>
+                      </a>
                     </SelectionOptions>
                     <SelectionOptions>
-                      <Link href="/selectionOptionsAE">
+                      <a href="/selectionOptionsAE">
                         E: Friends
-                      </Link>
+                      </a>
                     </SelectionOptions>
                     <SelectionOptions>
-                      <Link href="/selectionOptionsAF">
+                      <a href="/selectionOptionsAF">
                         F: Create an option yourself
-                      </Link>
+                      </a>
                     </SelectionOptions>
                   </div>
                 </div>

@@ -1,4 +1,6 @@
+'use client'
 
+import { useEffect } from 'react'
 
 import { InfoPersonList } from '@/components/selections/selection-options/InfoPersonList';
 
@@ -23,6 +25,10 @@ async function getData() {
 
 const SelectionOptionAData = async () => {
 
+  useEffect(() => {
+    require('/node_modules/bootstrap/dist/js/bootstrap.js');
+  }, []);
+
   const infoPersons = await getData();
 
   return (
@@ -46,12 +52,12 @@ const SelectionOptionAData = async () => {
                 <div className='bg-warning h-75 w-75 rounded-5 d-flex flex-column align-items-center'>
                   <div className='row h-35'>
                     <div className='d-flex align-items-center justify-content-center'>
-                      <figure>
+                      <div>
                         <SelectionOptionImage
                           src={selectImageFamily}
                           alt="image respresending my family and friends"
                         />
-                      </figure>
+                      </div>
                       <div className='d-flex flex-column align-items-center justify-content-center ms-5'>
                         <div className='fs-5'>
                           <div>
@@ -111,11 +117,11 @@ const SelectionOptionAData = async () => {
           </div>
         </div>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+      {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
               integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
               crossorigin="anonymous"
             >
-      </script>
+      </script> */}
     </>
   )
 }

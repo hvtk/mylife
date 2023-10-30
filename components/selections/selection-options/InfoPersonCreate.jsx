@@ -67,8 +67,6 @@ export function InfoPersonCreate() {
                        id="dropdownFormLastName"
                        placeholder="van t Kruijs"
                        required
-                    //    value={data.lastName}
-                    //    onChange={(e) => {setData({...data, lastName: e.target.value})}}
                 />
             </div>
             <button type="submit"
