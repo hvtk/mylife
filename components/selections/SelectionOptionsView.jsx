@@ -16,6 +16,8 @@ import selectImageRightsAndObligations from 'public/assets/images/selections/rig
 import selectImageMySchedule from 'public/assets/images/selections/my schedule.jpg'
 
 export function SelectionOptionsView() {
+
+    
     return(
         <>
             <div className='row h-20'>

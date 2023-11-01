@@ -1,13 +1,9 @@
 'use client'
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useRouter } from "next/navigation"
 
 export function InfoPersonCreate() {
-
-        useEffect(() => {
-            require('/node_modules/bootstrap/dist/js/bootstrap.js');
-        }, []);
         
         const router = useRouter();
 

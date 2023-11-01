@@ -10,15 +10,10 @@ import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/SelectionOptionImage'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
-import { useEffect } from 'react'
 
 export default function SelectionOptionA() {
 
   const { data: session, status } = useSession();
-
-  useEffect(() => {
-    require('/node_modules/bootstrap/dist/js/bootstrap.js');
-  }, []);
 
   return (
 
@@ -89,6 +84,10 @@ export default function SelectionOptionA() {
           </div>
         </div>
       </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+              integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+              crossorigin="anonymous">
+      </script>
     </>
   )
 }

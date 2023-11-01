@@ -3,9 +3,7 @@ import '../styles/globals.css'
 // Customized bootstrap css
 import '../styles/customBootstrapHomepage.scss'
 
-
 import { AuthProvider } from '@/components/account/AuthProvider'
-// import StyledJsxStyleRegistry from './registry'
 
 export const metadata = {
     title: "MyLife",
@@ -17,11 +15,9 @@ export default function RootLayout({children}) {
         
         <html lang="en">
             <body>
-                {/* <StyledJsxStyleRegistry> */}
-                    <AuthProvider>
-                        {children}
-                    </AuthProvider>
-                {/* </StyledJsxStyleRegistry> */}
+                <AuthProvider>
+                    {children}
+                </AuthProvider>
             </body>
         </html>
 

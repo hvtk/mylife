@@ -1,7 +1,5 @@
 'use client'
 
-import { useEffect } from 'react'
-
 import { InfoPersonList } from '@/components/selections/selection-options/InfoPersonList';
 
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
@@ -24,10 +22,6 @@ async function getData() {
 }
 
 const SelectionOptionAData = async () => {
-
-  useEffect(() => {
-    require('/node_modules/bootstrap/dist/js/bootstrap.js');
-  }, []);
 
   const infoPersons = await getData();
 
@@ -117,11 +111,10 @@ const SelectionOptionAData = async () => {
           </div>
         </div>
       </div>
-      {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
               integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-              crossorigin="anonymous"
-            >
-      </script> */}
+              crossorigin="anonymous">
+      </script>
     </>
   )
 }

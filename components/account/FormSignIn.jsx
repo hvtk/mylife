@@ -3,15 +3,10 @@
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useState } from "react";
 
 export function FormSignIn() {
-
-    useEffect(() => {
-        require('/node_modules/bootstrap/dist/js/bootstrap.js');
-      }, []);
-    
+ 
     const router = useRouter();
 
     const [err, setErr] = useState(false);
