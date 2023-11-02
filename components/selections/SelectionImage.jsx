@@ -1,5 +1,3 @@
-import 'server-only'
-
 import Image from 'next/image'
 
 export function SelectionImage({ src, alt }) {

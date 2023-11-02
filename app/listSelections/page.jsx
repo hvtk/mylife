@@ -1,5 +1,3 @@
-'use client'
-
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarListSelections } from '@/components/sidebar/SidebarListSelections'

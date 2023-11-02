@@ -1,5 +1,3 @@
-import 'server-only'
-
 import { MylifeImage } from '@/components/homepage/MylifeImage' 
 
 export function MylifeImageAndCaption() {
