@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { Selection } from 'components/selections/Selection'
 import { SelectionName } from 'components/selections/SelectionName'
 import selectImageWhereILive from 'public/assets/images/selections/where i live.jpg'

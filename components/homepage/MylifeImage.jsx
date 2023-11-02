@@ -1,3 +1,5 @@
+import 'server-only'
+
 import Image from 'next/image'
 import MylifeLogoImageFill from 'public/assets/images/mylife-logo/life.jpg'
 import MylifeLogoImageTopLeft from 'public/assets/images/mylife-logo/home.jpg'

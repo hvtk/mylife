@@ -1,3 +1,5 @@
+'use client'
+
 export function InfoPerson({ infoPerson }) {
     return (
       <li key={infoPerson.id}>

@@ -15,7 +15,7 @@ export const authOptions = {
             async authorize(credentials) {
 
                 try {
-                    const user = await prisma.User.findUnique({
+                    const user = await prisma.user.findUnique({
                         where : {
                             email: credentials.email
                         },
@@ -49,10 +49,10 @@ export const authOptions = {
          strategy: "jwt",
     },
 
-    // // When using custom signIn page (not the generic signin page from auth) 
-    // pages: {
-    //     signIn: "/auth/signIn",
-    // },
+    // When using custom signIn page (not the generic signin page from auth) 
+    pages: {
+        signIn: "/auth/signIn",
+    },
 
     // callbacks: {
     //     async jwt({ token, account }) {
