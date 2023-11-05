@@ -20,7 +20,9 @@ export default function SignUp() {
               </div>
               <div className='col-sm-7 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
                 <div className='bg-secondary w-75 h-75 d-flex flex-column align-items-center justify-content-center '>
-                  <FormSignUp/>
+                  <div className='bg-warning h-75 w-75 d-flex flex-column align-items-center justify-content-center '>
+                    <FormSignUp/>
+                  </div>
                 </div>
               </div>
             </div>

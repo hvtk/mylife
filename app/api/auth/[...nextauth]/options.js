@@ -41,8 +41,8 @@ export const authOptions = {
                 catch (err) {
                     throw new Error(err);
                 }
-            }
-        })
+            },
+        }),
     ],
 
     session: {

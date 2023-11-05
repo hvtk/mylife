@@ -38,7 +38,7 @@ export function FormSignUp() {
 
     return(
         <>
-            <div className='bg-warning h-75 w-75 d-flex flex-column align-items-center justify-content-center '>
+            {/* <div className='bg-warning h-75 w-75 d-flex flex-column align-items-center justify-content-center '> */}
                 <form className='d-flex flex-column align-items-center justify-content-center'
                       onSubmit={signUpUser}  
                     >
@@ -98,7 +98,7 @@ export function FormSignUp() {
                     </div>
                 </form>
                 {err && "Something went wrong!"}
-            </div>
+            {/* </div> */}
         </>
     )
 }

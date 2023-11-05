@@ -15,7 +15,7 @@ export function InfoPersonCreate() {
             const lastName = e.target[1].value;
 
             try {
-                const res = await fetch("/api/selections/familyandfriends/create-infoperson", {
+                const res = await fetch("/api/selections/familyandfriends", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

@@ -6,7 +6,7 @@ export const POST = async (request) => {
 
     const { firstName, lastName } = await request.json();
 
-    const infoPersonCreate = await prisma.InfoPerson.create({
+    const infoPersonCreate = await prisma.infoPerson.create({
         data: {
             firstName,
             lastName, 
