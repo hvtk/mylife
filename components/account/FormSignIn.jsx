@@ -1,7 +1,7 @@
 'use client'
 
-import { signIn } from "next-auth/react"
-import { useRouter } from "next/navigation";
+import { signIn, useSession } from "next-auth/react"
+import { useRouter } from "next/navigation"
 
 import { useState } from "react";
 
@@ -16,10 +16,11 @@ export function FormSignIn() {
 
         const email = e.target[0].value;
         const password = e.target[1].value;
+   
+        signIn("credentials", { email, password } )
 
-        signIn("credentials", { email, password }, { callbackUrl: 'http://localhost:3000/homepage'} );
-
-        // router.push("/homepage");
+        router?.push("/homepage")
+        
 
     };
 
