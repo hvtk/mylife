@@ -1,6 +1,6 @@
 'use client'
 
-import { signIn, useSession } from "next-auth/react"
+import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation"
 
 import { useState } from "react";
@@ -17,11 +17,16 @@ export function FormSignIn() {
         const email = e.target[0].value;
         const password = e.target[1].value;
    
-        signIn("credentials", { email, password } )
+        const response = await signIn("credentials", {
+            email: email,
+            password: password,
+            redirect: false,
+        });
 
-        router?.push("/homepage")
-        
-
+        if (!response?.error) {
+            router.push("/homepage");
+            router.refresh();
+        }
     };
 
     return(

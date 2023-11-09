@@ -1,10 +1,12 @@
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
-import { HeaderBase } from '@/components/header/HeaderBase'
-import { LoginName } from '@/components/client-side/LoginName'
+import { HeaderSignOut } from '@/components/header/HeaderSignOut'
+import { getServerSession } from 'next-auth'
 
-export default function Homepage() {
+export default async function Homepage() {
+
+  const session = await getServerSession();
    
   return (
 
@@ -25,8 +27,14 @@ export default function Homepage() {
                     <div className='fs-5 me-4'>
                       Homepage
                     </div> 
-                    <LoginName />
-                    <HeaderBase/>
+                    {!!session && 
+                    <div>
+                      Hi...{session.user.name}
+                    </div>
+                    }
+                    {!!session &&
+                    <HeaderSignOut/>
+                    }
                   </div>
                 </div>
                 <SelectionOptionsView />

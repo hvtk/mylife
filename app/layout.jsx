@@ -10,7 +10,8 @@ export const metadata = {
     description: "All info about my life on one place",
 }
 
-export default function RootLayout({children}) {  
+export default async function RootLayout({children}) {  
+
     return (
         
         <html lang="en">

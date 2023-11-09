@@ -35,7 +35,6 @@ export function FormSignUp() {
             }
         }
 
-
     return(
         <>
             {/* <div className='bg-warning h-75 w-75 d-flex flex-column align-items-center justify-content-center '> */}

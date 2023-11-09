@@ -7,7 +7,7 @@ import prisma from "@/app/lib/prisma"
 export const POST = async (request) => {
 
     const { name, email, password } = await request.json();
-    
+
     if(!name || !email || !password) {
         return new NextResponse("Missing name, email, password", { status: 400});
     }
@@ -32,6 +32,7 @@ export const POST = async (request) => {
         },
     });
 
+    
     try {
         if (user) {
             return new NextResponse("User has been created", {

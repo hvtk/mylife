@@ -1,4 +1,3 @@
-import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { FormSignIn } from '@/components/account/FormSignIn'
 import { FormMylifeImage } from '@/components/account/FormMylifeImage'
 
@@ -6,24 +5,17 @@ export default function SignIn() {
     
   return (
     <>
-      <div className='container min-vw-100 bg-body'>
+      <div className='container min-vw-100 bg-success'>
         <div className='row'>
-          <div className='col-sm-1 bg-secondary min-vh-100 d-flex flex-column justify-content-center'>
-            <SidebarBase/>
+          <div className='col-sm-5 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
+            <div className='bg-secondary w-75 h-75 d-flex flex-column align-items-center justify-content-center '> 
+              <FormMylifeImage />
+            </div>
           </div>
-          <div className='col-sm-11 bg-success min-vh-100 d-flex flex-column justify-content-center'>
-            <div className='row'>
-              <div className='col-sm-5 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
-                <div className='bg-secondary w-75 h-75 d-flex flex-column align-items-center justify-content-center '> 
-                  <FormMylifeImage />
-                </div>
-              </div>
-              <div className='col-sm-7 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
-                <div className='bg-secondary w-75 h-75 d-flex flex-column align-items-center justify-content-center '>
-                  <div className='bg-warning h-75 w-75 d-flex flex-column align-items-center justify-content-center '>
-                    <FormSignIn />
-                  </div>
-                </div>
+          <div className='col-sm-7 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
+            <div className='bg-secondary w-75 h-75 d-flex flex-column align-items-center justify-content-center '>
+              <div className='bg-warning h-75 w-75 d-flex flex-column align-items-center justify-content-center '>
+                <FormSignIn />
               </div>
             </div>
           </div>

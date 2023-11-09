@@ -1,4 +1,4 @@
-import bcrypt from 'bcryptjs'
+import bcrypt from "bcryptjs"
 import CredentialsProvider from "next-auth/providers/credentials"
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import prisma from "@/app/lib/prisma"
@@ -9,12 +9,15 @@ export const authOptions = {
     providers: [
         CredentialsProvider({
             
-            id:"credentials",
-            name: "credentials",
+            credentials: {
+                email: {},
+                password: {},
+            },
             
             async authorize(credentials) {
 
                 try {
+
                     const user = await prisma.user.findUnique({
                         where : {
                             email: credentials.email
@@ -22,13 +25,13 @@ export const authOptions = {
                     });
 
                     if(user) {
-                        //check password
-                        const isPasswordCorrect = await bcrypt.compare(
-                            credentials.password,
+
+                        const passwordCorrect = await bcrypt.compare(
+                            credentials?.password || '',
                             user.password
                         );
 
-                        if ( isPasswordCorrect ) {
+                        if (passwordCorrect) {
                             return user;
                         } else {
                             throw new Error("Wrong Credentials!");
@@ -41,7 +44,7 @@ export const authOptions = {
                 catch (err) {
                     throw new Error(err);
                 }
-            },
+            }
         }),
     ],
 
@@ -53,22 +56,6 @@ export const authOptions = {
     pages: {
         signIn: "/auth/signIn",
     },
-
-    // callbacks: {
-    //     async jwt({ token, account }) {
-    //         // Persist the OAuth access_token to the token right after signin
-    //         if (account) {
-    //             token.accessToken = account.access_token
-    //         }
-    //         return token
-    //     },
-
-    //     async session({ session, token, user }) {
-    //         // Send properties to the client, like an access_token from a provider
-    //         session.accessToken = token.accessToken
-    //         return session
-    //     },
-    // },
 
     secret: process.env.NEXTAUTH_SECRET,
     debug: process.env.NODE_ENV === "development",

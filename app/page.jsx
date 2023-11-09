@@ -1,6 +1,6 @@
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { MylifeIntroSelectionOptionsView } from '@/components/mylife-intro/MylifeIntroSelectionOptionsView'
-import { HeaderMylifeIntro } from '@/components/header/HeaderMylifeIntro'
+import { HeaderBase } from '@/components/header/HeaderBase'
 
 export default function MylifeIntroPage() {
 
@@ -18,7 +18,7 @@ export default function MylifeIntroPage() {
                   <div className='fs-5 me-5'>
                       MYLIFE INTRODUCTION PAGE
                   </div>  
-                  <HeaderMylifeIntro/>
+                  <HeaderBase/>
                 </div>
               </div>
               <MylifeIntroSelectionOptionsView />
