@@ -28,7 +28,7 @@ export default async function Homepage() {
                       Homepage
                     </div> 
                     {!!session && 
-                    <div>
+                    <div className='fs-5 me-4'>
                       Hi...{session.user.name}
                     </div>
                     }

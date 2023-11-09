@@ -1,7 +1,16 @@
+import { redirect } from 'next/navigation'
+import { getServerSession } from 'next-auth'
+
 import { FormSignIn } from '@/components/account/FormSignIn'
 import { FormMylifeImage } from '@/components/account/FormMylifeImage'
 
-export default function SignIn() {
+export default async function SignIn() {
+
+  const session = await getServerSession();
+
+    if(session) {
+        redirect('/homepage')
+    }
     
   return (
     <>

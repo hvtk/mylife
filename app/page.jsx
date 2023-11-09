@@ -1,8 +1,17 @@
+import { redirect } from 'next/navigation'
+import { getServerSession } from 'next-auth'
+
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { MylifeIntroSelectionOptionsView } from '@/components/mylife-intro/MylifeIntroSelectionOptionsView'
 import { HeaderBase } from '@/components/header/HeaderBase'
 
-export default function MylifeIntroPage() {
+export default async function MylifeIntroPage() {
+
+  const session = await getServerSession();
+
+    if(session) {
+        redirect('/homepage')
+    }
 
   return (
 
