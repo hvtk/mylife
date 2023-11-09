@@ -1,9 +1,13 @@
+import { getServerSession } from 'next-auth'
+
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarListSelections } from '@/components/sidebar/SidebarListSelections'
-import { HeaderBase } from '@/components/header/HeaderBase'
+import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 
-export default function ListSelections() {
+export default async function ListSelections() {
+
+  const session = await getServerSession();
 
   return (
     <>
@@ -23,7 +27,14 @@ export default function ListSelections() {
                     <div className='fs-5 me-4'>
                       List Selections
                     </div>
-                    <HeaderBase/>
+                    {!!session && 
+                    <div className='fs-5 me-4'>
+                      Hi...{session.user.name}
+                    </div>
+                    }
+                    {!!session &&
+                    <HeaderSignOut/>
+                    }
                   </div>
                 </div>
                 <SelectionOptionsView />

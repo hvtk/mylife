@@ -1,5 +1,3 @@
-'use client'
-
 import { InfoPersonList } from '@/components/selections/selection-options/InfoPersonList';
 
 import { SidebarBase } from '@/components/sidebar/SidebarBase'

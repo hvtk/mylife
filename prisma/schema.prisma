@@ -49,7 +49,6 @@ model InfoPerson {
   updatedAt DateTime    @updatedAt
   firstName String?
   lastName  String?
-  published Boolean     @default(false)
   userId    String?
   user      User?       @relation(fields: [userId], references: [id])
 }

@@ -1,6 +1,4 @@
-'use client'
-
-import { useSession } from 'next-auth/react'
+import { getServerSession } from 'next-auth'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
@@ -12,9 +10,9 @@ import { SelectionImage } from '@/components/selections/SelectionImage'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
-export default function SelectionFamilyAndFriends() {
+export default async function SelectionFamilyAndFriends() {
 
-  const { data: session, status } = useSession();
+  const session = await getServerSession();
 
   return (
 
@@ -30,10 +28,14 @@ export default function SelectionFamilyAndFriends() {
                 <div className='fs-5 me-5'>
                   Selection "My Family and Friends"
                 </div>  
-                <div className='fs-5 me-5'>
-                    Hi... {session?.user.name}
-                </div>
-                <HeaderSignOut/>
+                {!!session && 
+                    <div className='fs-5 me-4'>
+                      Hi...{session.user.name}
+                    </div>
+                    }
+                    {!!session &&
+                    <HeaderSignOut/>
+                    }
               </div>
             </div>
             <div className='row'>

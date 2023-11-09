@@ -1,9 +1,6 @@
-'use client'
-
-import { useSession } from 'next-auth/react'
+import { getServerSession } from 'next-auth'
 
 import { InfoPersonCreate } from '@/components/selections/selection-options/InfoPersonCreate'
-// import { InfoPersonList } from '@/components/selections/selection-options/InfoPersonList'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
@@ -11,9 +8,9 @@ import { SelectionOptionImage } from '@/components/selections/SelectionOptionIma
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
-export default function SelectionOptionA() {
+export default async function SelectionOptionA() {
 
-  const { data: session, status } = useSession();
+  const session = await getServerSession();
 
   return (
 
@@ -29,10 +26,14 @@ export default function SelectionOptionA() {
                 <div className='fs-5 me-5'>
                   Selection option A: "Those who raised you"
                 </div>  
-                <div className='fs-5 me-5'>
-                    Hi... {session?.user.name}
-                </div>
-                <HeaderSignOut/>
+                {!!session && 
+                    <div className='fs-5 me-4'>
+                      Hi...{session.user.name}
+                    </div>
+                    }
+                    {!!session &&
+                    <HeaderSignOut/>
+                    }
               </div>
             </div>
             <div className='row'>

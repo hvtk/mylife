@@ -9,30 +9,53 @@ export function InfoPersonCreate() {
 
         const [err, setErr] = useState(false);
 
+        // const InfoPersonCreation = async (e) => {
+        //     e.preventDefault();
+        //     const firstName = e.target[0].value;
+        //     const lastName = e.target[1].value;
+
+        //     try {
+        //         const res = await fetch("/api/selections/familyandfriends/create-infoperson", {
+        //             method: "POST",
+        //             headers: {
+        //                 "Content-Type": "application/json",
+        //             },
+        //             body: JSON.stringify({
+        //                 firstName,
+        //                 lastName,
+        //             }),
+        //         });
+
+        //         res.status === 201 && router.push("/selectionFamilyAndFriends");
+
+        //     } catch (err) {
+        //         setErr(true);
+        //     }
+        // }
+
         const InfoPersonCreation = async (e) => {
             e.preventDefault();
             const firstName = e.target[0].value;
             const lastName = e.target[1].value;
 
             try {
-                const res = await fetch("/api/selections/familyandfriends", {
+                
+                const body = { firstName, lastName };
+                await fetch("/api/selections/familyandfriends/create-infoperson", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({
-                        firstName,
-                        lastName,
-                    }),
+                    body: JSON.stringify(body),
                 });
 
-                res.status === 201 && router.push("/selectionFamilyAndFriends");
-
+                router.push("/selectionFamilyAndFriends")
+        
             } catch (err) {
                 setErr(true);
             }
         }
-    
+
     return (
         <form className='dropdown-menu p-4'
               onSubmit={InfoPersonCreation}  
