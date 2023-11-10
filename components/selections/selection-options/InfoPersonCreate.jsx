@@ -9,47 +9,27 @@ export function InfoPersonCreate() {
 
         const [err, setErr] = useState(false);
 
-        // const InfoPersonCreation = async (e) => {
-        //     e.preventDefault();
-        //     const firstName = e.target[0].value;
-        //     const lastName = e.target[1].value;
-
-        //     try {
-        //         const res = await fetch("/api/selections/familyandfriends/create-infoperson", {
-        //             method: "POST",
-        //             headers: {
-        //                 "Content-Type": "application/json",
-        //             },
-        //             body: JSON.stringify({
-        //                 firstName,
-        //                 lastName,
-        //             }),
-        //         });
-
-        //         res.status === 201 && router.push("/selectionFamilyAndFriends");
-
-        //     } catch (err) {
-        //         setErr(true);
-        //     }
-        // }
-
         const InfoPersonCreation = async (e) => {
             e.preventDefault();
-            const firstName = e.target[0].value;
-            const lastName = e.target[1].value;
+            const consumerEmail = e.target[0].value;
+            const firstName = e.target[1].value;
+            const lastName = e.target[2].value;
 
             try {
-                
-                const body = { firstName, lastName };
-                await fetch("/api/selections/familyandfriends/create-infoperson", {
+            
+                const res = await fetch("/api/selections/familyandfriends/create-infoperson", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify(body),
+                    body: JSON.stringify({
+                        consumerEmail,
+                        firstName,
+                        lastName
+                    }),
                 });
 
-                router.push("/selectionFamilyAndFriends")
+                res.status === 201 && router.push("/selectionFamilyAndFriends")
         
             } catch (err) {
                 setErr(true);
@@ -60,6 +40,20 @@ export function InfoPersonCreate() {
         <form className='dropdown-menu p-4'
               onSubmit={InfoPersonCreation}  
             >
+            <div className='mb-3'>
+                <label htmlFor="dropdownFormConsumerEmail"
+                       className='form-label'
+                    >
+                        Consumer Email
+                </label> 
+                <input type="text"
+                       name="dropdownFormConsumerEmail"
+                       className='form-control' 
+                       id="dropdownFormConsumerEmail"
+                       placeholder="Consumer (email address)"
+                       required
+                />
+            </div>
             <div className='mb-3'>
                 <label htmlFor="dropdownFormFirstName"
                        className='form-label'

@@ -1,57 +1,47 @@
 import { NextResponse } from "next/server"
 import prisma from "@/app/lib/prisma"
-import { getSession } from "next-auth/react";
-
-// export const POST = async (request) => {
-
-//     const { firstName, lastName } = await request.json();
-
-//     const infoPersonCreate = await prisma.infoPerson.create({
-//         data: {
-//             firstName,
-//             lastName, 
-//             user: {
-//                 connect: { email: userEmail}
-//             } 
-//         },
-//     });
-
-//     try {
-//         if (infoPersonCreate) {
-//             return new NextResponse("InfoPerson has been created", {
-//                 status: 201,
-//             });
-//         }
-
-//     } catch (err) {
-//         return new NextResponse(err.message, {
-//             status: 500,
-//         });
-//     }
-
-// }
+import { getServerSession } from "next-auth"
 
 export const POST = async (request) => {
 
-    const { firstName, lastName} = await request.json();
+    const { firstName, lastName, consumerEmail} = await request.json();
 
-    const session = await getSession({ request });
+    const session = await getServerSession();
 
-    if (session) {
-        await prisma.infoPerson.create({
+    try {
+
+        const infoPersonCreate = await prisma.infoPerson.create({
             data: {
                 firstName: firstName,
                 lastName: lastName,
-                user: {connect: { email: session?.user?.email }},
+                consumer: { connect: {email: consumerEmail} },
             },
         });
 
-        // res.json(result);
+        if (infoPersonCreate) {
+            
+            if (session) {
+                return new NextResponse (
+                    "InfoPerson has been created!", 
+                    { status: 201, }
+                );
+            } else {
+                return new NextResponse (
+                    "You are unauthorized to create infoPerson!",
+                    { status: 401, });
+            }
+        
+        } else {
+            return new NextResponse (
+                "InfoPerson is not created!",
+                { status: 401, }
+            );
+        }
 
-        return new NextResponse("InfoPerson has been created", { status: 201,});
-    }
-
-    if (!session) {
-        return new NextResponse("You are unauthorized to create InfoPerson", { status: 500,});
+    } catch (err) {
+        return new NextResponse (
+            err.message,
+            { status: 500, }
+        );
     }
 }

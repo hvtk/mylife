@@ -37,67 +37,67 @@ export function FormSignUp() {
 
     return(
         <>
-            {/* <div className='bg-warning h-75 w-75 d-flex flex-column align-items-center justify-content-center '> */}
-                <form className='d-flex flex-column align-items-center justify-content-center'
-                      onSubmit={signUpUser}  
-                    >
-                    <div className='fs-3 mb-3'>
-                        PLEASE SIGN UP
-                    </div>
-                    <label htmlFor="username"
-                           className='form-label'
-                        > 
-                            Enter your name:
-                    </label>
-                    <input
-                        type="text"
-                        name="username"
-                        className='form-control'
-                        id="inputForm"
-                        placeholder="Type your full name"
-                        required   
-                    />
-                    <label htmlFor="email"
+            
+            <form className='d-flex flex-column align-items-center justify-content-center'
+                    onSubmit={signUpUser}  
+                >
+                <div className='fs-3 mb-3'>
+                    PLEASE SIGN UP
+                </div>
+                <label htmlFor="username"
                         className='form-label'
-                        > 
-                            Enter your email:
-                    </label>
-                    <input
-                        type="email"
-                        name="email"
-                        className='form-control'
-                        id="inputForm"
-                        placeholder="Type your email"
-                        required
-                    />
-                    <label htmlFor="password"
-                        className='form-label'
-                        > 
-                            Enter your password:
-                    </label>
-                    <input
-                        type="password"
-                        name="password"
-                        className='form-control'
-                        id="inputForm"
-                        placeholder="Type your password"
-                        required
-                    />
-                    <button type="submit"
-                            className='btn btn-primary w-100'
-                            >
-                                Confirm SignUp
-                    </button>
-                    <div className="mt-3">
-                        <a className = 'text-primaryblue-600'
-                           href="/auth/signIn"
-                          >
-                                Already an account?
-                        </a>  
-                    </div>
-                </form>
-                {err && "Something went wrong!"}
-            {/* </div> */}
+                    > 
+                        Enter your name:
+                </label>
+                <input
+                    type="text"
+                    name="username"
+                    className='form-control'
+                    id="inputForm"
+                    placeholder="Type your full name"
+                    required   
+                />
+                <label htmlFor="email"
+                    className='form-label'
+                    > 
+                        Enter your email:
+                </label>
+                <input
+                    type="email"
+                    name="email"
+                    className='form-control'
+                    id="inputForm"
+                    placeholder="Type your email"
+                    required
+                />
+                <label htmlFor="password"
+                    className='form-label'
+                    > 
+                        Enter your password:
+                </label>
+                <input
+                    type="password"
+                    name="password"
+                    className='form-control'
+                    id="inputForm"
+                    placeholder="Type your password"
+                    required
+                />
+                <button type="submit"
+                        className='btn btn-primary w-100'
+                        >
+                            Confirm SignUp
+                </button>
+                <div className="mt-3">
+                    <a className = 'text-primaryblue-600'
+                        href="/auth/signIn"
+                        >
+                            Already an account?
+                    </a>  
+                </div>
+            </form>
+            {err && "Something went wrong!"}
+        
         </>
     )
 }
