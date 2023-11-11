@@ -8,7 +8,6 @@ import { SelectionExplenation } from '@/components/selections/SelectionExplenati
 import { SelectionImage } from '@/components/selections/SelectionImage'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
-import Link from 'next/link'
 
 export default async function SelectionFamilyAndFriends() {
 
