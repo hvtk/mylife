@@ -3,7 +3,6 @@ import { getServerSession } from 'next-auth'
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionExplenation } from '@/components/selections/SelectionExplenation'
-import { SelectionInfo } from '@/components/selections/SelectionInfo'
 import { SelectionImage } from '@/components/selections/SelectionImage'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
@@ -40,10 +39,8 @@ export default async function SelectionFamilyAndFriends() {
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
                 <div className='bg-warning h-75 w-75 rounded-5'>
                   <div className='d-flex flex-column align-items-center h-100'>
-                    <div className='d-flex align-items-center justify-content-center mt-5'>
-                      <SelectionInfo>
-                        All your information about your friends and family in one place
-                      </SelectionInfo>
+                    <div className='d-flex align-items-center justify-content-center fs-3 w-75 h-25'>
+                      All your information about your <br/> friends and family in one place
                     </div>
                     <div>
                       <SelectionImage
