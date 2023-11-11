@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { getServerSession } from 'next-auth'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
@@ -6,6 +8,7 @@ import { SelectionExplenation } from '@/components/selections/SelectionExplenati
 import { SelectionImage } from '@/components/selections/SelectionImage'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import Link from 'next/link'
 
 export default async function SelectionFamilyAndFriends() {
 
@@ -59,34 +62,34 @@ export default async function SelectionFamilyAndFriends() {
                         MY FAMILY AND FRIENDS
                     </div>
                     <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <a href="/selectionFamilyAndFriends/selectionOptionA">
+                      <Link href="/selectionFamilyAndFriends/selectionOptionA">
                         A: Those who raised you
-                      </a>
+                      </Link>
                     </div>
                     <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <a href="/selectionOptionsAB">
+                      <Link href="/selectionOptionsAB">
                         B: Brothers and Sisters
-                      </a>
+                      </Link>
                     </div>
                     <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <a href="/selectionOptionsAC">
+                      <Link href="/selectionOptionsAC">
                         C: Uncles and Aunts
-                      </a>
+                      </Link>
                     </div>
                     <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <a href="/selectionOptionsAD">
+                      <Link href="/selectionOptionsAD">
                         D: Grandpa's and Grandma's
-                      </a>
+                      </Link>
                     </div>
                     <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <a href="/selectionOptionsAE">
+                      <Link href="/selectionOptionsAE">
                         E: Friends
-                      </a>
+                      </Link>
                     </div>
                     <div className='d-flex text-bg-danger fs-3 align-items-center justify-content-center border border-dark border-1 w-75 h-8 rounded-3 mb-3'>
-                      <a href="/selectionOptionsAF">
+                      <Link href="/selectionOptionsAF">
                         F: Create an option yourself
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

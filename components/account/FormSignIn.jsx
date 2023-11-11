@@ -1,9 +1,11 @@
 'use client'
 
+import Link from "next/link"
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation"
 
-import { useState } from "react";
+import { useState } from "react"
+
 
 export function FormSignIn() {
  
@@ -70,11 +72,11 @@ export function FormSignIn() {
                             Confirm SignIn
                 </button>
                 <div className="mt-3">
-                    <a className = 'text-primaryblue-600'
+                    <Link className = 'text-primaryblue-600'
                         href="/auth/signUp"
                         >
                             Don't you have an account?
-                    </a> 
+                    </Link> 
                 </div>
             </form>
             {err && "Something went wrong!"}

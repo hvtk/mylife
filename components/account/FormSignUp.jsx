@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link';
+
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
@@ -89,11 +91,11 @@ export function FormSignUp() {
                             Confirm SignUp
                 </button>
                 <div className="mt-3">
-                    <a className = 'text-primaryblue-600'
+                    <Link className = 'text-primaryblue-600'
                         href="/auth/signIn"
                         >
                             Already an account?
-                    </a>  
+                    </Link>  
                 </div>
             </form>
             {err && "Something went wrong!"}

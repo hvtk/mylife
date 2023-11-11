@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { MylifeLogo } from 'components/sidebar/MylifeLogo'
 import SidebarList from 'public/assets/icons/sidebar/list.svg'
@@ -13,24 +14,24 @@ export function SidebarBase() {
             <MylifeLogo /> 
           </div>
           <div>
-            <a href="/listSelections">
+            <Link href="/listSelections">
               <Image
                   src={SidebarList}
                   alt="icon for list options/selection"
                   width={60}
                   height={60}
                 />
-            </a>
+            </Link>
           </div>
           <div>
-            <a href="/account">
+            <Link href="/account">
               <Image
                   src={SidebarPerson}
                   alt="icon for account user"
                   width={60}
                   height={60}
                 />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
