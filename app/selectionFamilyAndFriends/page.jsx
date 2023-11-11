@@ -2,9 +2,7 @@ import { getServerSession } from 'next-auth'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
-import { SelectionOptionName } from '@/components/selections/SelectionOptionName'
 import { SelectionExplenation } from '@/components/selections/SelectionExplenation'
-import { SelectionOptions } from '@/components/selections/SelectionOptions'
 import { SelectionInfo } from '@/components/selections/SelectionInfo'
 import { SelectionImage } from '@/components/selections/SelectionImage'
 
@@ -29,26 +27,30 @@ export default async function SelectionFamilyAndFriends() {
                   Selection "My Family and Friends"
                 </div>  
                 {!!session && 
-                    <div className='fs-5 me-4'>
-                      Hi...{session.user.name}
-                    </div>
-                    }
-                    {!!session &&
-                    <HeaderSignOut/>
-                    }
+                <div className='fs-5 me-4'>
+                  Hi...{session.user.name}
+                </div>
+                }
+                {!!session &&
+                <HeaderSignOut/>
+                }
               </div>
             </div>
             <div className='row'>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
                 <div className='bg-warning h-75 w-75 rounded-5'>
                   <div className='d-flex flex-column align-items-center h-100'>
-                    <SelectionInfo>
-                      All your information about your friends and family in one place
-                    </SelectionInfo>
-                    <SelectionImage
-                      src={selectImageFamily}
-                      alt="image respresending my family and friends"
-                    />
+                    <div className='d-flex align-items-center justify-content-center mt-5'>
+                      <SelectionInfo>
+                        All your information about your friends and family in one place
+                      </SelectionInfo>
+                    </div>
+                    <div>
+                      <SelectionImage
+                        src={selectImageFamily}
+                        alt="image respresending my family and friends"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -56,39 +58,39 @@ export default async function SelectionFamilyAndFriends() {
                 <div className='bg-warning h-75 w-75 rounded-5'>
                   <div className='d-flex flex-column align-items-center h-100'>
                     <SelectionExplenation />
-                    <SelectionOptionName>
-                      MY FAMILY AND FRIENDS
-                    </SelectionOptionName>
-                    <SelectionOptions>
+                    <div className='d-flex align-items-center justify-content-center text-bg-success border border-dark border-2 w-75 h-10 rounded-3 fs-3 fw-bold'>
+                        MY FAMILY AND FRIENDS
+                    </div>
+                    <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
                       <a href="/selectionFamilyAndFriends/selectionOptionA">
                         A: Those who raised you
                       </a>
-                    </SelectionOptions>
-                    <SelectionOptions>
+                    </div>
+                    <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
                       <a href="/selectionOptionsAB">
                         B: Brothers and Sisters
                       </a>
-                    </SelectionOptions>
-                    <SelectionOptions>
+                    </div>
+                    <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
                       <a href="/selectionOptionsAC">
                         C: Uncles and Aunts
                       </a>
-                    </SelectionOptions>
-                    <SelectionOptions>
+                    </div>
+                    <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
                       <a href="/selectionOptionsAD">
                         D: Grandpa's and Grandma's
                       </a>
-                    </SelectionOptions>
-                    <SelectionOptions>
+                    </div>
+                    <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
                       <a href="/selectionOptionsAE">
                         E: Friends
                       </a>
-                    </SelectionOptions>
-                    <SelectionOptions>
+                    </div>
+                    <div className='d-flex text-bg-danger fs-3 align-items-center justify-content-center border border-dark border-1 w-75 h-8 rounded-3 mb-3'>
                       <a href="/selectionOptionsAF">
                         F: Create an option yourself
                       </a>
-                    </SelectionOptions>
+                    </div>
                   </div>
                 </div>
               </div>
