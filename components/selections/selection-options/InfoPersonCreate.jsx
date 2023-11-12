@@ -13,7 +13,9 @@ export function InfoPersonCreate() {
             e.preventDefault();
             const consumerEmail = e.target[0].value;
             const firstName = e.target[1].value;
-            const lastName = e.target[2].value;
+            const secondName = e.target[2].value;
+            const infix = e.target[3].value;
+            const lastName = e.target[4].value;
 
             try {
             
@@ -25,6 +27,8 @@ export function InfoPersonCreate() {
                     body: JSON.stringify({
                         consumerEmail,
                         firstName,
+                        secondName,
+                        infix,
                         lastName
                     }),
                 });
@@ -37,56 +41,96 @@ export function InfoPersonCreate() {
         }
 
     return (
-        <form className='dropdown-menu p-4'
-              onSubmit={InfoPersonCreation}  
+        <form onSubmit={InfoPersonCreation}
+              className='row w-95'  
             >
-            <div className='mb-3'>
-                <label htmlFor="dropdownFormConsumerEmail"
-                       className='form-label'
-                    >
-                        Consumer Email
-                </label> 
-                <input type="text"
-                       name="dropdownFormConsumerEmail"
-                       className='form-control' 
-                       id="dropdownFormConsumerEmail"
-                       placeholder="Consumer (email address)"
-                       required
-                />
+            <div className='row mb-3'>
+                
+                    <label htmlFor="ConsumerEmail"
+                        className='col-sm-4 col-form-label'
+                        >
+                            Consumer-email
+                    </label> 
+                    <div className='col-sm-8'>
+                        <input type="text"
+                                name="ConsumerEmail"
+                                className='form-control' 
+                                id="ConsumerEmail"
+                                placeholder="Consumer (email address)"
+                                required
+                        />
+                    </div>
+                
             </div>
-            <div className='mb-3'>
-                <label htmlFor="dropdownFormFirstName"
-                       className='form-label'
+            <div className='row mb-3'>
+                <label htmlFor="FirstName"
+                       className='col-sm-4 col-form-label'
                     >
                         First Name
                 </label> 
-                <input type="text"
-                       name="dropdownFormFirstName"
-                       className='form-control' 
-                       id="dropdownFormFirstName"
-                       placeholder="Henk"
-                       required
-                />
+                <div className="col-sm-8">
+                    <input type="text"
+                           name="FirstName"
+                           className='form-control' 
+                           id="FirstName"
+                           placeholder="Henk"
+                    />
+                </div>
             </div>
-            <div className='mb-3'>
-                <label htmlFor="dropdownFormLastName"
-                       className='form-label'
+            <div className='row mb-3'>
+                <label htmlFor="SecondName"
+                       className='col-sm-4 col-form-label'
+                    >
+                        Second Name
+                </label> 
+                <div className='col-sm-8'>
+                    <input type="text"
+                           name="SecondName"
+                           className='form-control' 
+                           id="SecondName"
+                           placeholder="Diederik"
+                    />
+                </div>
+            </div>
+            <div className='row mb-3'>
+                <label htmlFor="Infix"
+                       className='col-sm-4 col-form-label'
+                    >
+                        Infix
+                </label> 
+                <div className="col-sm-8">
+                    <input type="text"
+                           name="Infix"
+                           className='form-control' 
+                           id="Infix"
+                           placeholder="van ´t"
+                    />
+                </div>
+            </div>
+            <div className='row mb-3'>
+                <label htmlFor="LastName"
+                       className='col-sm-4 col-form-label'
                     >
                         Last Name
                 </label> 
-                <input type="text"
-                       name="dropdownFormLastName"
-                       className='form-control' 
-                       id="dropdownFormLastName"
-                       placeholder="van t Kruijs"
-                       required
-                />
+                <div className='col-sm-8'>
+                    <input type="text"
+                           name="LastName"
+                           className='form-control' 
+                           id="LastName"
+                           placeholder="Kruijs"
+                    />
+                </div>
             </div>
-            <button type="submit"
-                    className='btn btn-primary'
-                    >
-                        Save Info Person 
-            </button>
+            <div className='row'>
+                <div className='col-sm-12'>
+                    <button type="submit"
+                            className='btn btn-primary form-control'
+                            >
+                                Save Info Person 
+                    </button>
+                </div>
+            </div>
         </form>
     )
 }

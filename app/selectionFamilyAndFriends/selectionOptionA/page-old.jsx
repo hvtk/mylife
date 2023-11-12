@@ -61,18 +61,23 @@ export default async function SelectionOptionA() {
                       </div>
                     </div>
                   </div>
-                  <div className='row h-10'>
-                    <div className='fs-5'>
-                      <div>
-                        Information sections
-                      </div> 
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
-                <div className='bg-warning h-75 w-75 rounded-5 d-flex flex-column align-items-center justify-content-center'>
-                    <InfoPersonCreate/>
+                <div className='bg-warning h-75 w-75 rounded-5'>
+                  <div className='d-flex flex-column align-items-start ms-5 mt-2 h-100'>
+                    <div className='dropdown'>
+                      <button type="button"
+                              className='btn btn-primary dropdown-toggle'
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              data-bs-auto-close="outside"
+                            >
+                              Info Person
+                      </button> 
+                      <InfoPersonCreate/>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

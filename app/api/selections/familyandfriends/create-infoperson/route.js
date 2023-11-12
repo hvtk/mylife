@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth"
 
 export const POST = async (request) => {
 
-    const { firstName, lastName, consumerEmail} = await request.json();
+    const { firstName, secondName, infix, lastName, consumerEmail} = await request.json();
 
     const session = await getServerSession();
 
@@ -13,6 +13,8 @@ export const POST = async (request) => {
         const infoPersonCreate = await prisma.infoPerson.create({
             data: {
                 firstName: firstName,
+                secondName: secondName,
+                infix: infix,
                 lastName: lastName,
                 consumer: { connect: {email: consumerEmail} },
             },
