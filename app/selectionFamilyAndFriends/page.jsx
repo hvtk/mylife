@@ -6,12 +6,14 @@ import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionExplenation } from '@/components/selections/SelectionExplenation'
 import { SelectionImage } from '@/components/selections/SelectionImage'
+import { SelectionName } from '@/components/header/SelectionName'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
 export default async function SelectionFamilyAndFriends() {
 
   const session = await getServerSession();
+  const selection = "Selection 'My Family and Friends'";
 
   return (
 
@@ -22,11 +24,11 @@ export default async function SelectionFamilyAndFriends() {
             <SidebarBase/>
           </div>
           <div className='col-sm-11 bg-info min-vh-100'>
-            <div className='row h-4'>
-              <div className='d-flex align-items-center justify-content-end '>
-                <div className='fs-5 me-5'>
-                  Selection "My Family and Friends"
-                </div>  
+            <div className='row'>
+              <div className='col-sm-12 h-4 mt-2 d-flex align-items-center justify-content-end'>
+                <SelectionName>
+                  { selection }
+                </SelectionName>
                 {!!session && 
                 <div className='fs-5 me-4'>
                   Hi...{session.user.name}

@@ -1,6 +1,6 @@
 export function SelectionName({ children }) {
   return (
-    <div>
+    <div className='fs-5 me-5'>
       { children }
     </div>
   )

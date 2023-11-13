@@ -5,12 +5,14 @@ import { InfoPersonCreate } from '@/components/selections/selection-options/Info
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/SelectionOptionImage'
+import { SelectionOptionName } from '@/components/header/SelectionOptionName'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
 export default async function SelectionOptionA() {
 
   const session = await getServerSession();
+  const option = "Selection option A: 'Those who raised you'";
 
   return (
 
@@ -22,10 +24,13 @@ export default async function SelectionOptionA() {
           </div>
           <div className='col-sm-11 bg-info min-vh-100'>
             <div className='row'>
-              <div className='col-sm-12 h-4 d-flex align-items-center justify-content-end'>
-                <div className='fs-5 me-5 mt-2'>
+              <div className='col-sm-12 h-4 mt-2 d-flex align-items-center justify-content-end'>
+                {/* <div className='fs-5 me-5 mt-2'>
                   Selection option A: "Those who raised you"
-                </div>  
+                </div>   */}
+                <SelectionOptionName>
+                  { option }
+                </SelectionOptionName>
                 {!!session && 
                 <div className='fs-5 me-4'>
                   Hi...{session.user.name}
