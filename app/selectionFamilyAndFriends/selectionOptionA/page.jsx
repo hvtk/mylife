@@ -21,61 +21,146 @@ export default async function SelectionOptionA() {
             <SidebarBase/>
           </div>
           <div className='col-sm-11 bg-info min-vh-100'>
-            <div className='row h-4'>
-              <div className='d-flex align-items-center justify-content-end '>
-                <div className='fs-5 me-5'>
+            <div className='row'>
+              <div className='col-sm-12 h-4 d-flex align-items-center justify-content-end'>
+                <div className='fs-5 me-5 mt-2'>
                   Selection option A: "Those who raised you"
                 </div>  
                 {!!session && 
-                    <div className='fs-5 me-4'>
-                      Hi...{session.user.name}
-                    </div>
-                    }
-                    {!!session &&
-                    <HeaderSignOut/>
-                    }
+                <div className='fs-5 me-4'>
+                  Hi...{session.user.name}
+                </div>
+                }
+                {!!session &&
+                <HeaderSignOut/>
+                }
               </div>
-            </div>
-            <div className='row'>
-              <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
-                <div className='bg-warning h-75 w-75 rounded-5 d-flex flex-column align-items-center'>
-                  <div className='row h-35'>
-                    <div className='d-flex align-items-center justify-content-center'>
-                      <div>
-                        <SelectionOptionImage
-                          src={selectImageFamily}
-                          alt="image respresending my family and friends"
-                        />
-                      </div>
-                      <div className='d-flex flex-column align-items-center justify-content-center ms-5'>
-                        <div className='fs-5'>
-                          <div>
-                            SELECTION OPTION A:
-                          </div> 
-                        </div>
+                <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
+                  <div className='bg-warning h-75 w-75 rounded-5'>
+                    <div className='row h-35'>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-center'>
                         <div>
-                          <div className='fs-5'>
-                            "Those who raised you"
-                          </div>
+                          <SelectionOptionImage
+                            src={selectImageFamily}
+                            alt="image respresending my family and friends"
+                          />
+                        </div>
+                      </div>
+                      <div className='col-sm-6 d-flex flex-column align-items-center justify-content-center'>
+                        <div className='fs-5'>
+                          SELECTION OPTION A:
+                        </div>
+                        <div className='fs-5'>
+                          "Those who raised you"
+                        </div>
+                      </div>
+                    </div>
+                    <div className='row h-10'>
+                      <div className='d-flex align-items-center justify-content-center fs-5'>
+                        <div>
+                          INFORMATION SECTIONS
                         </div> 
                       </div>
                     </div>
-                  </div>
-                  <div className='row h-10'>
-                    <div className='fs-5'>
-                      <div>
-                        Information sections
-                      </div> 
+                    <div className='row h-5'>
+                      <div className='d-flex align-items-center justify-content-between'>
+                        <div className='fs-5 ms-5'>
+                          <div>
+                            Name first person
+                          </div> 
+                        </div>
+                        <div className='fs-5 me-5'>
+                          <div>
+                            Name second person
+                          </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div className='row h-5'>
+                      <div className='d-flex align-items-center justify-content-between'>
+                        <div className='fs-5 ms-5'>
+                          <div>
+                            Name third person
+                          </div> 
+                        </div>
+                        <div className='fs-5 me-5'>
+                          <div>
+                            Name fourth person
+                          </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div className='row h-5'>
+                      <div className='d-flex align-items-center justify-content-between'>
+                        <div className='fs-5 ms-5'>
+                          <div>
+                            Adress first person
+                          </div> 
+                        </div>
+                        <div className='fs-5 me-5'>
+                          <div>
+                            Adress second person
+                          </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div className='row h-5'>
+                      <div className='d-flex align-items-center justify-content-between'>
+                        <div className='fs-5 ms-5'>
+                          <div>
+                            Adress third person
+                          </div> 
+                        </div>
+                        <div className='fs-5 me-5'>
+                          <div>
+                            Adress fourth person
+                          </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div className='row h-5'>
+                      <div className='d-flex align-items-center justify-content-between'>
+                        <div className='fs-5 ms-5'>
+                          <div>
+                            Other info first person
+                          </div> 
+                        </div>
+                        <div className='fs-5 me-5'>
+                          <div>
+                            Other info second person
+                          </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div className='row h-5'>
+                      <div className='d-flex align-items-center justify-content-between'>
+                        <div className='fs-5 ms-5'>
+                          <div>
+                            Other info third person
+                          </div> 
+                        </div>
+                        <div className='fs-5 me-5'>
+                          <div>
+                            Other info fourth person
+                          </div> 
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
-                <div className='bg-warning h-75 w-75 rounded-5 d-flex flex-column align-items-center justify-content-center'>
+                <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
+                  <div className='bg-warning h-75 w-75 rounded-5 d-flex flex-column align-items-center justify-content-center'>
+                    <div className='row h-10'>
+                      <div className='fs-5 mb-5'>
+                        <div>
+                          input: NAME FIRST PERSON "Those who raised you"
+                        </div> 
+                      </div>
+                    </div>
                     <InfoPersonCreate/>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
