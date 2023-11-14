@@ -25,9 +25,6 @@ export default async function SelectionOptionA() {
           <div className='col-sm-11 bg-info min-vh-100'>
             <div className='row'>
               <div className='col-sm-12 h-4 mt-2 d-flex align-items-center justify-content-end'>
-                {/* <div className='fs-5 me-5 mt-2'>
-                  Selection option A: "Those who raised you"
-                </div>   */}
                 <SelectedPageName>
                   { option }
                 </SelectedPageName>
