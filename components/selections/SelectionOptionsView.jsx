@@ -49,22 +49,30 @@ export function SelectionOptionsView() {
             </div>
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionFamilyAndFriends">
+                    <Link href="/selectionFamilyAndFriends"
+                          className='text-dark'
+                        >
                         Family and Friends
                     </Link>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionWhereILive">
+                    <Link href="/selectionWhereILive"
+                          className='text-dark'
+                        >
                         Where I live
                     </Link>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionEatAndDrink">
+                    <Link href="/selectionEatAndDrink"
+                          className='text-dark'
+                        >
                         Eat and Drink
                     </Link>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionPersonalSituation">
+                    <Link href="/selectionPersonalSituation"
+                          className='text-dark'
+                        >
                         Personal Situation
                     </Link>
                 </div>
@@ -97,22 +105,30 @@ export function SelectionOptionsView() {
             </div>
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionsleepRoutine">
+                    <Link href="/selectionsleepRoutine"
+                          className='text-dark'
+                        >
                         Sleep Routine
                     </Link>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionDailyRoutine">
+                    <Link href="/selectionDailyRoutine"
+                          className='text-dark'
+                        >
                         Daily Routine
                     </Link>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionFinance">
+                    <Link href="/selectionFinance"
+                          className='text-dark'
+                        >
                         Finance
                     </Link>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionInsurances">
+                    <Link href="/selectionInsurances"
+                          className='text-dark'
+                        >
                         Insurances
                     </Link>
                 </div>
@@ -145,22 +161,30 @@ export function SelectionOptionsView() {
             </div>
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionsubcriptions">
+                    <Link href="/selectionsubcriptions"
+                          className='text-dark'
+                        >
                         Subcriptions
                     </Link>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionUsedWebsites">
+                    <Link href="/selectionUsedWebsites"
+                          className='text-dark'
+                        >
                         Used Websites
                     </Link>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionInstalledApps">
+                    <Link href="/selectionInstalledApps"
+                          className='text-dark'
+                        >
                         Installed Apps
                     </Link>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionReminders">
+                    <Link href="/selectionReminders"
+                          className='text-dark'
+                        >
                         Reminders
                     </Link>
                 </div>
@@ -181,12 +205,16 @@ export function SelectionOptionsView() {
             </div>
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionRightsAndObligations">
+                    <Link href="/selectionRightsAndObligations"
+                          className='text-dark'
+                        >
                         Rights and Obligations
                     </Link>
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionMySchedule">
+                    <Link href="/selectionMySchedule"
+                          className='text-dark'
+                        >
                         My Schedule
                     </Link>
                 </div>

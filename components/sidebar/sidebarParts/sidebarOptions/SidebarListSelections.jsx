@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import Link from 'next/link'
+
 import { MylifeLogo } from 'components/sidebar/sidebarParts/MylifeLogo'
 import SidebarViewList from 'public/assets/icons/sidebar/view-list.svg'
 import SidebarPerson from 'public/assets/icons/sidebar/person.svg'
@@ -11,76 +13,104 @@ export function SidebarListSelections() {
        <div className='row'>
           <div className='col-sm-8 d-flex flex-column justify-content-center min-vh-100'>
             <div className='h-90 d-flex flex-column justify-content-center'>
-              <dl className='fs-5'>
+              <dl className='fs-5 ms-3'>
                 <dt>
-                  <a href="/selectionFamilyAndFriends">
+                  <Link href="/selectionFamilyAndFriends"
+                        className='text-dark' 
+                      >
                     A: Family and Friends
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionWhereILife">
+                  <Link href="/selectionWhereILife"
+                        className='text-dark'
+                      >
                     B: Where I Live
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionEatAndDrink">
+                  <Link href="/selectionEatAndDrink"
+                        className='text-dark'
+                      >
                     C: Eat and Drink
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionPersonalSituation">
+                  <Link href="/selectionPersonalSituation"
+                        className='text-dark'
+                      >
                     D: Personal Situation
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionSleepRoutine">
+                  <Link href="/selectionSleepRoutine"
+                        className='text-dark'
+                    >
                     E: Sleep Routine
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionDailyRoutine">
+                  <Link href="/selectionDailyRoutine"
+                        className='text-dark'
+                      >
                     F: Daily Routine
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionFinance">
+                  <Link href="/selectionFinance"
+                        className='text-dark'
+                      >
                     G: Finance
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionInsurances">
+                  <Link href="/selectionInsurances"
+                        className='text-dark'
+                      >
                     H: Insurances
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionSubcriptions">
+                  <Link href="/selectionSubcriptions"
+                        className='text-dark'
+                      >
                     I: Subcriptions
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionUsedWebsites">
+                  <Link href="/selectionUsedWebsites"
+                        className='text-dark'
+                      >
                     J: Used Websites
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionInstalledApps">
+                  <Link href="/selectionInstalledApps"
+                        className='text-dark'
+                      >
                     K: Installed Apps
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionReminders">
+                  <Link href="/selectionReminders"
+                        className='text-dark'
+                      >
                     L: Reminders
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionRightsAndObligations">
+                  <Link href="/selectionRightsAndObligations"
+                        className='text-dark'
+                      >
                     M: Rights and Obligations
-                  </a>
+                  </Link>
                 </dt>
                 <dt>
-                  <a href="/selectionMySchedule">
+                  <Link href="/selectionMySchedule"
+                        className='text-dark'
+                      >
                     N: My Schedule
-                  </a>
+                  </Link>
                 </dt>
               </dl>
             </div>
@@ -88,29 +118,29 @@ export function SidebarListSelections() {
           <div className='col-sm-4 d-flex flex-column justify-content-center min-vh-100'>
             <div className='h-90 d-flex flex-column align-items-center justify-content-between'>
               <div>
-                <a href="/homepage">
+                <Link href="/homepage">
                   <MylifeLogo />  
-                </a>
+                </Link>
               </div>
               <div>
-                <a href="/homepage">
+                <Link href="/homepage">
                   <Image
                       src={SidebarViewList}
                       alt="icon for list options/selection"
                       width={60}
                       height={60}
                     />
-                </a>
+                </Link>
               </div>
               <div>
-                <a href="/account">
+                <Link href="/account">
                   <Image
                       src={SidebarPerson}
                       alt="icon for account user"
                       width={60}
                       height={60}
                     />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

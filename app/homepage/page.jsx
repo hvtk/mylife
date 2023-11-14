@@ -2,6 +2,7 @@ import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeI
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
+import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
 import { getServerSession } from 'next-auth'
 
 export default async function Homepage() {
@@ -24,9 +25,9 @@ export default async function Homepage() {
               <div className='col-sm-8'>
                 <div className='row h-4'>
                   <div className='d-flex align-items-center justify-content-end '>
-                    <div className='fs-5 me-4'>
+                    <SelectedPageName>
                       Homepage
-                    </div> 
+                    </SelectedPageName>
                     {!!session && 
                     <div className='fs-5 me-4'>
                       Hi...{session.user.name}

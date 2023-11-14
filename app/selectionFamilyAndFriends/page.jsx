@@ -63,32 +63,44 @@ export default async function SelectionFamilyAndFriends() {
                         MY FAMILY AND FRIENDS
                     </div>
                     <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <Link href="/selectionFamilyAndFriends/selectionOptionA">
+                      <Link href="/selectionFamilyAndFriends/selectionOptionA"
+                            className='text-dark'
+                          >
                         A: Those who raised you
                       </Link>
                     </div>
                     <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <Link href="/selectionOptionsAB">
+                      <Link href="/selectionOptionsB"
+                            className='text-dark'
+                          >
                         B: Brothers and Sisters
                       </Link>
                     </div>
                     <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <Link href="/selectionOptionsAC">
+                      <Link href="/selectionOptionsC"
+                            className='text-dark'
+                          >
                         C: Uncles and Aunts
                       </Link>
                     </div>
                     <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <Link href="/selectionOptionsAD">
+                      <Link href="/selectionOptionsD"
+                            className='text-dark'
+                          >
                         D: Grandpa's and Grandma's
                       </Link>
                     </div>
                     <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <Link href="/selectionOptionsAE">
+                      <Link href="/selectionOptionsE"
+                            className='text-dark'
+                          >
                         E: Friends
                       </Link>
                     </div>
                     <div className='d-flex text-bg-danger fs-3 align-items-center justify-content-center border border-dark border-1 w-75 h-8 rounded-3 mb-3'>
-                      <Link href="/selectionOptionsAF">
+                      <Link href="/selectionOptionsF"
+                            className='text-dark'
+                          >
                         F: Create an option yourself
                       </Link>
                     </div>

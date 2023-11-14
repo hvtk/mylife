@@ -68,13 +68,15 @@ export default async function SelectionOptionA() {
                       </div>
                     </div>
                     <div className='row h-5'>
-                      <div className='d-flex align-items-center justify-content-between'>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
                         <div className='fs-5 ms-5'>
                           <div>
                             Name first person
                           </div> 
                         </div>
-                        <div className='fs-5 me-5'>
+                      </div>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
+                        <div className='fs-5 ms-5'>
                           <div>
                             Name second person
                           </div> 
@@ -82,13 +84,15 @@ export default async function SelectionOptionA() {
                       </div>
                     </div>
                     <div className='row h-5'>
-                      <div className='d-flex align-items-center justify-content-between'>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
                         <div className='fs-5 ms-5'>
                           <div>
                             Name third person
                           </div> 
                         </div>
-                        <div className='fs-5 me-5'>
+                      </div>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
+                        <div className='fs-5 ms-5'>
                           <div>
                             Name fourth person
                           </div> 
@@ -96,13 +100,15 @@ export default async function SelectionOptionA() {
                       </div>
                     </div>
                     <div className='row h-5'>
-                      <div className='d-flex align-items-center justify-content-between'>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
                         <div className='fs-5 ms-5'>
                           <div>
                             Adress first person
                           </div> 
                         </div>
-                        <div className='fs-5 me-5'>
+                      </div>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
+                        <div className='fs-5 ms-5'>
                           <div>
                             Adress second person
                           </div> 
@@ -110,13 +116,15 @@ export default async function SelectionOptionA() {
                       </div>
                     </div>
                     <div className='row h-5'>
-                      <div className='d-flex align-items-center justify-content-between'>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
                         <div className='fs-5 ms-5'>
                           <div>
                             Adress third person
                           </div> 
                         </div>
-                        <div className='fs-5 me-5'>
+                      </div>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
+                        <div className='fs-5 ms-5'>
                           <div>
                             Adress fourth person
                           </div> 
@@ -124,13 +132,15 @@ export default async function SelectionOptionA() {
                       </div>
                     </div>
                     <div className='row h-5'>
-                      <div className='d-flex align-items-center justify-content-between'>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
                         <div className='fs-5 ms-5'>
                           <div>
                             Other info first person
                           </div> 
                         </div>
-                        <div className='fs-5 me-5'>
+                      </div>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
+                        <div className='fs-5 ms-5'>
                           <div>
                             Other info second person
                           </div> 
@@ -138,13 +148,15 @@ export default async function SelectionOptionA() {
                       </div>
                     </div>
                     <div className='row h-5'>
-                      <div className='d-flex align-items-center justify-content-between'>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
                         <div className='fs-5 ms-5'>
                           <div>
                             Other info third person
                           </div> 
                         </div>
-                        <div className='fs-5 me-5'>
+                      </div>
+                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
+                        <div className='fs-5 ms-5'>
                           <div>
                             Other info fourth person
                           </div> 
