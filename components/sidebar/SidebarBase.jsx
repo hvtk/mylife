@@ -11,7 +11,9 @@ export function SidebarBase() {
       <div className='d-flex flex-column h-90'>
         <div className='d-flex flex-column align-items-center justify-content-between h-100'>
           <div>
-            <MylifeLogo /> 
+            <Link href="/homepage">
+               <MylifeLogo /> 
+            </Link>
           </div>
           <div>
             <Link href="/listSelections">
