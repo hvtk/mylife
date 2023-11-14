@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export function Selection({ src, alt }) {
+export function SelectionImage({ src, alt }) {
   return (
     <Image
       src={src} 

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { MylifeLogo } from 'components/sidebar/MylifeLogo'
+import { MylifeLogo } from '@/components/sidebar/sidebarParts/MylifeLogo'
 import SidebarList from 'public/assets/icons/sidebar/list.svg'
 import SidebarPerson from 'public/assets/icons/sidebar/person.svg'
 

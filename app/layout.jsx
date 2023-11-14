@@ -3,7 +3,7 @@ import '../styles/globals.css'
 // Customized bootstrap css
 import '../styles/customBootstrapHomepage.scss'
 
-import { AuthProvider } from '@/components/account/AuthProvider'
+import { AuthProvider } from '@/components/auth/AuthProvider'
 
 export const metadata = {
     title: "MyLife",

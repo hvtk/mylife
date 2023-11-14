@@ -1,7 +1,7 @@
 import { InfoPersonList } from '@/components/selections/selection-options/InfoPersonList';
 
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
-import { SelectionOptionImage } from '@/components/selections/SelectionOptionImage'
+import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 

@@ -4,8 +4,8 @@ import { InfoPersonCreate } from '@/components/selections/selection-options/Info
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
-import { SelectionOptionImage } from '@/components/selections/SelectionOptionImage'
-import { SelectionOptionName } from '@/components/header/SelectionOptionName'
+import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
+import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
@@ -28,9 +28,9 @@ export default async function SelectionOptionA() {
                 {/* <div className='fs-5 me-5 mt-2'>
                   Selection option A: "Those who raised you"
                 </div>   */}
-                <SelectionOptionName>
+                <SelectedPageName>
                   { option }
-                </SelectionOptionName>
+                </SelectedPageName>
                 {!!session && 
                 <div className='fs-5 me-4'>
                   Hi...{session.user.name}

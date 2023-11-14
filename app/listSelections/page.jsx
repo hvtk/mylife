@@ -2,7 +2,7 @@ import { getServerSession } from 'next-auth'
 
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
-import { SidebarListSelections } from '@/components/sidebar/SidebarListSelections'
+import { SidebarListSelections } from '@/components/sidebar/sidebarParts/sidebarOptions/SidebarListSelections'
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 
 export default async function ListSelections() {

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { MylifeLogo } from 'components/sidebar/MylifeLogo'
+import { MylifeLogo } from 'components/sidebar/sidebarParts/MylifeLogo'
 import SidebarViewList from 'public/assets/icons/sidebar/view-list.svg'
 import SidebarPerson from 'public/assets/icons/sidebar/person.svg'
 

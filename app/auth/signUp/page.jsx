@@ -1,8 +1,8 @@
 import { redirect } from 'next/navigation'
 import { getServerSession } from 'next-auth'
 
-import { FormSignUp } from '@/components/account/FormSignUp'
-import { FormMylifeImage } from '@/components/account/FormMylifeImage'
+import { FormSignUp } from '@/components/signUp/FormSignUp'
+import { FormMylifeImage } from '@/components/self-contained-items/FormMylifeImage'
 
 export default async function SignUp() {
 

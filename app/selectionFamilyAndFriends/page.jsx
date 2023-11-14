@@ -4,9 +4,9 @@ import { getServerSession } from 'next-auth'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
-import { SelectionExplenation } from '@/components/selections/SelectionExplenation'
-import { SelectionImage } from '@/components/selections/SelectionImage'
-import { SelectionName } from '@/components/header/SelectionName'
+import { SelectionExplenation } from '@/components/selections/self-contained-items/SelectionExplenation'
+import { SelectedSelectionImage } from '@/components/selections/only-single-image-fields/SelectedSelectionImage'
+import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
@@ -26,9 +26,9 @@ export default async function SelectionFamilyAndFriends() {
           <div className='col-sm-11 bg-info min-vh-100'>
             <div className='row'>
               <div className='col-sm-12 h-4 mt-2 d-flex align-items-center justify-content-end'>
-                <SelectionName>
+                <SelectedPageName>
                   { selection }
-                </SelectionName>
+                </SelectedPageName>
                 {!!session && 
                 <div className='fs-5 me-4'>
                   Hi...{session.user.name}
@@ -47,7 +47,7 @@ export default async function SelectionFamilyAndFriends() {
                       All your information about your <br/> friends and family in one place
                     </div>
                     <div>
-                      <SelectionImage
+                      <SelectedSelectionImage
                         src={selectImageFamily}
                         alt="image respresending my family and friends"
                       />

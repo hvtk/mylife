@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation'
 import { getServerSession } from 'next-auth'
 
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
-import { MylifeIntroSelectionOptionsView } from '@/components/mylife-intro/MylifeIntroSelectionOptionsView'
+import { MylifeIntroSelectionOptionsView } from '@/components/mylifeIntroPage/MylifeIntroSelectionOptionsView'
 import { HeaderBase } from '@/components/header/HeaderBase'
 
 export default async function MylifeIntroPage() {

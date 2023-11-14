@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-import { Selection } from 'components/selections/Selection'
-import selectImageWhereILive from 'public/assets/images/selections/where i live.jpg'
+import { SelectionImage } from '@/components/selections/only-single-image-fields//SelectionImage'
+import selectImageWhereILive from '/public/assets/images/selections/where i live.jpg'
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 import selectImageEatAndDrink from 'public/assets/images/selections/eat and drink.jpg'
 import selectImageSleep from 'public/assets/images/selections/sleep.jpg'
@@ -23,25 +23,25 @@ export function SelectionOptionsView() {
         <>
             <div className='row h-20'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection 
+                    <SelectionImage 
                         src={selectImageFamily}
                         alt="image respresending my family and friends"
                     />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection
+                    <SelectionImage
                         src={selectImageWhereILive} 
                         alt="images represending my place to live"
                     /> 
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection 
+                    <SelectionImage 
                         src={selectImageEatAndDrink}
                         alt="image respresending what I eat and drink"
                     />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection
+                    <SelectionImage
                         src={selectImagePersonalSituation} 
                         alt="images represending on my personal situation"
                     /> 
@@ -71,25 +71,25 @@ export function SelectionOptionsView() {
             </div>
             <div className='row h-20'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection 
+                    <SelectionImage 
                         src={selectImageSleep}
                         alt="image respresending what my sleep routine is"
                     />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection 
+                    <SelectionImage 
                         src={selectImageDailyRoutine}
                         alt="image respresending on my daily routine"
                     />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection
+                    <SelectionImage
                         src={selectImageMyFinance} 
                         alt="images represending my finance"
                     /> 
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection
+                    <SelectionImage
                         src={selectImageInsurance} 
                         alt="images represending my insurances"
                     /> 
@@ -97,7 +97,7 @@ export function SelectionOptionsView() {
             </div>
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionSleepRoutine">
+                    <Link href="/selectionsleepRoutine">
                         Sleep Routine
                     </Link>
                 </div>
@@ -119,25 +119,25 @@ export function SelectionOptionsView() {
             </div>
             <div className='row h-20'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection 
+                    <SelectionImage 
                         src={selectImageSubcriptions}
                         alt="image respresending my subcriptions"
                     />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection
+                    <SelectionImage
                         src={selectImageUsedWebsites} 
                         alt="images represending my used websites"
                     /> 
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection 
+                    <SelectionImage 
                         src={selectImageInstalledApps}
                         alt="image respresending my installed apps"
                     />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection
+                    <SelectionImage
                         src={selectImageReminders} 
                         alt="images represending my reminders"
                     /> 
@@ -145,7 +145,7 @@ export function SelectionOptionsView() {
             </div>
             <div className='row h-4'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center'>
-                    <Link href="/selectionSubcriptions">
+                    <Link href="/selectionsubcriptions">
                         Subcriptions
                     </Link>
                 </div>
@@ -167,13 +167,13 @@ export function SelectionOptionsView() {
             </div>
             <div className='row h-20'>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection 
+                    <SelectionImage 
                         src={selectImageRightsAndObligations}
                         alt="image respresending my rights and obligations"
                     />
                 </div>
                 <div className='col-sm-3 d-flex flex-row justify-content-center align-items-center'>
-                    <Selection
+                    <SelectionImage
                         src={selectImageMySchedule} 
                         alt="images represending my schedule"
                     /> 
