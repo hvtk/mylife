@@ -6,6 +6,10 @@ import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
+import { InfoSectionName } from '@/components/selections/only-single-text-and-link-fields/InfoSectionName'
+import { SelectionOptionName } from '@/components/selections/only-single-text-fields/SelectionOptionName'
+import { InfoSections } from '@/components/selections/self-contained-items/InfoSections'
+import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
@@ -37,144 +41,98 @@ export default async function SelectionOptionA() {
                 <HeaderSignOut/>
                 }
               </div>
-                <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
-                  <div className='bg-warning h-75 w-75 rounded-5'>
-                    <div className='row h-35'>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-center'>
-                        <div>
-                          <SelectionOptionImage
-                            src={selectImageFamily}
-                            alt="image respresending my family and friends"
-                          />
-                        </div>
-                      </div>
-                      <div className='col-sm-6 d-flex flex-column align-items-center justify-content-center'>
-                        <div className='fs-5'>
-                          SELECTION OPTION A:
-                        </div>
-                        <div className='fs-5'>
-                          "Those who raised you"
-                        </div>
+              <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
+                <div className='bg-warning h-75 w-75 rounded-5'>
+                  <div className='row h-35'>
+                    <div className='col-sm-6 d-flex align-items-center justify-content-center'>
+                      <div>
+                        <SelectionOptionImage
+                          src={selectImageFamily}
+                          alt="image respresending my family and friends"
+                        />
                       </div>
                     </div>
-                    <div className='row h-10'>
-                      <div className='d-flex align-items-center justify-content-center fs-5'>
-                        <div>
-                          INFORMATION SECTIONS
-                        </div> 
-                      </div>
-                    </div>
-                    <div className='row h-5'>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Name first person
-                          </div> 
-                        </div>
-                      </div>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Name second person
-                          </div> 
-                        </div>
-                      </div>
-                    </div>
-                    <div className='row h-5'>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Name third person
-                          </div> 
-                        </div>
-                      </div>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Name fourth person
-                          </div> 
-                        </div>
-                      </div>
-                    </div>
-                    <div className='row h-5'>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Adress first person
-                          </div> 
-                        </div>
-                      </div>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Adress second person
-                          </div> 
-                        </div>
-                      </div>
-                    </div>
-                    <div className='row h-5'>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Adress third person
-                          </div> 
-                        </div>
-                      </div>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Adress fourth person
-                          </div> 
-                        </div>
-                      </div>
-                    </div>
-                    <div className='row h-5'>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Other info first person
-                          </div> 
-                        </div>
-                      </div>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Other info second person
-                          </div> 
-                        </div>
-                      </div>
-                    </div>
-                    <div className='row h-5'>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Other info third person
-                          </div> 
-                        </div>
-                      </div>
-                      <div className='col-sm-6 d-flex align-items-center justify-content-start'>
-                        <div className='fs-5 ms-5'>
-                          <div>
-                            Other info fourth person
-                          </div> 
-                        </div>
-                      </div>
+                    <div className='col-sm-6 d-flex flex-column align-items-center justify-content-center'>
+                      <SelectionOptionName option={"SELECTION OPTION A:"}/>
+                      <SelectionOptionName optionName={"'Those who raised you'"}/>
                     </div>
                   </div>
-                </div>
-                <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
-                  <div className='bg-warning h-75 w-75 rounded-5 d-flex flex-column align-items-center justify-content-center'>
-                    <div className='row h-10'>
-                      <div className='fs-5 mb-5'>
-                        <div>
-                          input: NAME FIRST PERSON "Those who raised you"
-                        </div> 
-                      </div>
+                  <div className='row h-10'>
+                    <InfoSections />
+                  </div>
+                  <div className='row h-25'>
+                    <div className='col-sm-6 d-flex flex-column'>
+                      <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        1a: Name first person
+                      </InfoSectionName>
+                      <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        1b: Adress first person
+                      </InfoSectionName>
+                      <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        1c: Other info first person
+                      </InfoSectionName>
                     </div>
-                    <InfoPersonCreate/>
+                    <div className='col-sm-6 d-flex flex-column'>
+                    <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        2a: Name first person
+                      </InfoSectionName>
+                      <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        2b: Adress first person
+                      </InfoSectionName>
+                      <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        2c: Other info first person
+                      </InfoSectionName>
+                    </div>
+                  </div>
+                  <div className='row h-25'>
+                    <div className='col-sm-6 d-flex flex-column'>
+                    <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        3a: Name first person
+                      </InfoSectionName>
+                      <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        3b: Adress first person
+                      </InfoSectionName>
+                      <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        3c: Other info first person
+                      </InfoSectionName>
+                    </div>
+                    <div className='col-sm-6 d-flex flex-column'>
+                    <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        4a: Name first person
+                      </InfoSectionName>
+                      <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        4b: Adress first person
+                      </InfoSectionName>
+                      <InfoSectionName
+                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
+                        4c: Other info first person
+                      </InfoSectionName>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
+                <div className='bg-warning h-75 w-75 rounded-5 d-flex flex-column align-items-center justify-content-center'>
+                  <div className='row h-10'>
+                    <InfoSectionNameInput>
+                      input 1a: NAME FIRST PERSON "Those who raised you"
+                    </InfoSectionNameInput>
+                  </div>
+                  <InfoPersonCreate/>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

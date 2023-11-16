@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import { getServerSession } from 'next-auth'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
@@ -7,8 +5,11 @@ import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionExplenation } from '@/components/selections/self-contained-items/SelectionExplenation'
 import { SelectedSelectionImage } from '@/components/selections/only-single-image-fields/SelectedSelectionImage'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
+import { InfoSelectionName } from '@/components/selections/only-single-text-fields/InfoSelectionName'
+import { InfoSelectionOption } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOption'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
+
 
 export default async function SelectionFamilyAndFriends() {
 
@@ -59,51 +60,33 @@ export default async function SelectionFamilyAndFriends() {
                 <div className='bg-warning h-75 w-75 rounded-5'>
                   <div className='d-flex flex-column align-items-center h-100'>
                     <SelectionExplenation />
-                    <div className='d-flex align-items-center justify-content-center text-bg-success border border-dark border-2 w-75 h-10 rounded-3 fs-3 fw-bold'>
-                        MY FAMILY AND FRIENDS
-                    </div>
-                    <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <Link href="/selectionFamilyAndFriends/selectionOptionA"
-                            className='text-dark'
-                          >
+                    <InfoSelectionName>
+                      MY FAMILY AND FRIENDS
+                    </InfoSelectionName>
+                    <InfoSelectionOption 
+                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
                         A: Those who raised you
-                      </Link>
-                    </div>
-                    <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <Link href="/selectionOptionsB"
-                            className='text-dark'
-                          >
+                    </InfoSelectionOption>
+                    <InfoSelectionOption 
+                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
                         B: Brothers and Sisters
-                      </Link>
-                    </div>
-                    <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <Link href="/selectionOptionsC"
-                            className='text-dark'
-                          >
+                    </InfoSelectionOption>
+                    <InfoSelectionOption 
+                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
                         C: Uncles and Aunts
-                      </Link>
-                    </div>
-                    <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <Link href="/selectionOptionsD"
-                            className='text-dark'
-                          >
+                      </InfoSelectionOption>
+                      <InfoSelectionOption 
+                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
                         D: Grandpa's and Grandma's
-                      </Link>
-                    </div>
-                    <div className='d-flex text-bg-danger align-items-center justify-content-center border border-dark border-1 fs-3 w-75 h-8 rounded-3'>
-                      <Link href="/selectionOptionsE"
-                            className='text-dark'
-                          >
+                      </InfoSelectionOption>
+                      <InfoSelectionOption 
+                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
                         E: Friends
-                      </Link>
-                    </div>
-                    <div className='d-flex text-bg-danger fs-3 align-items-center justify-content-center border border-dark border-1 w-75 h-8 rounded-3 mb-3'>
-                      <Link href="/selectionOptionsF"
-                            className='text-dark'
-                          >
+                      </InfoSelectionOption>
+                      <InfoSelectionOption
+                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
                         F: Create an option yourself
-                      </Link>
-                    </div>
+                      </InfoSelectionOption>
                   </div>
                 </div>
               </div>
