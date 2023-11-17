@@ -14,8 +14,7 @@ import selectImageFamily from 'public/assets/images/selections/family.jpg'
 export default async function SelectionFamilyAndFriends() {
 
   const session = await getServerSession();
-  const selection = "Selection 'My Family and Friends'";
-
+  
   return (
 
     <>
@@ -28,7 +27,7 @@ export default async function SelectionFamilyAndFriends() {
             <div className='row'>
               <div className='col-sm-12 h-4 mt-2 d-flex align-items-center justify-content-end'>
                 <SelectedPageName>
-                  { selection }
+                  Selection 'My Family and Friends'
                 </SelectedPageName>
                 {!!session && 
                 <div className='fs-5 me-4'>
@@ -64,29 +63,29 @@ export default async function SelectionFamilyAndFriends() {
                       MY FAMILY AND FRIENDS
                     </InfoSelectionName>
                     <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
+                      href={"/selectionFamilyAndFriends/selectionOptionA/infoSection1a"}>
                         A: Those who raised you
                     </InfoSelectionOption>
                     <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
+                      href={"/selectionFamilyAndFriends/selectionOptionB/infoSection1a"}>
                         B: Brothers and Sisters
                     </InfoSelectionOption>
                     <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
+                      href={"/selectionFamilyAndFriends/selectionOptionC/infoSection1a"}>
                         C: Uncles and Aunts
-                      </InfoSelectionOption>
-                      <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
+                    </InfoSelectionOption>
+                    <InfoSelectionOption 
+                      href={"/selectionFamilyAndFriends/selectionOptionD/infoSection1a"}>
                         D: Grandpa's and Grandma's
-                      </InfoSelectionOption>
-                      <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
+                    </InfoSelectionOption>
+                    <InfoSelectionOption 
+                      href={"/selectionFamilyAndFriends/selectionOptionE/infoSection1a"}>
                         E: Friends
-                      </InfoSelectionOption>
-                      <InfoSelectionOption
-                      href={"/selectionFamilyAndFriends/selectionOptionA"}>
+                    </InfoSelectionOption>
+                    <InfoSelectionOption
+                      href={"/selectionFamilyAndFriends/selectionOptionF/infoSection1a"}>
                         F: Create an option yourself
-                      </InfoSelectionOption>
+                    </InfoSelectionOption>
                   </div>
                 </div>
               </div>

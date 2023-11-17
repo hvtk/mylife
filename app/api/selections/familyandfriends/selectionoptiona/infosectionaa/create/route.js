@@ -10,7 +10,7 @@ export const POST = async (request) => {
 
     try {
 
-        const infoPersonCreate = await prisma.infoPerson.create({
+        const SelectionOptionA1aCreate = await prisma.FamilyAndFriendsSelectionOptionA1a.create({
             data: {
                 firstName: firstName,
                 secondName: secondName,
@@ -20,7 +20,7 @@ export const POST = async (request) => {
             },
         });
 
-        if (infoPersonCreate) {
+        if (SelectionOptionA1aCreate) {
             
             if (session) {
                 return new NextResponse (

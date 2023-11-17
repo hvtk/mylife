@@ -1,23 +1,22 @@
 import { getServerSession } from 'next-auth'
 
-import { InfoPersonCreate } from '@/components/selections/selection-options/InfoPersonCreate'
+import { SelectionOptionA1aCreate } from '@/components/selections/selectionOptions/selectionOptionA/SelectionOptionA1aCreate'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
-import { InfoSectionName } from '@/components/selections/only-single-text-and-link-fields/InfoSectionName'
 import { SelectionOptionName } from '@/components/selections/only-single-text-fields/SelectionOptionName'
 import { InfoSections } from '@/components/selections/self-contained-items/InfoSections'
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
-
+import { InfoSelectionNames } from '@/components/selections/selectionOptions/selectionOptionA/InfoSelectionNames'
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
-export default async function SelectionOptionA() {
+
+export default async function InfoSection1a() {
 
   const session = await getServerSession();
-  const option = "Selection option A: 'Those who raised you'";
-
+  
   return (
 
     <>
@@ -30,7 +29,7 @@ export default async function SelectionOptionA() {
             <div className='row'>
               <div className='col-sm-12 h-4 mt-2 d-flex align-items-center justify-content-end'>
                 <SelectedPageName>
-                  { option }
+                  Selection option A: 'Those who raised you'
                 </SelectedPageName>
                 {!!session && 
                 <div className='fs-5 me-4'>
@@ -60,66 +59,7 @@ export default async function SelectionOptionA() {
                   <div className='row h-10'>
                     <InfoSections />
                   </div>
-                  <div className='row h-25'>
-                    <div className='col-sm-6 d-flex flex-column'>
-                      <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        1a: Name first person
-                      </InfoSectionName>
-                      <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        1b: Adress first person
-                      </InfoSectionName>
-                      <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        1c: Other info first person
-                      </InfoSectionName>
-                    </div>
-                    <div className='col-sm-6 d-flex flex-column'>
-                    <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        2a: Name first person
-                      </InfoSectionName>
-                      <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        2b: Adress first person
-                      </InfoSectionName>
-                      <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        2c: Other info first person
-                      </InfoSectionName>
-                    </div>
-                  </div>
-                  <div className='row h-25'>
-                    <div className='col-sm-6 d-flex flex-column'>
-                    <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        3a: Name first person
-                      </InfoSectionName>
-                      <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        3b: Adress first person
-                      </InfoSectionName>
-                      <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        3c: Other info first person
-                      </InfoSectionName>
-                    </div>
-                    <div className='col-sm-6 d-flex flex-column'>
-                    <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        4a: Name first person
-                      </InfoSectionName>
-                      <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        4b: Adress first person
-                      </InfoSectionName>
-                      <InfoSectionName
-                        href={"/selectionFamilyAndFriends/SelectionOptionA"}>
-                        4c: Other info first person
-                      </InfoSectionName>
-                    </div>
-                  </div>
+                  <InfoSelectionNames />
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
@@ -129,7 +69,7 @@ export default async function SelectionOptionA() {
                       input 1a: NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
-                  <InfoPersonCreate/>
+                  <SelectionOptionA1aCreate/>
                 </div>
               </div>
             </div>

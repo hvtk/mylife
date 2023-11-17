@@ -3,13 +3,13 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 
-export function InfoPersonCreate() {
+export function SelectionOptionA1aCreate() {
         
         const router = useRouter();
 
         const [err, setErr] = useState(false);
 
-        const InfoPersonCreation = async (e) => {
+        const SelectionOptionA1aCreation = async (e) => {
             e.preventDefault();
             const consumerEmail = e.target[0].value;
             const firstName = e.target[1].value;
@@ -19,7 +19,7 @@ export function InfoPersonCreate() {
 
             try {
             
-                const res = await fetch("/api/selections/familyandfriends/create-infoperson", {
+                const res = await fetch("/api/selections/familyandfriends/selectionoptiona/infosectionaa/create", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export function InfoPersonCreate() {
 
     return (
         <>
-            <form onSubmit={InfoPersonCreation}
+            <form onSubmit={SelectionOptionA1aCreation}
                 className='row w-95'  
                 >
                 <div className='row mb-3'>
@@ -128,7 +128,7 @@ export function InfoPersonCreate() {
                         <button type="submit"
                                 className='btn btn-primary form-control'
                                 >
-                                    Save Info Person 
+                                    Save Name First Person 
                         </button>
                     </div>
                 </div>
