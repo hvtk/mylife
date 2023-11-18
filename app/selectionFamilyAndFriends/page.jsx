@@ -63,27 +63,27 @@ export default async function SelectionFamilyAndFriends() {
                       MY FAMILY AND FRIENDS
                     </InfoSelectionName>
                     <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionA/infoSection1a"}>
+                      href={"/selectionFamilyAndFriends/selectionOptionA/infoSection1a/create"}>
                         A: Those who raised you
                     </InfoSelectionOption>
                     <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionB/infoSection1a"}>
+                      href={"/selectionFamilyAndFriends/selectionOptionB/infoSection1a/create"}>
                         B: Brothers and Sisters
                     </InfoSelectionOption>
                     <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionC/infoSection1a"}>
+                      href={"/selectionFamilyAndFriends/selectionOptionC/infoSection1a/create"}>
                         C: Uncles and Aunts
                     </InfoSelectionOption>
                     <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionD/infoSection1a"}>
+                      href={"/selectionFamilyAndFriends/selectionOptionD/infoSection1a/create"}>
                         D: Grandpa's and Grandma's
                     </InfoSelectionOption>
                     <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionE/infoSection1a"}>
+                      href={"/selectionFamilyAndFriends/selectionOptionE/infoSection1a/create"}>
                         E: Friends
                     </InfoSelectionOption>
                     <InfoSelectionOption
-                      href={"/selectionFamilyAndFriends/selectionOptionF/infoSection1a"}>
+                      href={"/selectionFamilyAndFriends/selectionOptionF/infoSection1a/create"}>
                         F: Create an option yourself
                     </InfoSelectionOption>
                   </div>

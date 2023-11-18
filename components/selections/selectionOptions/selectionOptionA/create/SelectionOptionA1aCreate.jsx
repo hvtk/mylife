@@ -19,7 +19,7 @@ export function SelectionOptionA1aCreate() {
 
             try {
             
-                const res = await fetch("/api/selections/familyandfriends/selectionoptiona/infosectionaa/create", {
+                const res = await fetch("/api/selections/familyandfriends/selectionoptiona/infosection1a/create", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

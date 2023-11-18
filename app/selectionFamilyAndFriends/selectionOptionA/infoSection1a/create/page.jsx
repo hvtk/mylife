@@ -1,6 +1,6 @@
 import { getServerSession } from 'next-auth'
 
-import { SelectionOptionA1aCreate } from '@/components/selections/selectionOptions/selectionOptionA/SelectionOptionA1aCreate'
+import { SelectionOptionA1aCreate } from '@/components/selections/selectionOptions/selectionOptionA/create/SelectionOptionA1aCreate'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
