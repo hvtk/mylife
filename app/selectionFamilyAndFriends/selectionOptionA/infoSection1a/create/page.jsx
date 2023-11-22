@@ -9,7 +9,7 @@ import { SelectedPageName } from '@/components/header/only-single-text-fields/Se
 import { SelectionOptionName } from '@/components/selections/only-single-text-fields/SelectionOptionName'
 import { InfoSections } from '@/components/selections/self-contained-items/InfoSections'
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
-import { InfoSelectionNames } from '@/components/selections/selectionOptions/selectionOptionA/InfoSelectionNames'
+import { OptionsToSelectAndInfoSelectionNames } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNames'
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
 
@@ -42,7 +42,7 @@ export default async function InfoSection1a() {
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
                 <div className='bg-warning h-75 w-75 rounded-5'>
-                  <div className='row h-30'>
+                  <div className='row h-30 mt-2'>
                     <div className='col-sm-6 d-flex align-items-center justify-content-center'>
                       <div>
                         <SelectionOptionImage
@@ -57,9 +57,18 @@ export default async function InfoSection1a() {
                     </div>
                   </div>
                   <div className='row h-10'>
-                    <InfoSections />
+                    <div className='col-sm-6 d-flex flex-column'>
+                      <div className='d-flex align-items-center justify-content-center fs-5'>      
+                        OPTIONS TO SELECT
+                      </div> 
+                    </div>
+                    <div className='col-sm-6 d-flex flex-column'>
+                      <div className='d-flex align-items-center justify-content-center fs-5 me-3'>      
+                      INFORMATION SECTION
+                      </div> 
+                    </div>
                   </div>
-                  <InfoSelectionNames />
+                  <OptionsToSelectAndInfoSelectionNames />
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>

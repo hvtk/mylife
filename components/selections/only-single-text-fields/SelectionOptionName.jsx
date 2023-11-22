@@ -1,6 +1,6 @@
 function Option({ option }) {
     return (
-        <div className='fs-5'>
+        <div className='fs-5 me-3'>
             {option} 
         </div>
     )
@@ -8,7 +8,7 @@ function Option({ option }) {
 
 function OptionName({ optionName}) {
     return (
-        <div className='fs-5'>
+        <div className='fs-5 me-3'>
             {optionName}
         </div>
     )

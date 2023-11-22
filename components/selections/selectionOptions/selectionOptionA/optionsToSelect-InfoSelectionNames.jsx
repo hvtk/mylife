@@ -1,7 +1,7 @@
 import { InfoSectionName } from '@/components/selections/only-single-text-and-link-fields/InfoSectionName'
 import { InfoSelectionOptionPage } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOptionPage'
 
-export function InfoSelectionNames() {
+export function OptionsToSelectAndInfoSelectionNames() {
 
     return (
 
@@ -14,7 +14,7 @@ export function InfoSelectionNames() {
                    </InfoSelectionOptionPage> 
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
-                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-3'>
+                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
                         <button className='btn btn-secondary dropdown-toggle'
                                 type="button"
                                 data-bs-toggle="dropdown"
@@ -53,7 +53,7 @@ export function InfoSelectionNames() {
                    </InfoSelectionOptionPage> 
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
-                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-3'>
+                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
                         <button className='btn btn-secondary dropdown-toggle'
                                 type="button"
                                 data-bs-toggle="dropdown"
@@ -92,7 +92,7 @@ export function InfoSelectionNames() {
                    </InfoSelectionOptionPage> 
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
-                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-3'>
+                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
                         <button className='btn btn-secondary dropdown-toggle'
                                 type="button"
                                 data-bs-toggle="dropdown"
@@ -131,7 +131,7 @@ export function InfoSelectionNames() {
                    </InfoSelectionOptionPage> 
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
-                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-3'>
+                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
                         <button className='btn btn-secondary dropdown-toggle'
                                 type="button"
                                 data-bs-toggle="dropdown"
