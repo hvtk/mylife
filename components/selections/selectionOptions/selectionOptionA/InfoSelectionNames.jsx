@@ -13,7 +13,7 @@ export function InfoSelectionNames() {
                     </InfoSectionName>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection1b"}>
-                        1b: Adress first person
+                        1b: Address first person
                     </InfoSectionName>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection1c"}>
@@ -23,15 +23,15 @@ export function InfoSelectionNames() {
                 <div className='col-sm-6 d-flex flex-column'>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection2a"}>
-                        2a: Name first person
+                        2a: Name second person
                     </InfoSectionName>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection2b"}>
-                        2b: Adress first person
+                        2b: Address second person
                     </InfoSectionName>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection2c"}>
-                        2c: Other info first person
+                        2c: Other info second person
                     </InfoSectionName>
                 </div>
             </div>
@@ -39,29 +39,29 @@ export function InfoSelectionNames() {
                 <div className='col-sm-6 d-flex flex-column'>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection3a"}>
-                        3a: Name first person
+                        3a: Name third person
                     </InfoSectionName>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection3b"}>
-                        3b: Adress first person
+                        3b: Address third person
                     </InfoSectionName>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection3c"}>
-                        3c: Other info first person
+                        3c: Other info third person
                     </InfoSectionName>
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection4a"}>
-                        4a: Name first person
+                        4a: Name fourth person
                     </InfoSectionName>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection4b"}>
-                        4b: Adress first person
+                        4b: Address fourth person
                     </InfoSectionName>
                     <InfoSectionName
                         href={"/selectionFamilyAndFriends/selectionOptionA/infoSection4c"}>
-                        4c: Other info first person
+                        4c: Other info fourth person
                     </InfoSectionName>
                 </div>
             </div>

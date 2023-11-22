@@ -1,5 +1,8 @@
 'use client'
 
+import { ConsumerEmail } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmail"
+import { SaveOptionA } from "@/components/selections/buttons/SaveOptionA"
+
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 
@@ -43,26 +46,9 @@ export function SelectionOptionA1aCreate() {
     return (
         <>
             <form onSubmit={SelectionOptionA1aCreation}
-                className='row w-95'  
+                  className='row w-95'  
                 >
-                <div className='row mb-3'>
-                    
-                        <label htmlFor="ConsumerEmail"
-                            className='col-sm-4 col-form-label'
-                            >
-                                Consumer-email
-                        </label> 
-                        <div className='col-sm-8'>
-                            <input type="text"
-                                    name="ConsumerEmail"
-                                    className='form-control' 
-                                    id="ConsumerEmail"
-                                    placeholder="Consumer (email address)"
-                                    required
-                            />
-                        </div>
-                    
-                </div>
+                <ConsumerEmail />
                 <div className='row mb-3'>
                     <label htmlFor="FirstName"
                         className='col-sm-4 col-form-label'
@@ -124,13 +110,9 @@ export function SelectionOptionA1aCreate() {
                     </div>
                 </div>
                 <div className='row'>
-                    <div className='col-sm-12'>
-                        <button type="submit"
-                                className='btn btn-primary form-control'
-                                >
-                                    Save Name First Person 
-                        </button>
-                    </div>
+                    <SaveOptionA>
+                        Save Name First Person
+                    </SaveOptionA>
                 </div>
             </form>
         </>
