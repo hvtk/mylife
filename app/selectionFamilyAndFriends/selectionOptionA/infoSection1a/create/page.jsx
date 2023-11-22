@@ -42,7 +42,7 @@ export default async function InfoSection1a() {
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
                 <div className='bg-warning h-75 w-75 rounded-5'>
-                  <div className='row h-35'>
+                  <div className='row h-30'>
                     <div className='col-sm-6 d-flex align-items-center justify-content-center'>
                       <div>
                         <SelectionOptionImage
