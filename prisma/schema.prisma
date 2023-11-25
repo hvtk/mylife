@@ -22,6 +22,17 @@ model User {
   sessions        Session[]
   profile         Profile?
   familyAndFriendsSelectionOptionA1a FamilyAndFriendsSelectionOptionA1a[]
+  familyAndFriendsSelectionOptionA1b FamilyAndFriendsSelectionOptionA1b[]
+  familyAndFriendsSelectionOptionA1c FamilyAndFriendsSelectionOptionA1c[]
+  familyAndFriendsSelectionOptionA2a FamilyAndFriendsSelectionOptionA2a[]
+  familyAndFriendsSelectionOptionA2b FamilyAndFriendsSelectionOptionA2b[]
+  familyAndFriendsSelectionOptionA2c FamilyAndFriendsSelectionOptionA2c[]
+  familyAndFriendsSelectionOptionA3a FamilyAndFriendsSelectionOptionA3a[]
+  familyAndFriendsSelectionOptionA3b FamilyAndFriendsSelectionOptionA3b[]
+  familyAndFriendsSelectionOptionA3c FamilyAndFriendsSelectionOptionA3c[]
+  familyAndFriendsSelectionOptionA4a FamilyAndFriendsSelectionOptionA4a[]
+  familyAndFriendsSelectionOptionA4b FamilyAndFriendsSelectionOptionA4b[]
+  familyAndFriendsSelectionOptionA4c FamilyAndFriendsSelectionOptionA4c[]
 }
 
 model Profile {
@@ -63,7 +74,7 @@ model Session {
 //The Verification Token model is used to store tokens for passwordless sign in. (see Auth.js)
 model VerificationToken {
   identifier    String   
-  token         String  @unique
+  token         String   @unique
   expires       DateTime
 
   @@unique([identifier, token])
@@ -72,7 +83,7 @@ model VerificationToken {
 // Models for selection 'Family and Friends'
 
 model FamilyAndFriendsSelectionOptionA1a {
-  id          Int      @id @default(autoincrement())
+  id          Int         @id @default(autoincrement())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   firstName   String?
@@ -82,5 +93,146 @@ model FamilyAndFriendsSelectionOptionA1a {
   consumerId  Int
   consumer    User        @relation(fields: [consumerId], references: [id])
 }
+
+model FamilyAndFriendsSelectionOptionA1b {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  land        String?
+  county      String?
+  address     String?
+  postalCode  String?
+  city        String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
+model FamilyAndFriendsSelectionOptionA1c {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  birthday    String?
+  email       String?
+  phone       String?
+  phoneMobile String?
+  instagram   String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
+model FamilyAndFriendsSelectionOptionA2a {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  firstName   String?
+  secondName  String?
+  infix       String?
+  lastName    String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
+model FamilyAndFriendsSelectionOptionA2b {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  land        String?
+  county      String?
+  address     String?
+  postalCode  String?
+  city        String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
+model FamilyAndFriendsSelectionOptionA2c {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  birthday    String?
+  email       String?
+  phone       String?
+  phoneMobile String?
+  instagram   String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
+model FamilyAndFriendsSelectionOptionA3a {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  firstName   String?
+  secondName  String?
+  infix       String?
+  lastName    String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
+model FamilyAndFriendsSelectionOptionA3b {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  land        String?
+  county      String?
+  address     String?
+  postalCode  String?
+  city        String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
+model FamilyAndFriendsSelectionOptionA3c {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  birthday    String?
+  email       String?
+  phone       String?
+  phoneMobile String?
+  instagram   String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
+model FamilyAndFriendsSelectionOptionA4a {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  firstName   String?
+  secondName  String?
+  infix       String?
+  lastName    String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
+model FamilyAndFriendsSelectionOptionA4b {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  land        String?
+  county      String?
+  address     String?
+  postalCode  String?
+  city        String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
+model FamilyAndFriendsSelectionOptionA4c {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  birthday    String?
+  email       String?
+  phone       String?
+  phoneMobile String?
+  instagram   String?
+  consumerId  Int
+  consumer    User        @relation(fields: [consumerId], references: [id])
+}
+
 
 
