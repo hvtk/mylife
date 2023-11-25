@@ -3,10 +3,11 @@ import { getServerSession } from 'next-auth'
 
 import { FormSignUp } from '@/components/signUp/FormSignUp'
 import { FormMylifeImage } from '@/components/self-contained-items/FormMylifeImage'
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
 export default async function SignUp() {
 
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
 
     if(session) {
         redirect('/homepage')

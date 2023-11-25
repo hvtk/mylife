@@ -7,15 +7,15 @@ import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
 import { SelectionOptionName } from '@/components/selections/only-single-text-fields/SelectionOptionName'
-import { InfoSections } from '@/components/selections/self-contained-items/InfoSections'
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
 import { OptionsToSelectAndInfoSelectionNames } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNames'
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 
 
 export default async function InfoSection1a() {
 
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   
   return (
 

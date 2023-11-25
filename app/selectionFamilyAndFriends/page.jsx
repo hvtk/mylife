@@ -9,11 +9,12 @@ import { InfoSelectionName } from '@/components/selections/only-single-text-fiel
 import { InfoSelectionOption } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOption'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import { authOptions } from '../api/auth/[...nextauth]/route'
 
 
 export default async function SelectionFamilyAndFriends() {
 
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   
   return (
 

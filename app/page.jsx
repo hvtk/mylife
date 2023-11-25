@@ -4,10 +4,11 @@ import { getServerSession } from 'next-auth'
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { MylifeIntroSelectionOptionsView } from '@/components/mylifeIntroPage/MylifeIntroSelectionOptionsView'
 import { HeaderBase } from '@/components/header/HeaderBase'
+import { authOptions } from './api/auth/[...nextauth]/route'
 
 export default async function MylifeIntroPage() {
 
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
 
     if(session) {
         redirect('/homepage')

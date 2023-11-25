@@ -1,5 +1,4 @@
 import { getServerSession } from 'next-auth'
-
 import { SelectionOptionA1aRead } from '@/components/selections/selectionOptions/selectionOptionA/read/SelectionOptionA1aRead'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
@@ -9,25 +8,28 @@ import { SelectedPageName } from '@/components/header/only-single-text-fields/Se
 import { SelectionOptionName } from '@/components/selections/only-single-text-fields/SelectionOptionName'
 import { InfoSections } from '@/components/selections/self-contained-items/InfoSections'
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
-import { InfoSelectionNames } from '@/components/selections/selectionOptions/selectionOptionA/InfoSelectionNames'
+import { InfoSelectionName } from '@/components/selections/only-single-text-fields/InfoSelectionName'
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
-
-async function getDataInfoSection1a() {
-  const infoSection1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
-      include: {
-          consumer: {
-              select: {name: true}
-          }
-      }
-  })
-
-  return infoSection1aData;
-}
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+import { NextResponse } from 'next/server'
+import prisma from '@/app/lib/prisma'
 
 export default async function InfoSectionA1aGetData() {
 
-  const session = await getServerSession();
-  const infoSection1aData = await getDataInfoSection1a();
+  const session = await getServerSession(authOptions)
+  
+  const infoSection1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
+    where: {
+        consumer: {
+            email: session.user.email
+        }
+    },
+    include: {
+      consumer: {
+        select: { name: true}
+      }
+    },
+  })
   
   return (
 
@@ -71,7 +73,7 @@ export default async function InfoSectionA1aGetData() {
                   <div className='row h-10'>
                     <InfoSections />
                   </div>
-                  <InfoSelectionNames />
+                  <InfoSelectionName />
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>

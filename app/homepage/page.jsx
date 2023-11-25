@@ -4,10 +4,12 @@ import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
 import { getServerSession } from 'next-auth'
+import { authOptions } from '../api/auth/[...nextauth]/route'
+
 
 export default async function Homepage() {
 
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
    
   return (
 

@@ -5,10 +5,11 @@ import { SelectionOptionsView } from '@/components/selections/SelectionOptionsVi
 import { SidebarListSelections } from '@/components/sidebar/sidebarParts/sidebarOptions/SidebarListSelections'
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
+import { authOptions } from '../api/auth/[...nextauth]/route'
 
 export default async function ListSelections() {
 
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
 
   return (
     <>
