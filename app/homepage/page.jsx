@@ -1,11 +1,12 @@
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+
+import { getServerSession } from 'next-auth'
+
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { SelectionOptionsView } from '@/components/selections/SelectionOptionsView'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
-import { getServerSession } from 'next-auth'
-import { authOptions } from '../api/auth/[...nextauth]/route'
-
 
 export default async function Homepage() {
 

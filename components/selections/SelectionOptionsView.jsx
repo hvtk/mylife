@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { SelectionImage } from '@/components/selections/only-single-image-fields//SelectionImage'
+
 import selectImageWhereILive from '/public/assets/images/selections/where i live.jpg'
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 import selectImageEatAndDrink from 'public/assets/images/selections/eat and drink.jpg'
@@ -18,7 +19,6 @@ import selectImageMySchedule from 'public/assets/images/selections/my schedule.j
 
 export function SelectionOptionsView() {
 
-    
     return(
         <>
             <div className='row h-20'>

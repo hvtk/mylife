@@ -1,3 +1,5 @@
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+
 import { getServerSession } from 'next-auth'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
@@ -9,8 +11,6 @@ import { InfoSelectionName } from '@/components/selections/only-single-text-fiel
 import { InfoSelectionOption } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOption'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
-import { authOptions } from '../api/auth/[...nextauth]/route'
-
 
 export default async function SelectionFamilyAndFriends() {
 

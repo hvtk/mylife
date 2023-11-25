@@ -1,10 +1,12 @@
-import { redirect } from 'next/navigation'
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+
 import { getServerSession } from 'next-auth'
+
+import { redirect } from 'next/navigation'
 
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
 import { MylifeIntroSelectionOptionsView } from '@/components/mylifeIntroPage/MylifeIntroSelectionOptionsView'
 import { HeaderBase } from '@/components/header/HeaderBase'
-import { authOptions } from './api/auth/[...nextauth]/route'
 
 export default async function MylifeIntroPage() {
 

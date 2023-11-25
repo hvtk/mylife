@@ -1,6 +1,10 @@
-import { getServerSession } from 'next-auth'
-import { SelectionOptionA1aRead } from '@/components/selections/selectionOptions/selectionOptionA/read/SelectionOptionA1aRead'
+import prisma from '@/app/lib/prisma'
 
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+
+import { getServerSession } from 'next-auth'
+
+import { SelectionOptionA1aRead } from '@/components/selections/selectionOptions/selectionOptionA/read/SelectionOptionA1aRead'
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
@@ -9,10 +13,8 @@ import { SelectionOptionName } from '@/components/selections/only-single-text-fi
 import { InfoSections } from '@/components/selections/self-contained-items/InfoSections'
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
 import { InfoSelectionName } from '@/components/selections/only-single-text-fields/InfoSelectionName'
+
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
-import { NextResponse } from 'next/server'
-import prisma from '@/app/lib/prisma'
 
 export default async function InfoSectionA1aGetData() {
 

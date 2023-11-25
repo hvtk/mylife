@@ -1,3 +1,5 @@
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+
 import { getServerSession } from 'next-auth'
 
 import { MylifeImageAndCaption } from '@/components/self-contained-items/MyLifeImageAndCaption'
@@ -5,7 +7,6 @@ import { SelectionOptionsView } from '@/components/selections/SelectionOptionsVi
 import { SidebarListSelections } from '@/components/sidebar/sidebarParts/sidebarOptions/SidebarListSelections'
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
-import { authOptions } from '../api/auth/[...nextauth]/route'
 
 export default async function ListSelections() {
 

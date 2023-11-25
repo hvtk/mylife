@@ -1,7 +1,8 @@
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+
 import { getServerSession } from 'next-auth'
 
 import { SelectionOptionA1aCreate } from '@/components/selections/selectionOptions/selectionOptionA/create/SelectionOptionA1aCreate'
-
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
@@ -9,9 +10,8 @@ import { SelectedPageName } from '@/components/header/only-single-text-fields/Se
 import { SelectionOptionName } from '@/components/selections/only-single-text-fields/SelectionOptionName'
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
 import { OptionsToSelectAndInfoSelectionNames } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNames'
-import selectImageFamily from 'public/assets/images/selections/family.jpg'
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 
+import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
 export default async function InfoSection1a() {
 
