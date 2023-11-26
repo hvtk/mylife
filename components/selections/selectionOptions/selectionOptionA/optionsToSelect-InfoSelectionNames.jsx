@@ -9,7 +9,7 @@ export function OptionsToSelectAndInfoSelectionNames() {
             <div className='row h-8'>
                 <div className='col-sm-6 d-flex flex-column'>
                    <InfoSelectionOptionPage
-                        href={"/selectionFamilyAndFriends/selectionOptionA/infoSection1a/create"}>
+                        href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
                         A: Those who raised you
                    </InfoSelectionOptionPage> 
                 </div>
@@ -25,19 +25,19 @@ export function OptionsToSelectAndInfoSelectionNames() {
                         <ul className='dropdown-menu'>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection1a/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
                                     1a: Name first person
                                 </InfoSectionName>
                             </li>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection1b/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1b/create"}>
                                     1b: Address first person
                                 </InfoSectionName>
                             </li>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection1c/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1c/create"}>
                                     1c: Other info first person
                                 </InfoSectionName>
                             </li>
@@ -64,19 +64,19 @@ export function OptionsToSelectAndInfoSelectionNames() {
                         <ul className='dropdown-menu'>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection2a/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA2/infoSectionA2a/create"}>
                                     2a: Name second person
                                 </InfoSectionName>
                             </li>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection2b/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA2/infoSectionA2b/create"}>
                                     2b: Address second person
                                 </InfoSectionName>
                             </li>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection2c/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA2/infoSectionA2c/create"}>
                                     2c: Other info second person
                                 </InfoSectionName>
                             </li>
@@ -103,19 +103,19 @@ export function OptionsToSelectAndInfoSelectionNames() {
                         <ul className='dropdown-menu'>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection3a/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA3/infoSectionA3a/create"}>
                                     3a: Name third person
                                 </InfoSectionName>
                             </li>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection3b/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA3/infoSectionA3b/create"}>
                                     3b: Address third person
                                 </InfoSectionName>
                             </li>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection3c/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA3/infoSectionA3c/create"}>
                                     3c: Other info third person
                                 </InfoSectionName>
                             </li>
@@ -142,19 +142,19 @@ export function OptionsToSelectAndInfoSelectionNames() {
                         <ul className='dropdown-menu'>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection4a/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA4/infoSectionA4a/create"}>
                                     4a: Name fourth person
                                 </InfoSectionName>
                             </li>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection4b/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA4/infoSectionA4b/create"}>
                                     4b: Address fourth person
                                 </InfoSectionName>
                             </li>
                             <li>
                                 <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSection4c/create"}>
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA4/infoSectionA4c/create"}>
                                     4c: Other info fourth person
                                 </InfoSectionName>
                             </li>

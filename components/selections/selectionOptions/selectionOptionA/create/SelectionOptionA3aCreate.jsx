@@ -8,13 +8,13 @@ import { ConsumerEmail } from "@/components/selections/selectionOptions/selectio
 import { SaveOptionA } from "@/components/selections/buttons/SaveOptionA"
 import { InfoSectionAName } from "./input-fields/infoSectionA/InfoSectionAName"
 
-export function SelectionOptionA1aCreate() {
+export function SelectionOptionA3aCreate() {
         
         const router = useRouter();
 
         const [err, setErr] = useState(false);
 
-        const SelectionOptionA1aCreation = async (e) => {
+        const SelectionOptionA3aCreation = async (e) => {
             e.preventDefault();
             const consumerEmail = e.target[0].value;
             const firstName = e.target[1].value;
@@ -24,7 +24,7 @@ export function SelectionOptionA1aCreate() {
 
             try {
             
-                const res = await fetch("/api/selections/familyandfriends/selectionoptiona/infosection1a/create", {
+                const res = await fetch("/api/selections/familyandfriends/selectionoptiona/infosection3a/create", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -47,14 +47,14 @@ export function SelectionOptionA1aCreate() {
 
     return (
         <>
-            <form onSubmit={SelectionOptionA1aCreation}
+            <form onSubmit={SelectionOptionA3aCreation}
                   className='row w-95'  
                 >
                 <ConsumerEmail />
                 <InfoSectionAName />
                 <div className='row'>
                     <SaveOptionA>
-                        Save Name First Person
+                        Save Name Third Person
                     </SaveOptionA>
                 </div>
             </form>

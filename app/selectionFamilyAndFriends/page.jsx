@@ -64,7 +64,7 @@ export default async function SelectionFamilyAndFriends() {
                       MY FAMILY AND FRIENDS
                     </InfoSelectionName>
                     <InfoSelectionOption 
-                      href={"/selectionFamilyAndFriends/selectionOptionA/infoSection1a/create"}>
+                      href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
                         A: Those who raised you
                     </InfoSelectionOption>
                     <InfoSelectionOption 
