@@ -2,9 +2,12 @@ import Image from 'next/image'
 
 import Link from 'next/link'
 
-import { MylifeLogo } from 'components/sidebar/sidebarParts/MylifeLogo'
-import SidebarViewList from 'public/assets/icons/sidebar/view-list.svg'
-import SidebarPerson from 'public/assets/icons/sidebar/person.svg'
+import { SidebarSelectionDropdownButton } from '@/components/sidebar/sidebarParts/SidebarSelectionDropdownButton'
+import { MylifeLogo } from '@/components/sidebar/sidebarParts/MylifeLogo'
+import { SidebarInfoSectionName } from '@/components/sidebar/sidebarParts/SidebarInfoSectionName'
+import SidebarViewList from '@/public/assets/icons/sidebar/view-list.svg'
+import SidebarPerson from '@/public/assets/icons/sidebar/person.svg'
+
 
 export function SidebarListSelections() {
   return (
@@ -13,104 +16,383 @@ export function SidebarListSelections() {
        <div className='row'>
           <div className='col-sm-8 d-flex flex-column justify-content-center min-vh-100'>
             <div className='h-90 d-flex flex-column justify-content-center'>
-              <dl className='fs-5 ms-3'>
+              <dl className='ms-3'>
                 <dt>
-                  <Link href="/selectionFamilyAndFriends"
-                        className='text-dark' 
-                      >
-                    A: Family and Friends
-                  </Link>
+                  <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      A: Family and Friends
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionWhereILife"
-                        className='text-dark'
-                      >
-                    B: Where I Live
-                  </Link>
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      B: Where I Live
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionWhereILife"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionEatAndDrink"
-                        className='text-dark'
-                      >
-                    C: Eat and Drink
-                  </Link>
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      C: Eat and Drink
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionEatAndDrink"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionPersonalSituation"
-                        className='text-dark'
-                      >
-                    D: Personal Situation
-                  </Link>
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      D: Personal Situation
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionPersonalSituation"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionSleepRoutine"
-                        className='text-dark'
-                    >
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
                     E: Sleep Routine
-                  </Link>
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionSleepRoutine"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionDailyRoutine"
-                        className='text-dark'
-                      >
-                    F: Daily Routine
-                  </Link>
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      F: Daily Routine
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionDailyRoutine"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionFinance"
-                        className='text-dark'
-                      >
-                    G: Finance
-                  </Link>
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      G: Finance
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFinance"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionInsurances"
-                        className='text-dark'
-                      >
-                    H: Insurances
-                  </Link>
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      H: Insurances
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionInsurances"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionSubcriptions"
-                        className='text-dark'
-                      >
-                    I: Subcriptions
-                  </Link>
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      I: Subcriptions
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionSubcriptions"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionUsedWebsites"
-                        className='text-dark'
-                      >
-                    J: Used Websites
-                  </Link>
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      J: Used Websites
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionUsedWebsites"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionInstalledApps"
-                        className='text-dark'
-                      >
-                    K: Installed Apps
-                  </Link>
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      K: Installed Apps
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionInstalledApps"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionReminders"
-                        className='text-dark'
-                      >
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
                     L: Reminders
-                  </Link>
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionReminders"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
                 <dt>
-                  <Link href="/selectionRightsAndObligations"
-                        className='text-dark'
-                      >
-                    M: Rights and Obligations
-                  </Link>
+                <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      M: Rights and Obligations
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"SelectionRightsAndObligations"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
-                <dt>
-                  <Link href="/selectionMySchedule"
-                        className='text-dark'
-                      >
-                    N: My Schedule
-                  </Link>
+                <dt> <div className='dropdown-center'>  
+                    <SidebarSelectionDropdownButton>
+                      N: My Schedule
+                    </SidebarSelectionDropdownButton>
+                    <ul className='dropdown-menu'>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionMySchedule"}>
+                                Options
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                Input
+                            </SidebarInfoSectionName>
+                        </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/read"}>
+                                Data
+                            </SidebarInfoSectionName>
+                        </li>
+                    </ul>
+                  </div>
                 </dt>
               </dl>
             </div>
