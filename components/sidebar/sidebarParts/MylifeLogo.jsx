@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import MylifeLogoImageFill from 'public/assets/images/mylife-logo/life.jpg'
-import MylifeLogoImageTopLeft from 'public/assets/images/mylife-logo/home.jpg'
-import MylifeLogoImageTopRight from 'public/assets/images/mylife-logo/sad.jpg'
-import MylifeLogoImageBottomRight from 'public/assets/images/mylife-logo/working.jpg'
-import MylifeLogoImageBottomLeft from 'public/assets/images/mylife-logo/happy.jpg'
+import MylifeLogoImageFill from '@/public/assets/images/mylife-logo/life.jpg'
+import MylifeLogoImageTopLeft from '@/public/assets/images/mylife-logo/home.jpg'
+import MylifeLogoImageTopRight from '@/public/assets/images/mylife-logo/sad.jpg'
+import MylifeLogoImageBottomRight from '@/public/assets/images/mylife-logo/working.jpg'
+import MylifeLogoImageBottomLeft from '@/public/assets/images/mylife-logo/happy.jpg'
 
 export function MylifeLogo() {
   return (

@@ -12,6 +12,7 @@ import { InfoSectionNameInput } from '@/components/selections/only-single-text-f
 import { OptionsToSelectAndInfoSelectionNames } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNames'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import { GoBackTo } from '@/components/selections/only-single-text-and-link-fields/GoBackTo'
 
 export default async function InfoSectionA1a() {
 
@@ -54,6 +55,9 @@ export default async function InfoSectionA1a() {
                     <div className='col-sm-6 d-flex flex-column align-items-center justify-content-center'>
                       <SelectionOptionName option={"SELECTION OPTION A:"}/>
                       <SelectionOptionName optionName={"'Those who raised you'"}/>
+                      <GoBackTo href={'/selectionFamilyAndFriends'}>
+                          selection 'My Family and Friends' 
+                      </GoBackTo> 
                     </div>
                   </div>
                   <div className='row h-10'>

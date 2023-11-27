@@ -6,7 +6,7 @@ export function InfoSectionName({href, children}) {
         <>
             <div>
                 <Link className='fs-5 ms-3 text-dark'
-                        href={href}
+                      href={href}
                     >
                     {children}
                 </Link>
