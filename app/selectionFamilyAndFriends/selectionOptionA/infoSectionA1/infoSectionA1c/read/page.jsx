@@ -47,7 +47,7 @@ export default async function InfoSectionA1cGetData() {
             <div className='row'>
               <div className='col-sm-12 h-4 mt-2 d-flex align-items-center justify-content-end'>
                 <SelectedPageName>
-                  DATA:  Selection option A: 'Those who raised you'
+                  Selection option A: 'Those who raised you'
                 </SelectedPageName>
                 {!!session && 
                 <div className='fs-5 me-4'>
@@ -103,11 +103,12 @@ export default async function InfoSectionA1cGetData() {
                     infoSectionA1cData.map((FamilyAndFriendsSelectionOptionA1c) => {
                       return (
                         <SelectionOptionA1cRead
-                          key={FamilyAndFriendsSelectionOptionA1c.firstName}
-                          firstName={FamilyAndFriendsSelectionOptionA1c.firstName}
-                          secondName={FamilyAndFriendsSelectionOptionA1c.secondName}
-                          infix={FamilyAndFriendsSelectionOptionA1c.infix}
-                          lastName={FamilyAndFriendsSelectionOptionA1c.lastName}
+                          key={FamilyAndFriendsSelectionOptionA1c.birthday}
+                          birthday={FamilyAndFriendsSelectionOptionA1c.birthday}
+                          email={FamilyAndFriendsSelectionOptionA1c.email}
+                          phone={FamilyAndFriendsSelectionOptionA1c.phone}
+                          phoneMobile={FamilyAndFriendsSelectionOptionA1c.phoneMobile}
+                          instagram={FamilyAndFriendsSelectionOptionA1c.instagram}
                         />
                       )
                     })
