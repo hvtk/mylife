@@ -10,6 +10,7 @@ import { SelectedPageName } from '@/components/header/only-single-text-fields/Se
 import { SelectionOptionName } from '@/components/selections/only-single-text-fields/SelectionOptionName'
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
 import { OptionsToSelectAndInfoSelectionNames } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNames'
+import { GoBackTo } from '@/components/selections/only-single-text-and-link-fields/GoBackTo'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
@@ -54,6 +55,9 @@ export default async function InfoSectionA1c() {
                     <div className='col-sm-6 d-flex flex-column align-items-center justify-content-center'>
                       <SelectionOptionName option={"SELECTION OPTION A:"}/>
                       <SelectionOptionName optionName={"'Those who raised you'"}/>
+                      <GoBackTo href={'/selectionFamilyAndFriends'}>
+                          selection 'My Family and Friends' 
+                      </GoBackTo>
                     </div>
                   </div>
                   <div className='row h-10'>

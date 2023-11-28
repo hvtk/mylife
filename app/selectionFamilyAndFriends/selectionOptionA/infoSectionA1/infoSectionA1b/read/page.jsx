@@ -10,10 +10,9 @@ import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
 import { SelectionOptionName } from '@/components/selections/only-single-text-fields/SelectionOptionName'
-import { InfoSections } from '@/components/selections/self-contained-items/InfoSections'
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
-import { InfoSelectionName } from '@/components/selections/only-single-text-fields/InfoSelectionName'
-
+import { OptionsToSelectAndInfoSelectionNamesData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesData'
+import { GoBackTo } from '@/components/selections/only-single-text-and-link-fields/GoBackTo'
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
 export default async function InfoSectionA1bGetData() {
@@ -45,7 +44,7 @@ export default async function InfoSectionA1bGetData() {
             <div className='row'>
               <div className='col-sm-12 h-4 mt-2 d-flex align-items-center justify-content-end'>
                 <SelectedPageName>
-                  DATA:  Selection option A: 'Those who raised you'
+                  Selection option A: 'Those who raised you'
                 </SelectedPageName>
                 {!!session && 
                 <div className='fs-5 me-4'>
@@ -70,12 +69,24 @@ export default async function InfoSectionA1bGetData() {
                     <div className='col-sm-6 d-flex flex-column align-items-center justify-content-center'>
                       <SelectionOptionName option={"SELECTION OPTION A:"}/>
                       <SelectionOptionName optionName={"'Those who raised you'"}/>
+                      <GoBackTo href={'/selectionFamilyAndFriends'}>
+                          selection 'My Family and Friends' 
+                      </GoBackTo> 
                     </div>
                   </div>
                   <div className='row h-10'>
-                    <InfoSections />
+                    <div className='col-sm-6 d-flex flex-column'>
+                      <div className='d-flex align-items-center justify-content-center fs-5'>      
+                        OPTIONS TO SELECT
+                      </div> 
+                    </div>
+                    <div className='col-sm-6 d-flex flex-column'>
+                      <div className='d-flex align-items-center justify-content-center fs-5 me-3'>      
+                        GET DATA FROM INFO SECTION
+                      </div> 
+                    </div>
                   </div>
-                  <InfoSelectionName />
+                  <OptionsToSelectAndInfoSelectionNamesData />
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
@@ -89,11 +100,12 @@ export default async function InfoSectionA1bGetData() {
                     infoSectionA1bData.map((FamilyAndFriendsSelectionOptionA1b) => {
                       return (
                         <SelectionOptionA1bRead
-                          key={FamilyAndFriendsSelectionOptionA1b.firstName}
-                          firstName={FamilyAndFriendsSelectionOptionA1b.firstName}
-                          secondName={FamilyAndFriendsSelectionOptionA1b.secondName}
-                          infix={FamilyAndFriendsSelectionOptionA1b.infix}
-                          lastName={FamilyAndFriendsSelectionOptionA1b.lastName}
+                          key={FamilyAndFriendsSelectionOptionA1b.land}
+                          land={FamilyAndFriendsSelectionOptionA1b.land}
+                          county={FamilyAndFriendsSelectionOptionA1b.county}
+                          address={FamilyAndFriendsSelectionOptionA1b.address}
+                          postalCode={FamilyAndFriendsSelectionOptionA1b.postalCode}
+                          city={FamilyAndFriendsSelectionOptionA1b.city}
                         />
                       )
                     })

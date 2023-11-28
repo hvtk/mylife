@@ -1,4 +1,4 @@
-export function SelectionOptionA1aRead({firstName, secondName, infix, lastName}) {
+export function SelectionOptionA1cRead({birthday, email, phone, phoneMobile, instagram}) {
     
     return (
         <>
@@ -7,44 +7,55 @@ export function SelectionOptionA1aRead({firstName, secondName, infix, lastName})
                 <div className='row mb-3'>
                     <div className='col-sm-4'
                         >
-                            First Name
+                            Birthday
                     </div> 
                     <div className="col-sm-8 border border-1 border-dark rounded-2">
                         <div>
-                               {firstName}
+                               {birthday}
                         </div>
                     </div>
                 </div>
                 <div className='row mb-3'>
-                <div className='col-sm-4'
+                    <div className='col-sm-4'
                         >
-                            Second Name
+                            Email
                     </div> 
                     <div className="col-sm-8 border border-1 border-dark rounded-2">
                         <div>
-                               {secondName}
+                               {email}
                         </div>
                     </div>
                 </div>
                 <div className='row mb-3'>
-                <div className='col-sm-4'
+                    <div className='col-sm-4'
                         >
-                            Infix
+                            Phone
                     </div> 
                     <div className="col-sm-8 border border-1 border-dark rounded-2">
                         <div>
-                               {infix}
+                               {phone}
                         </div>
                     </div>
                 </div>
                 <div className='row mb-3'>
-                <div className='col-sm-4'
+                    <div className='col-sm-4'
                         >
-                            Last Name
+                            Phone Mobile
                     </div> 
                     <div className="col-sm-8 border border-1 border-dark rounded-2">
                         <div>
-                               {lastName}
+                               {phoneMobile}
+                        </div>
+                    </div>
+                </div>
+                <div className='row mb-3'>
+                    <div className='col-sm-4'
+                        >
+                            Instagram
+                    </div> 
+                    <div className="col-sm-8 border border-1 border-dark rounded-2">
+                        <div>
+                               {instagram}
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-export function SelectionOptionA1aRead({firstName, secondName, infix, lastName}) {
+export function SelectionOptionA1bRead({land, county, address, postalCode, city}) {
     
     return (
         <>
@@ -7,44 +7,55 @@ export function SelectionOptionA1aRead({firstName, secondName, infix, lastName})
                 <div className='row mb-3'>
                     <div className='col-sm-4'
                         >
-                            First Name
+                            Land
                     </div> 
                     <div className="col-sm-8 border border-1 border-dark rounded-2">
                         <div>
-                               {firstName}
+                               {land}
                         </div>
                     </div>
                 </div>
                 <div className='row mb-3'>
-                <div className='col-sm-4'
+                    <div className='col-sm-4'
                         >
-                            Second Name
+                            County
                     </div> 
                     <div className="col-sm-8 border border-1 border-dark rounded-2">
                         <div>
-                               {secondName}
+                            {county}
                         </div>
                     </div>
                 </div>
                 <div className='row mb-3'>
-                <div className='col-sm-4'
+                    <div className='col-sm-4'
                         >
-                            Infix
+                            Address
                     </div> 
                     <div className="col-sm-8 border border-1 border-dark rounded-2">
                         <div>
-                               {infix}
+                            {address}
                         </div>
                     </div>
                 </div>
                 <div className='row mb-3'>
-                <div className='col-sm-4'
+                    <div className='col-sm-4'
                         >
-                            Last Name
+                            Postal Code
                     </div> 
                     <div className="col-sm-8 border border-1 border-dark rounded-2">
                         <div>
-                               {lastName}
+                            {postalCode}
+                        </div>
+                    </div>
+                </div>
+                <div className='row mb-3'>
+                    <div className='col-sm-4'
+                        >
+                            City
+                    </div> 
+                    <div className="col-sm-8 border border-1 border-dark rounded-2">
+                        <div>
+                            {city}
                         </div>
                     </div>
                 </div>

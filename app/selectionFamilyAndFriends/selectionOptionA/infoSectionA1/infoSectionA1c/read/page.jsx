@@ -10,9 +10,11 @@ import { SidebarBase } from '@/components/sidebar/SidebarBase'
 import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
 import { SelectionOptionName } from '@/components/selections/only-single-text-fields/SelectionOptionName'
-import { InfoSections } from '@/components/selections/self-contained-items/InfoSections'
+import { OptionsToSelectAndInfoSelectionNamesData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesData'
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
-import { InfoSelectionName } from '@/components/selections/only-single-text-fields/InfoSelectionName'
+
+
+import { GoBackTo } from '@/components/selections/only-single-text-and-link-fields/GoBackTo'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
 
@@ -70,14 +72,26 @@ export default async function InfoSectionA1cGetData() {
                     <div className='col-sm-6 d-flex flex-column align-items-center justify-content-center'>
                       <SelectionOptionName option={"SELECTION OPTION A:"}/>
                       <SelectionOptionName optionName={"'Those who raised you'"}/>
+                      <GoBackTo href={'/selectionFamilyAndFriends'}>
+                          selection 'My Family and Friends' 
+                      </GoBackTo>
                     </div>
                   </div>
                   <div className='row h-10'>
-                    <InfoSections />
+                    <div className='col-sm-6 d-flex flex-column'>
+                        <div className='d-flex align-items-center justify-content-center fs-5'>      
+                          OPTIONS TO SELECT
+                        </div> 
+                      </div>
+                      <div className='col-sm-6 d-flex flex-column'>
+                        <div className='d-flex align-items-center justify-content-center fs-5 me-3'>      
+                          GET DATA FROM INFO SECTION
+                        </div> 
+                      </div>
+                    </div>
+                    <OptionsToSelectAndInfoSelectionNamesData />
                   </div>
-                  <InfoSelectionName />
                 </div>
-              </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
                 <div className='bg-warning h-75 w-75 rounded-5 d-flex flex-column align-items-center justify-content-center'>
                   <div className='row h-10'>
