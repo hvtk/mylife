@@ -1,7 +1,15 @@
+'use client'
+
 import { InfoSectionName } from '@/components/selections/only-single-text-and-link-fields/InfoSectionName'
 import { InfoSelectionOptionPage } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOptionPage'
+import { useState } from 'react'
 
 export function OptionsToSelectAndInfoSelectionNames() {
+
+    const [active, setActive] = useState(false);
+    const handleClick = () => {
+        setActive(!active);
+    };
 
     return (
 
@@ -15,10 +23,11 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
-                        <button className='btn btn-secondary dropdown-toggle'
+                        <button className={active ? 'btn btn-secondary dropdown-toggle' : 'btn btn-primary dropdown-toggle'}
                                 type="button"
                                 data-bs-toggle="dropdown"
-                                aria-expanded="false"
+                                aria-expanded="false" 
+                                onClick={handleClick}
                                 >
                             First Person
                         </button>
@@ -54,10 +63,11 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
-                        <button className='btn btn-secondary dropdown-toggle'
+                        <button className={active ? 'btn btn-secondary dropdown-toggle' : 'btn btn-primary dropdown-toggle'}
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
+                                onClick={handleClick}
                                 >
                             Second Person
                         </button>
@@ -93,10 +103,11 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
-                        <button className='btn btn-secondary dropdown-toggle'
+                        <button className={active ? 'btn btn-secondary dropdown-toggle' : 'btn btn-primary dropdown-toggle'}
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
+                                onClick={handleClick}
                                 >
                             Third Person
                         </button>
@@ -132,10 +143,11 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
-                        <button className='btn btn-secondary dropdown-toggle'
+                        <button className={active ? 'btn btn-secondary dropdown-toggle' : 'btn btn-primary dropdown-toggle'}
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
+                                onClick={handleClick}
                                 >
                             Fourth Person
                         </button>
