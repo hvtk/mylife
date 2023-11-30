@@ -3,7 +3,7 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import { getServerSession } from 'next-auth'
 
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
-import { SidebarBase } from '@/components/sidebar/SidebarBase'
+import { SidebarSelections } from '@/components/sidebar/selections/SidebarSelections'
 import { SelectionExplenation } from '@/components/selections/self-contained-items/SelectionExplenation'
 import { SelectedSelectionImage } from '@/components/selections/only-single-image-fields/SelectedSelectionImage'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
@@ -22,7 +22,7 @@ export default async function SelectionFamilyAndFriends() {
       <div className='container min-vw-100 bg-body'>
         <div className='row'>
           <div className='col-sm-1 bg-secondary min-vh-100 d-flex flex-column justify-content-center'>
-            <SidebarBase/>
+            <SidebarSelections />
           </div>
           <div className='col-sm-11 bg-info min-vh-100'>
             <div className='row'>

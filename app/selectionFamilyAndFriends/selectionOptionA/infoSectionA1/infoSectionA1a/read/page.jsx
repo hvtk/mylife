@@ -6,7 +6,7 @@ import { getServerSession } from 'next-auth'
 
 import { SelectionOptionA1aRead } from '@/components/selections/selectionOptions/selectionOptionA/read/SelectionOptionA1aRead'
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
-import { SidebarBase } from '@/components/sidebar/SidebarBase'
+import { SidebarSelections } from '@/components/sidebar/selections/SidebarSelections'
 import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
 import { SelectedPageName } from '@/components/header/only-single-text-fields/SelectedPageName'
 import { SelectionOptionName } from '@/components/selections/only-single-text-fields/SelectionOptionName'
@@ -39,7 +39,7 @@ export default async function InfoSectionA1aGetData() {
       <div className='container min-vw-100 bg-body'>
         <div className='row'>
           <div className='col-sm-1 bg-secondary min-vh-100 d-flex flex-column justify-content-center'>
-            <SidebarBase/>
+            <SidebarSelections />
           </div>
           <div className='col-sm-11 bg-info min-vh-100'>
             <div className='row'>
