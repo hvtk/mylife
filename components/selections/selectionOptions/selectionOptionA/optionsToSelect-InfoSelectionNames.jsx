@@ -1,14 +1,29 @@
 'use client'
 
-import { InfoSectionName } from '@/components/selections/only-single-text-and-link-fields/InfoSectionName'
+import { DropdownInfoSectionName } from '@/components/dropdown/selections/DropdownInfoSectionName'
 import { InfoSelectionOptionPage } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOptionPage'
 import { useState } from 'react'
 
 export function OptionsToSelectAndInfoSelectionNames() {
 
-    const [active, setActive] = useState(false);
-    const handleClick = () => {
-        setActive(!active);
+    const [active1, setActive1] = useState(false);
+    const handleClick1 = () => {
+        setActive1(!active1);
+    };
+
+    const [active2, setActive2] = useState(false);
+    const handleClick2 = () => {
+        setActive2(!active2);
+    };
+
+    const [active3, setActive3] = useState(false);
+    const handleClick3 = () => {
+        setActive3(!active3);
+    };
+
+    const [active4, setActive4] = useState(false);
+    const handleClick4 = () => {
+        setActive4(!active4);
     };
 
     return (
@@ -21,34 +36,36 @@ export function OptionsToSelectAndInfoSelectionNames() {
                         A: Those who raised you
                    </InfoSelectionOptionPage> 
                 </div>
-                <div className='col-sm-6 d-flex flex-column'>
-                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
-                        <button className={active ? 'btn btn-secondary dropdown-toggle' : 'btn btn-primary dropdown-toggle'}
+                <div className='col-sm-6 d-flex flex-column' >
+                    <div className='dropdown-center ms-4'>
+                        <button className={active1 ? 'btn btn-primary dropdown-toggle' : 'btn btn-secondary dropdown-toggle'}
                                 type="button"
                                 data-bs-toggle="dropdown"
-                                aria-expanded="false" 
-                                onClick={handleClick}
+                                aria-expanded="true"
+                                aria-current="false" 
+                                onClick={handleClick1}
                                 >
                             First Person
                         </button>
                         <ul className='dropdown-menu'>
                             <li>
-                                <InfoSectionName
-                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}>
+                                <DropdownInfoSectionName
+                                    href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}
+                                    >
                                     1a: Name first person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1b/create"}>
                                     1b: Address first person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1c/create"}>
                                     1c: Other info first person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                         </ul>
                     </div>
@@ -62,33 +79,33 @@ export function OptionsToSelectAndInfoSelectionNames() {
                    </InfoSelectionOptionPage> 
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
-                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
-                        <button className={active ? 'btn btn-secondary dropdown-toggle' : 'btn btn-primary dropdown-toggle'}
+                    <div className='dropdown-center ms-4'>
+                        <button className={active2 ? 'btn btn-primary dropdown-toggle' : 'btn btn-secondary dropdown-toggle'}
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                                onClick={handleClick}
+                                onClick={handleClick2}
                                 >
                             Second Person
                         </button>
                         <ul className='dropdown-menu'>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA2/infoSectionA2a/create"}>
                                     2a: Name second person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA2/infoSectionA2b/create"}>
                                     2b: Address second person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA2/infoSectionA2c/create"}>
                                     2c: Other info second person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                         </ul>
                     </div>
@@ -102,33 +119,33 @@ export function OptionsToSelectAndInfoSelectionNames() {
                    </InfoSelectionOptionPage> 
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
-                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
-                        <button className={active ? 'btn btn-secondary dropdown-toggle' : 'btn btn-primary dropdown-toggle'}
+                    <div className='dropdown-center ms-4'>
+                        <button className={active3 ? 'btn btn-primary dropdown-toggle' : 'btn btn-secondary dropdown-toggle'}
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                                onClick={handleClick}
+                                onClick={handleClick3}
                                 >
                             Third Person
                         </button>
                         <ul className='dropdown-menu'>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA3/infoSectionA3a/create"}>
                                     3a: Name third person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA3/infoSectionA3b/create"}>
                                     3b: Address third person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA3/infoSectionA3c/create"}>
                                     3c: Other info third person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                         </ul>
                     </div>
@@ -142,33 +159,33 @@ export function OptionsToSelectAndInfoSelectionNames() {
                    </InfoSelectionOptionPage> 
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
-                    <div className='dropdown-center d-flex align-items-center justify-content-start ms-4'>
-                        <button className={active ? 'btn btn-secondary dropdown-toggle' : 'btn btn-primary dropdown-toggle'}
+                    <div className='dropdown-center ms-4'>
+                        <button className={active4 ? 'btn btn-primary dropdown-toggle' : 'btn btn-secondary dropdown-toggle'}
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                                onClick={handleClick}
+                                onClick={handleClick4}
                                 >
                             Fourth Person
                         </button>
                         <ul className='dropdown-menu'>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA4/infoSectionA4a/create"}>
                                     4a: Name fourth person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA4/infoSectionA4b/create"}>
                                     4b: Address fourth person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                             <li>
-                                <InfoSectionName
+                                <DropdownInfoSectionName
                                     href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA4/infoSectionA4c/create"}>
                                     4c: Other info fourth person
-                                </InfoSectionName>
+                                </DropdownInfoSectionName>
                             </li>
                         </ul>
                     </div>
