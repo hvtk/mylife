@@ -4,21 +4,23 @@ import Link from "next/link"
 import { useState } from "react"
 
 
-export function InfoSelectionOptionPage({href, children}) {
+export function InfoSelectionOptionPageActive({href, children}) {
 
-    const [active, setActive] = useState(false);
-    const handleClick = () => {
-        setActive(!active);
-    };
+    // const [active, setActive] = useState(false);
+    // const handleClick = () => {
+    //     setActive(!active);
+    // };
 
     return(
         <>
             <div className='d-flex align-items-center justify-content-start ms-3 fs-5'>
                 <Link href={href}
                     >
-                        <button className={ active ? "btn btn-bg-secondary text-white" : "btn btn-outline-primary text-black"}
+                        <button className="btn btn-outline-primary text-white active"
                                 type="button"
-                                onClick={handleClick}
+                                aria-pressed="true"
+                                data-bs-toggle="button"
+                                // onClick={handleClick}
                              >
                                 {children}
                         </button>

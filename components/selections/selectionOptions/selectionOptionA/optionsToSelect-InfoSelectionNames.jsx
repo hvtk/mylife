@@ -1,30 +1,7 @@
-'use client'
-
 import { DropdownInfoSectionName } from '@/components/dropdown/selections/DropdownInfoSectionName'
 import { InfoSelectionOptionPage } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOptionPage'
-import { useState } from 'react'
 
 export function OptionsToSelectAndInfoSelectionNames() {
-
-    const [active1, setActive1] = useState(false);
-    const handleClick1 = () => {
-        setActive1(!active1);
-    };
-
-    const [active2, setActive2] = useState(false);
-    const handleClick2 = () => {
-        setActive2(!active2);
-    };
-
-    const [active3, setActive3] = useState(false);
-    const handleClick3 = () => {
-        setActive3(!active3);
-    };
-
-    const [active4, setActive4] = useState(false);
-    const handleClick4 = () => {
-        setActive4(!active4);
-    };
 
     return (
 
@@ -38,12 +15,10 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column' >
                     <div className='dropdown-center ms-4'>
-                        <button className={active1 ? 'btn btn-primary dropdown-toggle' : 'btn btn-secondary dropdown-toggle'}
+                        <button className='btn btn-outline-primary dropdown-toggle text-dark'
                                 type="button"
                                 data-bs-toggle="dropdown"
-                                aria-expanded="true"
-                                aria-current="false" 
-                                onClick={handleClick1}
+                                aria-expanded="false"
                                 >
                             First Person
                         </button>
@@ -74,17 +49,16 @@ export function OptionsToSelectAndInfoSelectionNames() {
             <div className='row h-8'>
                 <div className='col-sm-6 d-flex flex-column'>
                    <InfoSelectionOptionPage
-                        href={"/selectionFamilyAndFriends/selectionOptionB/infoSection1a/create"}>
+                        href={"/selectionFamilyAndFriends/selectionOptionB/infoSectionB1/infoSectionB1a/create"}>
                         B: Brothers and Sisters
                    </InfoSelectionOptionPage> 
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
-                        <button className={active2 ? 'btn btn-primary dropdown-toggle' : 'btn btn-secondary dropdown-toggle'}
+                        <button className='btn btn-outline-primary dropdown-toggle text-dark'
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                                onClick={handleClick2}
                                 >
                             Second Person
                         </button>
@@ -120,11 +94,10 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
-                        <button className={active3 ? 'btn btn-primary dropdown-toggle' : 'btn btn-secondary dropdown-toggle'}
+                        <button className='btn btn-outline-primary dropdown-toggle text-dark'
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                                onClick={handleClick3}
                                 >
                             Third Person
                         </button>
@@ -160,11 +133,10 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
-                        <button className={active4 ? 'btn btn-primary dropdown-toggle' : 'btn btn-secondary dropdown-toggle'}
+                        <button className='btn btn-outline-primary dropdown-toggle text-dark'
                                 type="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                                onClick={handleClick4}
                                 >
                             Fourth Person
                         </button>
