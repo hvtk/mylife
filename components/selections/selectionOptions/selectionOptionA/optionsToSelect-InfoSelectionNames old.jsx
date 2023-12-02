@@ -1,142 +1,18 @@
 import { DropdownInfoSectionName } from '@/components/dropdown/selections/DropdownInfoSectionName'
-
-// const signInUser = async (e) => {
-//     e.preventDefault();
-
-//     const email = e.target[0].value;
-//     const password = e.target[1].value;
-
-//     const response = await signIn("credentials", {
-//         email: email,
-//         password: password,
-//         redirect: false,
-//     });
-
-//     if (!response?.error) {
-//         router.push("/homepage");
-//         router.refresh();
-//     }
-// };
+import { InfoSelectionOptionPage } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOptionPage'
 
 export function OptionsToSelectAndInfoSelectionNames() {
 
     return (
 
         <> 
-            <div className='row h-50'>
+            <div className='row h-8'>
                 <div className='col-sm-6 d-flex flex-column'>
-                   <div className='btn-group-vertical'
-                        role="group"
-                        aria-label="Info selection toggle button group"
+                   <InfoSelectionOptionPage
+                        href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}
                         >
-                       
-                            
-                            <a  href="/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"
-                                rel="The info selection page to create" 
-                                >  
-                                <input type="radio"
-                                        className='btn-check' 
-                                        name="btnradio"
-                                        id="btnradio1"
-                                        autocomplete="off"
-                                        
-                                    />
-                                <label className="btn btn-bg-secondary text-white"
-                                       htmlFor='btnradio1' 
-                                    >
-                                        A: Those who raised you 
-                                </label>
-                            </a>
-                          
-                       
-                       
-                            <a  href="/selectionFamilyAndFriends/selectionOptionB/infoSectionB1/infoSectionB1a/create"
-                                rel="The info selection page to create" 
-                                > 
-                            
-                                <input type="radio"
-                                       className='btn-check' 
-                                       name="btnradio"
-                                       id="btnradio2"
-                                       autocomplete="off"
-                                       
-                                    />
-                                <label className="btn btn-bg-secondary text-white"
-                                        htmlFor='btnradio2' 
-                                    >
-                                        A: Those who raised you 
-                                </label>
-                            </a>
-                            
-                      
-                       
-                           
-                            
-                                <input type="radio"
-                                       className='btn-check' 
-                                       name="btnradio"
-                                       id="btnradio3"
-                                       autocomplete="off"
-                                       
-                                    />
-                                <label className="btn btn-bg-secondary text-white"
-                                        htmlFor='btnradio3' 
-                                    >
-                                        A: Those who raised you 
-                                </label>
-                         
-                       
-                       
-                           
-                                
-                                <input type="radio"
-                                       className='btn-check' 
-                                       name="btnradio"
-                                       id="btnradio4"
-                                       autocomplete="off"
-                                       
-                                    />
-                                <label className="btn btn-bg-secondary text-white"
-                                        htmlFor='btnradio4' 
-                                    >
-                                        A: Those who raised you 
-                                </label>
-                            
-                       
-                        
-                          
-                            
-                                <input type="radio"
-                                       className='btn-check' 
-                                       name="btnradio"
-                                       id="btnradio5"
-                                       autocomplete="off"
-                                       
-                                    />
-                                <label className="btn btn-bg-secondary text-white"
-                                        htmlFor='btnradio5' 
-                                    >
-                                        A: Those who raised you 
-                                </label>
-                         
-                        
-                       
-                           
-                                <input type="radio"
-                                        className='btn-check' 
-                                        name="btnradio"
-                                        id="btnradio6"
-                                        autocomplete="off"
-                                        
-                                    />
-                                <label className="btn btn-bg-secondary text-white"
-                                        htmlFor='btnradio6' 
-                                    >
-                                        A: Those who raised you 
-                                </label>
-                            
-                        
-                    </div>
+                        A: Those who raised you
+                   </InfoSelectionOptionPage> 
                 </div>
                 <div className='col-sm-6 d-flex flex-column' >
                     <div className='dropdown-center ms-4'>
@@ -169,6 +45,16 @@ export function OptionsToSelectAndInfoSelectionNames() {
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
+                   <InfoSelectionOptionPage
+                        href={"/selectionFamilyAndFriends/selectionOptionB/infoSectionB1/infoSectionB1a/create"}>
+                        B: Brothers and Sisters
+                   </InfoSelectionOptionPage> 
+                </div>
+                <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
                         <button className='btn btn-outline-primary dropdown-toggle text-dark'
                                 type="button"
@@ -198,6 +84,16 @@ export function OptionsToSelectAndInfoSelectionNames() {
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
+                   <InfoSelectionOptionPage
+                        href={"/selectionFamilyAndFriends/selectionOptionC/infoSection1a/create"}>
+                        C: Uncles and Aunts
+                   </InfoSelectionOptionPage> 
+                </div>
+                <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
                         <button className='btn btn-outline-primary dropdown-toggle text-dark'
                                 type="button"
@@ -227,6 +123,16 @@ export function OptionsToSelectAndInfoSelectionNames() {
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
+                   <InfoSelectionOptionPage
+                        href={"/selectionFamilyAndFriends/selectionOptionD/infoSection1a/create"}>
+                        D: Grandpa's and Grandma's
+                   </InfoSelectionOptionPage> 
+                </div>
+                <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
                         <button className='btn btn-outline-primary dropdown-toggle text-dark'
                                 type="button"
@@ -258,42 +164,22 @@ export function OptionsToSelectAndInfoSelectionNames() {
                     </div>
                 </div>
             </div>
-        </> 
-    )
-}
-
-
-
-{/* <div className='col-sm-6 d-flex flex-column'>
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
                    <InfoSelectionOptionPage
-                        href={"/selectionFamilyAndFriends/selectionOptionB/infoSectionB1/infoSectionB1a/create"}>
-                        B: Brothers and Sisters
+                        href={"/selectionFamilyAndFriends/selectionOptionE/infoSection1a/create"}>
+                        E: Friends
                    </InfoSelectionOptionPage> 
-                </div> */}
- {/* //                 href={"/selectionFamilyAndFriends/selectionOptionE/infoSection1a/create"}>
-        //                 E: Friends
-        //           
-        //         </div>
-        //     </div>
-        //     <div className='row h-8'>
-        //         <div className='col-sm-6 d-flex flex-column'>
-        //            <InfoSelectionOptionPage
+                </div>
+            </div>
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
+                   <InfoSelectionOptionPage
                         href={"/selectionFamilyAndFriends/selectionOptionF/infoSection1a/create"}>
                         F: Create an option yourself
                    </InfoSelectionOptionPage> 
                 </div>
             </div>
-        </> */}
-{/* <div className='col-sm-6 d-flex flex-column'>
-                   <InfoSelectionOptionPage
-                        href={"/selectionFamilyAndFriends/selectionOptionD/infoSection1a/create"}>
-                        D: Grandpa's and Grandma's
-                   </InfoSelectionOptionPage> 
-                </div> */}
- {/* <div className='col-sm-6 d-flex flex-column'>
-                   <InfoSelectionOptionPage
-                        href={"/selectionFamilyAndFriends/selectionOptionC/infoSection1a/create"}>
-                        C: Uncles and Aunts
-                   </InfoSelectionOptionPage> 
-                </div> */}
-
+        </>
+    )
+}
