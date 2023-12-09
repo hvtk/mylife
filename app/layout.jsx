@@ -1,7 +1,7 @@
-import '../styles/globals.css'
+import '@/styles/globals.css'
 
 // Customized bootstrap css
-import '../styles/customBootstrapHomepage.scss'
+import '@/styles/customBootstrapHomepage.scss'
 
 import { AuthProvider } from '@/components/auth/AuthProvider'
 

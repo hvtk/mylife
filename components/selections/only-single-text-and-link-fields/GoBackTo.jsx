@@ -9,7 +9,7 @@ export function GoBackTo({href, children}) {
                 <Link className='p-1'
                       href={href}  
                     >
-                    <button className='btn btn-outline-secondary text-dark'
+                    <button className='btn btn-outline-primary text-dark'
                                 type="button"
                                 >
                             {children}

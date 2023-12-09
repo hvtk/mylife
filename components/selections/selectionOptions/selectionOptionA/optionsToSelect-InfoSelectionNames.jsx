@@ -1,90 +1,18 @@
-'use client'
-
-import { useState } from 'react'
-
-import { ToggleButton } from '@mui/material'
-import { ToggleButtonGroup } from '@mui/material'
-
 import { DropdownInfoSectionName } from '@/components/dropdown/selections/DropdownInfoSectionName'
+import { InfoSelectionOptionPage } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOptionPage'
 
 export function OptionsToSelectAndInfoSelectionNames() {
-
-        const [option, setOption] = useState('optionA')
-
-        const handleChange = (e, newOption) => {
-            if (newOption !== null) {
-                setOption(newOption)
-            }
-        }
 
     return (
 
         <> 
-            <div className='row h-50'>
-                <div className='col-sm-6'>
-                    <ToggleButtonGroup
-                        orientation="vertical"
-                        value={option}
-                        exclusive // Selecting one option deselects any other
-                        onChange={handleChange}
-                        aria-label="Selection from options"
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
+                   <InfoSelectionOptionPage
+                        href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}
                         >
-                        <ToggleButton value="optionA"
-                                        aria-label="selected option A: Those who raised you"
-                                   
-                                    
-                                
-                                        href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/create"}
-                                        >
-                                        A: Those who raised you
-                                    
-                        </ToggleButton>
-                        <ToggleButton value="optionB"
-                                        aria-label="selected option B: Brothers and Sisters"
-                                    
-                                   
-                                        href={"/selectionFamilyAndFriends/selectionOptionB/infoSectionB1/infoSectionB1a/create"}
-                                        >
-                                        B: Brothers and Sisters
-                                    
-                        </ToggleButton>
-                        <ToggleButton value="optionC"
-                                     aria-label="selected option C: Uncles and Aunts"
-                                    
-                                    
-                                        href={"/selectionFamilyAndFriends/selectionOptionC/infoSection1a/create"}
-                                        >
-                                        C: Uncles and Aunts
-                                    
-                        </ToggleButton>
-                        <ToggleButton value="optionD"
-                                    aria-label="selected option D: Grandpa's and Grandma's"
-                                    
-                                    
-                                        href={"/selectionFamilyAndFriends/selectionOptionD/infoSection1a/create"}
-                                        >
-                                        D: Grandpa's and Grandma's
-                                      
-                        </ToggleButton>
-                        <ToggleButton value="optionE"
-                                aria-label="selected option E: Friends"
-                                
-                                    
-                                        href={"/selectionFamilyAndFriends/selectionOptionE/infoSection1a/create"}
-                                        >
-                                        E: Friends
-                                    
-                        </ToggleButton>
-                        <ToggleButton value="optionF"
-                        aria-label="selected option F: Create an option yourself"
-                        
-                                    
-                                        href={"/selectionFamilyAndFriends/selectionOptionF/infoSection1a/create"}
-                                        >
-                                        F: Create an option yourself
-                                     
-                        </ToggleButton>
-                    </ToggleButtonGroup>    
+                        A: Those who raised you
+                   </InfoSelectionOptionPage> 
                 </div>
                 <div className='col-sm-6 d-flex flex-column' >
                     <div className='dropdown-center ms-4'>
@@ -117,6 +45,16 @@ export function OptionsToSelectAndInfoSelectionNames() {
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
+                   <InfoSelectionOptionPage
+                        href={"/selectionFamilyAndFriends/selectionOptionB/infoSectionB1/infoSectionB1a/create"}>
+                        B: Brothers and Sisters
+                   </InfoSelectionOptionPage> 
+                </div>
+                <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
                         <button className='btn btn-outline-primary dropdown-toggle text-dark'
                                 type="button"
@@ -146,6 +84,16 @@ export function OptionsToSelectAndInfoSelectionNames() {
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
+                   <InfoSelectionOptionPage
+                        href={"/selectionFamilyAndFriends/selectionOptionC/infoSection1a/create"}>
+                        C: Uncles and Aunts
+                   </InfoSelectionOptionPage> 
+                </div>
+                <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
                         <button className='btn btn-outline-primary dropdown-toggle text-dark'
                                 type="button"
@@ -175,6 +123,16 @@ export function OptionsToSelectAndInfoSelectionNames() {
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
+                   <InfoSelectionOptionPage
+                        href={"/selectionFamilyAndFriends/selectionOptionD/infoSection1a/create"}>
+                        D: Grandpa's and Grandma's
+                   </InfoSelectionOptionPage> 
+                </div>
+                <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
                         <button className='btn btn-outline-primary dropdown-toggle text-dark'
                                 type="button"
@@ -205,7 +163,23 @@ export function OptionsToSelectAndInfoSelectionNames() {
                         </ul>
                     </div>
                 </div>
-            </div>  
+            </div>
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
+                   <InfoSelectionOptionPage
+                        href={"/selectionFamilyAndFriends/selectionOptionE/infoSection1a/create"}>
+                        E: Friends
+                   </InfoSelectionOptionPage> 
+                </div>
+            </div>
+            <div className='row h-8'>
+                <div className='col-sm-6 d-flex flex-column'>
+                   <InfoSelectionOptionPage
+                        href={"/selectionFamilyAndFriends/selectionOptionF/infoSection1a/create"}>
+                        F: Create an option yourself
+                   </InfoSelectionOptionPage> 
+                </div>
+            </div>
         </>
     )
 }
