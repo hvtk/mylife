@@ -4,7 +4,7 @@ export function SidebarSelectionDropdownButton({ children }) {
 
         <>
            
-            <button className='btn btn-secondary dropdown-toggle text-dark fw-bold'
+            <button className='btn btn-outline-primary dropdown-toggle text-dark fw-bold m-1'
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
