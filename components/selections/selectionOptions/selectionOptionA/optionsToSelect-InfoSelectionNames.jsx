@@ -1,5 +1,6 @@
 import { DropdownInfoSectionName } from '@/components/dropdown/selections/DropdownInfoSectionName'
 import { InfoSelectionOptionPage } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOptionPage'
+import { DropdownToggle } from '@/components/selections/buttons/DropdownToggle'
 
 export function OptionsToSelectAndInfoSelectionNames() {
 
@@ -16,13 +17,9 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column' >
                     <div className='dropdown-center ms-4'>
-                        <button className='btn btn-outline-primary dropdown-toggle text-dark'
-                                type="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                                >
+                        <DropdownToggle>
                             First Person
-                        </button>
+                        </DropdownToggle>
                         <ul className='dropdown-menu'>
                             <li>
                                 <DropdownInfoSectionName
@@ -56,13 +53,9 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
-                        <button className='btn btn-outline-primary dropdown-toggle text-dark'
-                                type="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                                >
+                        <DropdownToggle>
                             Second Person
-                        </button>
+                        </DropdownToggle>
                         <ul className='dropdown-menu'>
                             <li>
                                 <DropdownInfoSectionName
@@ -95,13 +88,9 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
-                        <button className='btn btn-outline-primary dropdown-toggle text-dark'
-                                type="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                                >
+                        <DropdownToggle>
                             Third Person
-                        </button>
+                        </DropdownToggle>
                         <ul className='dropdown-menu'>
                             <li>
                                 <DropdownInfoSectionName
@@ -134,13 +123,9 @@ export function OptionsToSelectAndInfoSelectionNames() {
                 </div>
                 <div className='col-sm-6 d-flex flex-column'>
                     <div className='dropdown-center ms-4'>
-                        <button className='btn btn-outline-primary dropdown-toggle text-dark'
-                                type="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                                >
+                        <DropdownToggle>
                             Fourth Person
-                        </button>
+                        </DropdownToggle>
                         <ul className='dropdown-menu'>
                             <li>
                                 <DropdownInfoSectionName
