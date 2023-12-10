@@ -5,7 +5,7 @@ export function SidebarInfoSectionName({href, children}) {
     return(
         <>
             <div>
-                <Link className='fs-6 ms-3 text-dark'
+                <Link className='text-dark dropdown-item'
                       href={href}
                     >
                     {children}
