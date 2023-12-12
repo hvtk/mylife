@@ -1,13 +1,5 @@
-import Image from 'next/image'
-
-import Link from 'next/link'
-
-import { SidebarSelectionDropdownButton } from '@/components/sidebar/sidebarParts/SidebarSelectionDropdownButton'
-import { MylifeLogo } from '@/components/sidebar/sidebarParts/MylifeLogo'
 import { SidebarInfoSectionName } from '@/components/sidebar/sidebarParts/SidebarInfoSectionName'
-import SidebarViewList from '@/public/assets/icons/sidebar/view-list.svg'
-import SidebarPerson from '@/public/assets/icons/sidebar/person.svg'
-
+import { SidebarSelectionDropdownButtonOffcanvas } from '@/components/sidebar/sidebarParts/SidebarSelectionDropdownButtonOffcanvas'
 
 export function SidebarListSelectionsOffcanvas() {
   return (
@@ -19,9 +11,9 @@ export function SidebarListSelectionsOffcanvas() {
               <dl className='ms-3'>
                 <dt>
                   <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       A: Family and Friends
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -52,9 +44,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       B: Where I Live
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -79,9 +71,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       C: Eat and Drink
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -106,9 +98,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       D: Personal Situation
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -133,9 +125,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                     E: Sleep Routine
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -160,9 +152,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       F: Daily Routine
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -187,9 +179,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       G: Finance
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -214,9 +206,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       H: Insurances
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -241,9 +233,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       I: Subcriptions
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -268,9 +260,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       J: Used Websites
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -295,9 +287,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       K: Installed Apps
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -322,9 +314,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                     L: Reminders
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -349,9 +341,9 @@ export function SidebarListSelectionsOffcanvas() {
                 </dt>
                 <dt>
                 <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       M: Rights and Obligations
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
@@ -375,9 +367,9 @@ export function SidebarListSelectionsOffcanvas() {
                   </div>
                 </dt>
                 <dt> <div className='dropdown-center'>  
-                    <SidebarSelectionDropdownButton>
+                    <SidebarSelectionDropdownButtonOffcanvas>
                       N: My Schedule
-                    </SidebarSelectionDropdownButton>
+                    </SidebarSelectionDropdownButtonOffcanvas>
                     <ul className='dropdown-menu'>
                         <li>
                             <SidebarInfoSectionName
