@@ -6,7 +6,7 @@ import { useState } from "react"
 
 import { ConsumerEmail } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmail"
 import { SaveOptionA } from "@/components/selections/buttons/SaveOptionA"
-import { InfoSectionAName } from "./input-fields/infoSectionA/InfoSectionAName"
+import { InfoSectionAName } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/infoSectionA/InfoSectionAName"
 
 export function SelectionOptionA1aUpdate() {
         
@@ -54,7 +54,7 @@ export function SelectionOptionA1aUpdate() {
                 <InfoSectionAName />
                 <div className='row'>
                     <SaveOptionA>
-                        Save Name First Person
+                        Update Name First Person
                     </SaveOptionA>
                 </div>
             </form>

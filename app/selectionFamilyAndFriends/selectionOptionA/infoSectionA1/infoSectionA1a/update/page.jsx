@@ -4,7 +4,7 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 
 import { getServerSession } from 'next-auth'
 
-import { SelectionOptionA1aRead } from '@/components/selections/selectionOptions/selectionOptionA/read/SelectionOptionA1aRead'
+import { SelectionOptionA1aUpdate } from '@/components/selections/selectionOptions/selectionOptionA/update/input-fields/SelectionOptionA1aUpdate'
 import { HeaderSignOut } from '@/components/header/HeaderSignOut'
 import { SidebarSelections } from '@/components/sidebar/selections/SidebarSelections'
 import { SelectionOptionImage } from '@/components/selections/only-single-image-fields/SelectionOptionImage'
@@ -14,9 +14,9 @@ import { InfoSectionNameInput } from '@/components/selections/only-single-text-f
 import { GoBackTo } from '@/components/selections/only-single-text-and-link-fields/GoBackTo'
 
 import selectImageFamily from 'public/assets/images/selections/family.jpg'
-import { OptionsToSelectAndInfoSelectionNamesData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesData'
+import { OptionsToSelectAndInfoSelectionNamesUpdateData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesUpdateData'
 
-export default async function InfoSectionA1aGetData() {
+export default async function InfoSectionA1aUpdateData() {
 
   const session = await getServerSession(authOptions)
   
@@ -45,7 +45,7 @@ export default async function InfoSectionA1aGetData() {
             <div className='row'>
               <div className='col-sm-12 h-4 mt-2 d-flex align-items-center justify-content-end'>
                 <SelectedPageName>
-                  DATA:  Selection option A: 'Those who raised you'
+                  UPDATE DATA:  Selection option A: 'Those who raised you'
                 </SelectedPageName>
                 {!!session && 
                 <div className='fs-5 me-4'>
@@ -78,16 +78,16 @@ export default async function InfoSectionA1aGetData() {
                   <div className='row h-8'>
                     <div className='col-sm-6 d-flex flex-column'>
                       <div className='d-flex align-items-center justify-content-center fs-5'>      
-                        OPTIONS TO SELECT
+                        INFO SECTION
                       </div> 
                     </div>
                     <div className='col-sm-6 d-flex flex-column'>
                       <div className='d-flex align-items-center justify-content-center fs-5 me-3'>      
-                      GET DATA FROM INFO SECTION
+                      GET DATA TO UPDATE
                       </div> 
                     </div>
                   </div>
-                  <OptionsToSelectAndInfoSelectionNamesData />
+                  <OptionsToSelectAndInfoSelectionNamesUpdateData />
                 </div>
               </div>
               <div className='col-sm-6 min-vh-100 d-flex flex-column align-items-center justify-content-center'>
@@ -97,19 +97,7 @@ export default async function InfoSectionA1aGetData() {
                       DATA NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
-                  {
-                    infoSectionA1aData.map((FamilyAndFriendsSelectionOptionA1a) => {
-                      return (
-                        <SelectionOptionA1aRead
-                          key={FamilyAndFriendsSelectionOptionA1a.firstName}
-                          firstName={FamilyAndFriendsSelectionOptionA1a.firstName}
-                          secondName={FamilyAndFriendsSelectionOptionA1a.secondName}
-                          infix={FamilyAndFriendsSelectionOptionA1a.infix}
-                          lastName={FamilyAndFriendsSelectionOptionA1a.lastName}
-                        />
-                      )
-                    })
-                  }
+                  <SelectionOptionA1aUpdate/>
                 </div>
               </div>
             </div>

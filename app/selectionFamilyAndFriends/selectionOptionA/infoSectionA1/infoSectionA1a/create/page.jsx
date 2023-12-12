@@ -60,7 +60,7 @@ export default async function InfoSectionA1a() {
                       </GoBackTo> 
                     </div>
                   </div>
-                  <div className='row h-10'>
+                  <div className='row h-8'>
                     <div className='col-sm-6 d-flex flex-column'>
                       <div className='d-flex align-items-center justify-content-center fs-5'>      
                         OPTIONS TO SELECT

@@ -41,6 +41,12 @@ export function SidebarListSelectionsOffcanvas() {
                                 Data
                             </SidebarInfoSectionName>
                         </li>
+                        <li>
+                            <SidebarInfoSectionName
+                                href={"/selectionFamilyAndFriends/selectionOptionA/infoSectionA1/infoSectionA1a/update"}>
+                                Update Data
+                            </SidebarInfoSectionName>
+                        </li>
                     </ul>
                   </div>
                 </dt>
