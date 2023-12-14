@@ -97,7 +97,19 @@ export default async function InfoSectionA1aUpdateData() {
                       DATA NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
-                  <SelectionOptionA1aUpdate/>
+                  {
+                    infoSectionA1aData.map((FamilyAndFriendsSelectionOptionA1a) => {
+                      return (
+                        <SelectionOptionA1aUpdate
+                          key={FamilyAndFriendsSelectionOptionA1a.firstName}
+                          firstName={FamilyAndFriendsSelectionOptionA1a.firstName}
+                          secondName={FamilyAndFriendsSelectionOptionA1a.secondName}
+                          infix={FamilyAndFriendsSelectionOptionA1a.infix}
+                          lastName={FamilyAndFriendsSelectionOptionA1a.lastName}
+                        />
+                      )
+                    })
+                  }
                 </div>
               </div>
             </div>
