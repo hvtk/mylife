@@ -14,23 +14,22 @@ export function SelectionOptionA1aUpdate() {
 
         const [err, setErr] = useState(false);
 
-        const SelectionOptionA1aCreation = async (e) => {
+        const SelectionOptionA1aUpdateData = async (e) => {
             e.preventDefault();
-            const consumerEmail = e.target[0].value;
-            const firstName = e.target[1].value;
-            const secondName = e.target[2].value;
-            const infix = e.target[3].value;
-            const lastName = e.target[4].value;
+            // const consumerEmail = e.target[0].value;
+            // const firstName = e.target[1].value;
+            // const secondName = e.target[2].value;
+            // const infix = e.target[3].value;
+            // const lastName = e.target[4].value;
 
             try {
             
-                const res = await fetch("/api/selections/familyandfriends/selectionoptiona/infosection1a/create", {
+                const res = await fetch("/api/selections/familyandfriends/selectionoptiona/infosection1a/update", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        consumerEmail,
                         firstName,
                         secondName,
                         infix,
@@ -47,7 +46,7 @@ export function SelectionOptionA1aUpdate() {
 
     return (
         <>
-            <form onSubmit={SelectionOptionA1aCreation}
+            <form onSubmit={SelectionOptionA1aUpdateData}
                   className='row w-95'  
                 >
                 <ConsumerEmail />

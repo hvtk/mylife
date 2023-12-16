@@ -10,7 +10,7 @@ export function GoBackTo({href, children}) {
                       href={href}  
                     >
                     <button className='btn btn-outline-primary text-black'
-                                type="button"
+                            type="button"
                                 >
                             {children}
                     </button>

@@ -47,43 +47,43 @@ export function FormSignUp() {
                     PLEASE SIGN UP
                 </div>
                 <label htmlFor="username"
-                        className='form-label'
+                       className='form-label'
                     > 
                         Enter your name:
                 </label>
-                <input
-                    type="text"
-                    name="username"
-                    className='form-control'
-                    id="inputForm"
-                    placeholder="Type your full name"
-                    required   
+                <input type="text"
+                       name="username"
+                       className='form-control'
+                       id="username"
+                       placeholder="Type your full name"
+                       required 
+                      
                 />
                 <label htmlFor="email"
-                    className='form-label'
+                       className='form-label'
                     > 
                         Enter your email:
                 </label>
-                <input
-                    type="email"
-                    name="email"
-                    className='form-control'
-                    id="inputForm"
-                    placeholder="Type your email"
-                    required
+                <input type="email"
+                       name="email"
+                       className='form-control'
+                       id="email"
+                       placeholder="Type your email"
+                       required
+                    
                 />
                 <label htmlFor="password"
-                    className='form-label'
+                       className='form-label'
                     > 
                         Enter your password:
                 </label>
-                <input
-                    type="password"
-                    name="password"
-                    className='form-control'
-                    id="inputForm"
-                    placeholder="Type your password"
-                    required
+                <input type="password"
+                       name="password"
+                       className='form-control'
+                       id="password"
+                       placeholder="Type your password"
+                       required
+                    
                 />
                 <button type="submit"
                         className='btn btn-primary w-100'
@@ -92,7 +92,7 @@ export function FormSignUp() {
                 </button>
                 <div className="mt-3">
                     <Link className = 'text-primaryblue-600'
-                        href="/auth/signIn"
+                          href="/auth/signIn"
                         >
                             Already an account?
                     </Link>  
