@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation"
 
 import { useState } from "react"
 
-import { ConsumerEmail } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmail"
 import { SaveOptionA } from "@/components/selections/buttons/SaveOptionA"
 import { InfoSectionANameUpdate } from "@/components/selections/selectionOptions/selectionOptionA/update/input-fields/infoSectionA/InfoSectionANameUpdate"
 
@@ -49,7 +48,6 @@ export function SelectionOptionA1aUpdate() {
             <form onSubmit={SelectionOptionA1aUpdateData}
                   className='row w-95'  
                 >
-                <ConsumerEmail />
                 <InfoSectionANameUpdate />
                 <div className='row'>
                     <SaveOptionA>

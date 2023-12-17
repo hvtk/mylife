@@ -1,4 +1,4 @@
-import prisma from '@/app/lib/prisma'
+// import prisma from '@/app/lib/prisma'
 
 import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 
@@ -18,21 +18,7 @@ import { OptionsToSelectAndInfoSelectionNamesUpdateData } from '@/components/sel
 
 export default async function InfoSectionA1aUpdateData() {
 
- 
   const session = await getServerSession(authOptions)
-
-  const infoSectionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
-    where: {
-        consumer: {
-            email: session.user.email
-        }
-    },
-    include: {
-      consumer: {
-        select: { name: true}
-      }
-    },
-  })
   
   return (
 
@@ -98,19 +84,7 @@ export default async function InfoSectionA1aUpdateData() {
                       DATA NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
-                  {
-                    infoSectionA1aData.map((FamilyAndFriendsSelectionOptionA1a) => {
-                      return (
-                        <SelectionOptionA1aUpdate
-                          key={FamilyAndFriendsSelectionOptionA1a.firstName}
-                          firstName={FamilyAndFriendsSelectionOptionA1a.firstName}
-                          secondName={FamilyAndFriendsSelectionOptionA1a.secondName}
-                          infix={FamilyAndFriendsSelectionOptionA1a.infix}
-                          lastName={FamilyAndFriendsSelectionOptionA1a.lastName}
-                        />
-                      )
-                    })
-                  }
+                  <SelectionOptionA1aUpdate />
                 </div>
               </div>
             </div>
