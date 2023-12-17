@@ -19,7 +19,7 @@ import { OptionsToSelectAndInfoSelectionNamesUpdateData } from '@/components/sel
 export default async function InfoSectionA1aUpdateData() {
 
   const session = await getServerSession(authOptions)
-  
+
   return (
 
     <>

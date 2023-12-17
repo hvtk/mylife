@@ -15,11 +15,10 @@ export function SelectionOptionA1aUpdate() {
 
         const SelectionOptionA1aUpdateData = async (e) => {
             e.preventDefault();
-            // const consumerEmail = e.target[0].value;
-            // const firstName = e.target[1].value;
-            // const secondName = e.target[2].value;
-            // const infix = e.target[3].value;
-            // const lastName = e.target[4].value;
+            const firstName = e.target[0].value;
+            const secondName = e.target[1].value;
+            const infix = e.target[2].value;
+            const lastName = e.target[3].value;
 
             try {
             
