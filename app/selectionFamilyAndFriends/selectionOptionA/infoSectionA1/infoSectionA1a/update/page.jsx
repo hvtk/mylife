@@ -81,7 +81,7 @@ export default async function InfoSectionA1aUpdateData() {
                 <div className='bg-warning h-75 w-75 rounded-5 d-flex flex-column align-items-center justify-content-center'>
                   <div className='row h-10'>
                     <InfoSectionNameInput>
-                      DATA NAME FIRST PERSON "Those who raised you"
+                      UPDATE NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
                   <SelectionOptionA1aUpdate />

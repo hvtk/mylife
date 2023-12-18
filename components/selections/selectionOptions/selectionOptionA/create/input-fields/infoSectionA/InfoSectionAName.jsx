@@ -1,16 +1,5 @@
-'use client'
-
-import { useState } from "react"
-
 export function InfoSectionAName() {
 
-    const [state, setState] = useState({
-        Firstname: "",
-        Secondname: "",
-        Infix: "",
-        Lastname: ""
-    });
-       
     return (
         <>
            
@@ -18,7 +7,7 @@ export function InfoSectionAName() {
                 <label htmlFor="FirstName"
                        className='col-sm-4 col-form-label'
                     >
-                        First Name: {""}
+                        First Name
                 </label> 
                 <div className="col-sm-8">
                     <input type="text"
@@ -26,7 +15,6 @@ export function InfoSectionAName() {
                            className='form-control' 
                            id="FirstName"
                            placeholder="Henk"
-                           defaultValue={state.Firstname}
                     />
                 </div>
             </div>
@@ -34,7 +22,7 @@ export function InfoSectionAName() {
                 <label htmlFor="SecondName"
                        className='col-sm-4 col-form-label'
                     >
-                        Second Name: {""}
+                        Second Name
                 </label> 
                 <div className='col-sm-8'>
                     <input type="text"
@@ -42,7 +30,6 @@ export function InfoSectionAName() {
                            className='form-control' 
                            id="SecondName"
                            placeholder="Diederik"
-                           defaultValue={state.Secondname}
                     />
                 </div>
             </div>
@@ -50,7 +37,7 @@ export function InfoSectionAName() {
                 <label htmlFor="Infix"
                        className='col-sm-4 col-form-label'
                     >
-                        Infix: {""}
+                        Infix
                 </label> 
                 <div className="col-sm-8">
                     <input type="text"
@@ -58,7 +45,6 @@ export function InfoSectionAName() {
                            className='form-control' 
                            id="Infix"
                            placeholder="van ´t"
-                           defaultValue={state.Infix}
                     />
                 </div>
             </div>
@@ -66,7 +52,7 @@ export function InfoSectionAName() {
                 <label htmlFor="LastName"
                        className='col-sm-4 col-form-label'
                     >
-                        Last Name: {""}
+                        Last Name
                 </label> 
                 <div className='col-sm-8'>
                     <input type="text"
@@ -74,7 +60,6 @@ export function InfoSectionAName() {
                            className='form-control' 
                            id="LastName"
                            placeholder="Kruijs"
-                           defaultValue= {state.Lastname}
                     />
                 </div>
             </div>
