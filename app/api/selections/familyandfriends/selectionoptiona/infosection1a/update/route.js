@@ -2,55 +2,51 @@ import prisma from "@/app/lib/prisma"
 
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-import { NextResponse } from "next/server"
-
 import { getServerSession } from "next-auth"
 
-export const UPDATE = async (request) => {
-
-    // const { firstName, secondName, infix, lastName, consumerEmail} = await request.json();
+export const UPDATE = async (req, res) => {
 
     const session = await getServerSession(authOptions);
 
     try {
 
-        const SelectionOptionA1aUpdate = await prisma.FamilyAndFriendsSelectionOptionA1a.update({
-            where: {
-                consumer: {
-                    email: session.user.email
-                }
-            },
-            include: {
-              consumer: {
-                select: { name: true}
-              }
-            },
-        });
+        if (req.method === "PUT") {
 
-        if (SelectionOptionA1aUpdate) {
+            await prisma.FamilyAndFriendsSelectionOptionA1a.update({
+                where: {
+                    consumer: {
+                        email: session.user.email
+                    }
+                },
+                include: {
+                    consumer: {
+                        select: { name: true}
+                    }
+                },
+                data: {
+                    completed: req.body.completed,
+                },
+            });
             
             if (session) {
-                return new NextResponse (
-                    "InfoPerson has been updated!", 
-                    { status: 201, }
+                res.status(201).json(
+                    {message: "InfoPerson has been updated!"} 
                 );
             } else {
-                return new NextResponse (
-                    "You are unauthorized to update infoPerson!",
-                    { status: 401, });
+                res.status(401).json (
+                    {message: "You are unauthorized to update infoPerson!"}
+                );
             }
         
         } else {
-            return new NextResponse (
-                "InfoPerson is not updated!",
-                { status: 401, }
+            res.status(401).json (
+                {message: "InfoPerson is not updated!"}
             );
         }
 
     } catch (err) {
-        return new NextResponse (
-            err.message,
-            { status: 500, }
+        res.err.status(500).json (
+           {message: "There is something going wrong!"} 
         );
     }
 }

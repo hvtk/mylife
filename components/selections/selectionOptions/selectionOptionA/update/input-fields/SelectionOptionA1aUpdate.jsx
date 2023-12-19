@@ -15,19 +15,20 @@ export function SelectionOptionA1aUpdate() {
 
         const SelectionOptionA1aUpdateData = async (e) => {
             e.preventDefault();
-            const firstName = e.target[0].value;
-            const secondName = e.target[1].value;
-            const infix = e.target[2].value;
-            const lastName = e.target[3].value;
+            // const firstName = e.target[0].value;
+            // const secondName = e.target[1].value;
+            // const infix = e.target[2].value;
+            // const lastName = e.target[3].value;
 
             try {
             
                 const res = await fetch("/api/selections/familyandfriends/selectionoptiona/infosection1a/update", {
-                    method: "POST",
+                    method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
+                        completed: !FamilyAndFriendsSelectionOptionA1a.completed,
                         firstName,
                         secondName,
                         infix,
