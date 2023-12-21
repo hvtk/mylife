@@ -5,7 +5,7 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import { getServerSession } from 'next-auth'
 
 
-export async function InfoSectionANameUpdate() {
+export async function InfoSectionANameUpdate({handleFirstNameChange, handleSecondNameChange,handleInfixChange,handleLastNameChange }) {
 
     const session = await getServerSession(authOptions)
   
@@ -44,7 +44,7 @@ export async function InfoSectionANameUpdate() {
                             id="FirstName"
                             placeholder="Henk"
                             defaultValue={FamilyAndFriendsSelectionOptionA1a.firstName}
-                            
+                            onChange={handleFirstNameChange}
                         />
                     </div>
                 </div>
@@ -64,6 +64,7 @@ export async function InfoSectionANameUpdate() {
                             id="SecondName"
                             placeholder="Diederik"
                             defaultValue={FamilyAndFriendsSelectionOptionA1a.secondName}
+                            onChange={handleSecondNameChange}
                         />
                     </div>
                 </div>
@@ -83,6 +84,7 @@ export async function InfoSectionANameUpdate() {
                             id="Infix"
                             placeholder="van 't"
                             defaultValue={FamilyAndFriendsSelectionOptionA1a.infix}
+                            onChange={handleInfixChange}
                         />
                     </div>
                 </div>
@@ -102,6 +104,7 @@ export async function InfoSectionANameUpdate() {
                             id="LastName"
                             placeholder="Kruijs"
                             defaultValue={FamilyAndFriendsSelectionOptionA1a.lastName}
+                            onChange={handleLastNameChange}
                         />
                     </div>
                 </div>

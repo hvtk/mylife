@@ -13,12 +13,43 @@ export function SelectionOptionA1aUpdate() {
 
         const [err, setErr] = useState(false);
 
+        const [updateOptionA1a, setUpdateOptionA1a] = useState('');
+
+        function handleFirstNameChange(e) {
+            setUpdateOptionA1a({
+                ...updateOptionA1a,
+                firstName: e.target[0].value
+            });
+        }
+
+        function handleSecondNameChange(e) {
+            setUpdateOptionA1a({
+                ...updateOptionA1a,
+                secondName: e.target[1].value
+            });
+        }
+
+        function handleInfixChange(e) {
+            setUpdateOptionA1a({
+                ...updateOptionA1a,
+                infix: e.target[2].value
+            });
+        }
+
+        function handleLastNameChange(e) {
+            setUpdateOptionA1a({
+                ...updateOptionA1a,
+                lastName: e.target[3].value
+            });
+        }
+
         const SelectionOptionA1aUpdateData = async (e) => {
             e.preventDefault();
-            // const firstName = e.target[0].value;
-            // const secondName = e.target[1].value;
-            // const infix = e.target[2].value;
-            // const lastName = e.target[3].value;
+
+            const firstName = e.target[0].value;
+            const secondName = e.target[1].value;
+            const infix = e.target[2].value;
+            const lastName = e.target[3].value;
 
             try {
             
@@ -28,7 +59,6 @@ export function SelectionOptionA1aUpdate() {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        completed: !FamilyAndFriendsSelectionOptionA1a.completed,
                         firstName,
                         secondName,
                         infix,
@@ -48,7 +78,7 @@ export function SelectionOptionA1aUpdate() {
             <form onSubmit={SelectionOptionA1aUpdateData}
                   className='row w-95'  
                 >
-                <InfoSectionANameUpdate />
+                <InfoSectionANameUpdate/>
                 <div className='row'>
                     <SaveOptionA>
                         Update Name First Person
