@@ -6,7 +6,7 @@ import { useState } from "react"
 
 import { ConsumerEmail } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmail"
 import { SaveOptionA } from "@/components/selections/buttons/SaveOptionA"
-import { InfoSectionAName } from "./input-fields/infoSectionA/InfoSectionAName"
+import { InfoSectionAName } from "@/components/selections/selectionsOptions/selectionsOptionA/create/input-fields/infoSectionA/InfoSectionAName"
 
 export function SelectionOptionA1aCreate() {
         
