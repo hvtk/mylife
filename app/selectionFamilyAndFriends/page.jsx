@@ -10,7 +10,7 @@ import { SelectedPageName } from '@/components/header/only-single-text-fields/Se
 import { InfoSelectionName } from '@/components/selections/only-single-text-fields/InfoSelectionName'
 import { InfoSelectionOption } from '@/components/selections/only-single-text-and-link-fields/InfoSelectionOption'
 
-import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 
 export default async function SelectionFamilyAndFriends() {
 

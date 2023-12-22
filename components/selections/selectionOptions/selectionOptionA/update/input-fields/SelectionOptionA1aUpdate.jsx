@@ -13,34 +13,33 @@ export function SelectionOptionA1aUpdate() {
 
         const [err, setErr] = useState(false);
 
-        const [updateOptionA1a, setUpdateOptionA1a] = useState('');
+        const [firstName, setFirstName] = useState("");
+        const [secondName, setSecondName] = useState("");
+        const [infix, setInfix] = useState("");
+        const [lastName, setLastName] = useState("");
 
-        function handleFirstNameChange(e) {
-            setUpdateOptionA1a({
-                ...updateOptionA1a,
-                firstName: e.target[0].value
-            });
+        const handleFirstNameChange = (e) => {
+            setFirstName(
+                e.target[0].value
+            );
         }
 
-        function handleSecondNameChange(e) {
-            setUpdateOptionA1a({
-                ...updateOptionA1a,
-                secondName: e.target[1].value
-            });
+        const handleSecondNameChange = (e) => {
+            setSecondName(
+                e.target[1].value
+            );
         }
 
-        function handleInfixChange(e) {
-            setUpdateOptionA1a({
-                ...updateOptionA1a,
-                infix: e.target[2].value
-            });
+        const handleInfixChange = (e) => {
+            setInfix(
+                e.target[2].value
+            );
         }
 
-        function handleLastNameChange(e) {
-            setUpdateOptionA1a({
-                ...updateOptionA1a,
-                lastName: e.target[3].value
-            });
+        const handleLastNameChange = (e) => {
+            setLastName(
+                e.target[3].value
+            );
         }
 
         const SelectionOptionA1aUpdateData = async (e) => {

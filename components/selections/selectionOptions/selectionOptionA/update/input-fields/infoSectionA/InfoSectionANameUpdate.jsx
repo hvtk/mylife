@@ -5,7 +5,7 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import { getServerSession } from 'next-auth'
 
 
-export async function InfoSectionANameUpdate({handleFirstNameChange, handleSecondNameChange,handleInfixChange,handleLastNameChange }) {
+export async function InfoSectionANameUpdate() {
 
     const session = await getServerSession(authOptions)
   
@@ -44,7 +44,6 @@ export async function InfoSectionANameUpdate({handleFirstNameChange, handleSecon
                             id="FirstName"
                             placeholder="Henk"
                             defaultValue={FamilyAndFriendsSelectionOptionA1a.firstName}
-                            onChange={handleFirstNameChange}
                         />
                     </div>
                 </div>
@@ -64,7 +63,6 @@ export async function InfoSectionANameUpdate({handleFirstNameChange, handleSecon
                             id="SecondName"
                             placeholder="Diederik"
                             defaultValue={FamilyAndFriendsSelectionOptionA1a.secondName}
-                            onChange={handleSecondNameChange}
                         />
                     </div>
                 </div>
@@ -84,7 +82,6 @@ export async function InfoSectionANameUpdate({handleFirstNameChange, handleSecon
                             id="Infix"
                             placeholder="van 't"
                             defaultValue={FamilyAndFriendsSelectionOptionA1a.infix}
-                            onChange={handleInfixChange}
                         />
                     </div>
                 </div>
@@ -104,7 +101,6 @@ export async function InfoSectionANameUpdate({handleFirstNameChange, handleSecon
                             id="LastName"
                             placeholder="Kruijs"
                             defaultValue={FamilyAndFriendsSelectionOptionA1a.lastName}
-                            onChange={handleLastNameChange}
                         />
                     </div>
                 </div>

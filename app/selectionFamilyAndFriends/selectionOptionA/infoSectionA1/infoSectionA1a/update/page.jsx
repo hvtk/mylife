@@ -11,7 +11,7 @@ import { SelectionOptionName } from '@/components/selections/only-single-text-fi
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
 import { GoBackTo } from '@/components/selections/only-single-text-and-link-fields/GoBackTo'
 
-import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 import { OptionsToSelectAndInfoSelectionNamesUpdateData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesUpdateData'
 
 export default async function InfoSectionA1aUpdateData() {
