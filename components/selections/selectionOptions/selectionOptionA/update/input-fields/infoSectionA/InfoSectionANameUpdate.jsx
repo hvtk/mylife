@@ -22,7 +22,6 @@ export async function InfoSectionANameUpdate() {
         },
     })
 
-
     return (
 
         <>
