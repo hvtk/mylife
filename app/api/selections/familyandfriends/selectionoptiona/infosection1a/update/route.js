@@ -16,11 +16,21 @@ export const UPDATE = async (request) => {
     try {
 
         const SelectionOptionA1aUpdate = await prisma.FamilyAndFriendsSelectionOptionA1a.update({
+            where: {
+                consumer: {
+                    email: session.user.email
+                }
+            },
+            include: {
+              consumer: {
+                select: { name: true}
+              }
+            },
             data: {
                 firstName: firstName,
                 secondName: secondName,
                 infix: infix,
-                lastName: lastName,
+                lastName: lastName
             },
         });
 

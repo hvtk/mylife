@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export function InfoSectionANameUpdateChange({children}) {
+export function InfoSectionANameUpdateChange() {
 
     const [firstName, setFirstname] = useState("");
 
@@ -10,20 +10,13 @@ export function InfoSectionANameUpdateChange({children}) {
         setFirstname(e.target[0].value);
     };
 
-    const nameUpdateChange = document.getElementById("#FirstName");
-    const newAttrA = document.createAttribute("value");
-    const newAttrB = document.createAttribute("onChange");
-    
-    nameUpdateChange.addEventListener("click", () => {
+    document.getElementById("FirstName").addEventListener("click", () => {
+        const newAttrA = document.createAttribute("value");
+        const newAttrB = document.createAttribute("onChange");
         newAttrA.value = {firstName};
         newAttrB.value = {handleChange};
         value.setAttributeNode(newAttrA);
         onChange.setAttributeNode(newAttrB);
     });
-
-    return (
-        <>
-            {children}
-        </>
-    )
+    
 }

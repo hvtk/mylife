@@ -13,6 +13,7 @@ import { GoBackTo } from '@/components/selections/only-single-text-and-link-fiel
 
 import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 import { OptionsToSelectAndInfoSelectionNamesUpdateData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesUpdateData'
+import { InfoSectionANameUpdate } from '@/components/selections/selectionOptions/selectionOptionA/update/input-fields/infoSectionA/InfoSectionANameUpdate'
 
 export default async function InfoSectionA1aUpdateData() {
 
@@ -82,7 +83,9 @@ export default async function InfoSectionA1aUpdateData() {
                       UPDATE NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
-                  <SelectionOptionA1aUpdate />
+                  <SelectionOptionA1aUpdate>
+                    <InfoSectionANameUpdate/>
+                  </SelectionOptionA1aUpdate>
                 </div>
               </div>
             </div>

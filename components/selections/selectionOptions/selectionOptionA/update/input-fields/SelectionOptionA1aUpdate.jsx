@@ -5,12 +5,11 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 import { SaveOptionA } from "@/components/selections/buttons/SaveOptionA"
-import { InfoSectionANameUpdateChange } from "@/components/selections/selectionOptions/selectionOptionA/update/change-input-fields/InfoSectionANameUpdateChange"
 import { InfoSectionANameUpdate } from "@/components/selections/selectionOptions/selectionOptionA/update/input-fields/infoSectionA/InfoSectionANameUpdate"
 
 
 
-export function SelectionOptionA1aUpdate() {
+export function SelectionOptionA1aUpdate({children}) {
 
         const router = useRouter();
 
@@ -51,9 +50,8 @@ export function SelectionOptionA1aUpdate() {
             <form onSubmit={SelectionOptionA1aUpdateData}
                   className='row w-95'  
                 >
-                <InfoSectionANameUpdateChange>
-                    <InfoSectionANameUpdate />
-                </InfoSectionANameUpdateChange>
+                {/* <InfoSectionANameUpdate /> */}
+                {children}
                 <div className='row'>
                     <SaveOptionA>
                         Update Name First Person
