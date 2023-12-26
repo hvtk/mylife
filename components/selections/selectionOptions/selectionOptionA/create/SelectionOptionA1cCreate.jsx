@@ -6,9 +6,8 @@ import { useState } from "react"
 
 import { ConsumerEmail } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmail"
 import { SaveOptionA } from "@/components/selections/buttons/SaveOptionA"
-import { InfoSectionAOtherInfo } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/infoSectionA/InfoSectionAOtherInfo"
 
-export function SelectionOptionA1cCreate() {
+export function SelectionOptionA1cCreate({children}) {
         
         const router = useRouter();
 
@@ -53,7 +52,7 @@ export function SelectionOptionA1cCreate() {
                   className='row w-95'  
                 >
                 <ConsumerEmail />
-                <InfoSectionAOtherInfo />
+                    {children}
                 <div className='row'>
                     <SaveOptionA>
                         Save Other Info First Person

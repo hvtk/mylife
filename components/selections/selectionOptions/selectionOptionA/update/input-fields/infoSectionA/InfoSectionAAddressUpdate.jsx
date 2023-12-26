@@ -11,7 +11,7 @@ export function InfoSectionAAddressUpdate() {
                 </label> 
                 <div className="col-sm-8">
                     <input type="text"
-                            name="Land"
+                           name="Land"
                            className='form-control' 
                            id="Land"
                            placeholder="Netherlands"

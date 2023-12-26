@@ -13,6 +13,7 @@ import { OptionsToSelectAndInfoSelectionNames } from '@/components/selections/se
 
 import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 import { GoBackTo } from '@/components/selections/only-single-text-and-link-fields/GoBackTo'
+import { InfoSectionAName } from '@/components/selections/selectionOptions/selectionOptionA/create/input-fields/infoSectionA/InfoSectionAName'
 
 export default async function InfoSectionA1a() {
 
@@ -82,7 +83,9 @@ export default async function InfoSectionA1a() {
                       input 1a: NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
-                  <SelectionOptionA1aCreate/>
+                  <SelectionOptionA1aCreate>
+                    <InfoSectionAName />
+                  </SelectionOptionA1aCreate>
                 </div>
               </div>
             </div>

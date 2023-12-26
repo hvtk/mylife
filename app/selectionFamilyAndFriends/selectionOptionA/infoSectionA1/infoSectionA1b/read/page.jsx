@@ -13,7 +13,7 @@ import { SelectionOptionName } from '@/components/selections/only-single-text-fi
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
 import { OptionsToSelectAndInfoSelectionNamesData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesData'
 import { GoBackTo } from '@/components/selections/only-single-text-and-link-fields/GoBackTo'
-import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 
 export default async function InfoSectionA1bGetData() {
 

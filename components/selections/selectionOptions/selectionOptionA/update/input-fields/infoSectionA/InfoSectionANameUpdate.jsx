@@ -57,11 +57,11 @@ export async function InfoSectionANameUpdate() {
                     </label> 
                     <div className='col-sm-8'>
                         <input type="text"
-                            name="SecondName"
-                            className='form-control' 
-                            id="SecondName"
-                            placeholder="Diederik"
-                            defaultValue={FamilyAndFriendsSelectionOptionA1a.secondName}
+                               name="SecondName"
+                               className='form-control' 
+                               id="SecondName"
+                               placeholder="Diederik"
+                               defaultValue={FamilyAndFriendsSelectionOptionA1a.secondName}
                         />
                     </div>
                 </div>
@@ -76,11 +76,11 @@ export async function InfoSectionANameUpdate() {
                     </label> 
                     <div className="col-sm-8">
                         <input type="text"
-                            name="Infix"
-                            className='form-control' 
-                            id="Infix"
-                            placeholder="van 't"
-                            defaultValue={FamilyAndFriendsSelectionOptionA1a.infix}
+                               name="Infix"
+                               className='form-control' 
+                               id="Infix"
+                               placeholder="van 't"
+                               defaultValue={FamilyAndFriendsSelectionOptionA1a.infix}
                         />
                     </div>
                 </div>
@@ -95,11 +95,11 @@ export async function InfoSectionANameUpdate() {
                     </label> 
                     <div className='col-sm-8'>
                         <input type="text"
-                            name="LastName"
-                            className='form-control' 
-                            id="LastName"
-                            placeholder="Kruijs"
-                            defaultValue={FamilyAndFriendsSelectionOptionA1a.lastName}
+                               name="LastName"
+                               className='form-control' 
+                               id="LastName"
+                               placeholder="Kruijs"
+                               defaultValue={FamilyAndFriendsSelectionOptionA1a.lastName}
                         />
                     </div>
                 </div>

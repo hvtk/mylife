@@ -11,8 +11,9 @@ import { SelectionOptionName } from '@/components/selections/only-single-text-fi
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
 import { OptionsToSelectAndInfoSelectionNames } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNames'
 import { GoBackTo } from '@/components/selections/only-single-text-and-link-fields/GoBackTo'
+import { InfoSectionAAddress } from '@/components/selections/selectionOptions/selectionOptionA/create/input-fields/infoSectionA/InfoSectionAAddress'
 
-import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 
 export default async function InfoSectionA1b() {
 
@@ -82,7 +83,9 @@ export default async function InfoSectionA1b() {
                       input 1b: ADRESS FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
-                  <SelectionOptionA1bCreate/>
+                  <SelectionOptionA1bCreate>
+                    <InfoSectionAAddress />
+                  </SelectionOptionA1bCreate>
                 </div>
               </div>
             </div>

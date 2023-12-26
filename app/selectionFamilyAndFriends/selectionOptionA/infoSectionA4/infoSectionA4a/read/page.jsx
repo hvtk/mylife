@@ -14,7 +14,7 @@ import { InfoSections } from '@/components/selections/self-contained-items/InfoS
 import { InfoSectionNameInput } from '@/components/selections/only-single-text-fields/InfoSectionNameInput'
 import { InfoSelectionName } from '@/components/selections/only-single-text-fields/InfoSelectionName'
 
-import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 
 export default async function InfoSectionA1aGetData() {
 

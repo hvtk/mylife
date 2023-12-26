@@ -16,7 +16,7 @@ import { InfoSectionNameInput } from '@/components/selections/only-single-text-f
 
 import { GoBackTo } from '@/components/selections/only-single-text-and-link-fields/GoBackTo'
 
-import selectImageFamily from 'public/assets/images/selections/family.jpg'
+import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 
 export default async function InfoSectionA1cGetData() {
 
