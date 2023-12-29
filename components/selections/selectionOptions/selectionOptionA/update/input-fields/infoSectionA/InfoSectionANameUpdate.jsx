@@ -43,6 +43,7 @@ export async function InfoSectionANameUpdate() {
                             id="FirstName"
                             placeholder="Henk"
                             defaultValue={FamilyAndFriendsSelectionOptionA1a.firstName}
+                            
                         />
                     </div>
                 </div>
