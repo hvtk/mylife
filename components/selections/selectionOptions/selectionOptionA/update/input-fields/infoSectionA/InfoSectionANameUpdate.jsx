@@ -1,3 +1,5 @@
+
+
 import prisma from '@/app/lib/prisma'
 
 import { authOptions } from '@/app/api/auth/[...nextauth]/route'
@@ -43,6 +45,7 @@ export async function InfoSectionANameUpdate() {
                             id="FirstName"
                             placeholder="Henk"
                             defaultValue={FamilyAndFriendsSelectionOptionA1a.firstName}
+                            
                             
                         />
                     </div>
