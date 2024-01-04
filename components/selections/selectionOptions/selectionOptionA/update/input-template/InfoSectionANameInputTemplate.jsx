@@ -12,6 +12,16 @@ export function InfoSectionANameInputTemplate(props) {
 
     const [err, setErr] = useState(false);
 
+    const [firstName, setFirstName] = useState('');
+    const [secondName, setSecondName] = useState('');
+    const [infix, setInfix] = useState('');
+    const [lastName, setLastName] = useState('');
+
+    const changeFirstName = (e) => setFirstName(e.target.firstName);
+    const changeSecondName = (e) => setSecondName(e.target.secondName);       
+    const changeInfix = (e) => setInfix(e.target.infix);  
+    const changeLastName = (e) => setLastName(e.target.lastName);
+
     const SelectionOptionA1aUpdateData = async (e) => {
         e.preventDefault();
 
@@ -62,9 +72,9 @@ export function InfoSectionANameInputTemplate(props) {
                             name="FirstName"
                             className='form-control' 
                             id="FirstName"
-                            placeholder="Henk"
-                            defaultValue={props.firstName}
-                            
+                            placeholder={props.firstName}
+                            value={firstName}
+                            onChange={changeFirstName}
                         />
                     </div>
                 </div>
@@ -82,8 +92,9 @@ export function InfoSectionANameInputTemplate(props) {
                                 name="SecondName"
                                 className='form-control' 
                                 id="SecondName"
-                                placeholder="Diederik"
-                                defaultValue={props.secondName}
+                                placeholder={props.secondName}
+                                value={secondName}
+                                onChange={changeSecondName}
                         />
                     </div>
                 </div>
@@ -101,8 +112,9 @@ export function InfoSectionANameInputTemplate(props) {
                                 name="Infix"
                                 className='form-control' 
                                 id="Infix"
-                                placeholder="van 't"
-                                defaultValue={props.infix}
+                                placeholder={props.infix}
+                                value={infix}
+                                onChange={changeInfix}
                         />
                     </div>
                 </div>
@@ -120,8 +132,9 @@ export function InfoSectionANameInputTemplate(props) {
                                 name="LastName"
                                 className='form-control' 
                                 id="LastName"
-                                placeholder="Kruijs"
-                                defaultValue={props.lastName}
+                                placeholder={props.lastName}
+                                value={lastName}
+                                onChange={changeLastName}
                         />
                     </div>
                 </div>

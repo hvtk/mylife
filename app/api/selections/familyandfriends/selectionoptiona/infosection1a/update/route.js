@@ -22,9 +22,9 @@ export const UPDATE = async (request) => {
                 }
             },
             include: {
-              consumer: {
-                select: { name: true}
-              }
+                consumer: {
+                    select: { name: true}
+                }
             },
             data: {
                 firstName: firstName,
