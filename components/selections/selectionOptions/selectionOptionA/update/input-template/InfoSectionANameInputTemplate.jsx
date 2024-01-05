@@ -17,10 +17,25 @@ export function InfoSectionANameInputTemplate(props) {
     const [infix, setInfix] = useState('');
     const [lastName, setLastName] = useState('');
 
-    const changeFirstName = (e) => setFirstName(e.target.firstName);
-    const changeSecondName = (e) => setSecondName(e.target.secondName);       
-    const changeInfix = (e) => setInfix(e.target.infix);  
-    const changeLastName = (e) => setLastName(e.target.lastName);
+    const changeFirstName = (e) => {
+        e.preventDefault();
+        setFirstName(e.target.firstName);
+    }
+
+    const changeSecondName = (e) => {
+        e.preventDefault();
+        setSecondName(e.target.secondName);       
+    }
+
+    const changeInfix = (e) => {
+        e.preventDefault();
+        setInfix(e.target.infix); 
+    }
+
+    const changeLastName = (e) => {
+        e.preventDefault();
+        setLastName(e.target.lastName);
+    }
 
     const SelectionOptionA1aUpdateData = async (e) => {
         e.preventDefault();

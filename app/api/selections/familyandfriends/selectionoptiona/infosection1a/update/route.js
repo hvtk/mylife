@@ -21,7 +21,7 @@ export const UPDATE = async (request) => {
                 secondName: secondName,
                 infix: infix,
                 lastName: lastName,
-                consumer: {email: consumerEmail}
+                consumer: {email: consumerEmail},
             },
         });
 
