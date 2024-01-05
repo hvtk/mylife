@@ -25,10 +25,11 @@ export function InfoSectionANameInputTemplate(props) {
     const SelectionOptionA1aUpdateData = async (e) => {
         e.preventDefault();
 
-        const firstName = e.target[0].value;
-        const secondName = e.target[1].value;
-        const infix = e.target[2].value;
-        const lastName = e.target[3].value;
+        const consumerEmail = e.target[0].value;
+        const firstName = e.target[1].value;
+        const secondName = e.target[2].value;
+        const infix = e.target[3].value;
+        const lastName = e.target[4].value;
 
         try {
         
@@ -38,6 +39,7 @@ export function InfoSectionANameInputTemplate(props) {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
+                    consumerEmail,
                     firstName,
                     secondName,
                     infix,

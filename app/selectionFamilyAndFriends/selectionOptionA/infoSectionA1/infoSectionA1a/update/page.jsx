@@ -15,6 +15,7 @@ import { GoBackTo } from '@/components/selections/only-single-text-and-link-fiel
 import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 import { OptionsToSelectAndInfoSelectionNamesUpdateData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesUpdateData'
 import { InfoSectionANameInputTemplate } from '@/components/selections/selectionOptions/selectionOptionA/update/input-template/InfoSectionANameInputTemplate'
+import { ConsumerEmailUpdate } from '@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmailUpdate'
 
 export default async function InfoSectionA1aUpdateData() {
 
@@ -97,6 +98,9 @@ export default async function InfoSectionA1aUpdateData() {
                       UPDATE NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
+                  <ConsumerEmailUpdate>
+                    {session.user.email}
+                  </ConsumerEmailUpdate>
                   {
                     infoSectionA1aData.map((FamilyAndFriendsSelectionOptionA1a) => {
                       return (

@@ -9,28 +9,19 @@ import { getServerSession } from "next-auth"
 
 export const UPDATE = async (request) => {
 
-    const { firstName, secondName, infix, lastName} = await request.json();
+    const { firstName, secondName, infix, lastName, consumerEmail} = await request.json();
 
     const session = await getServerSession(authOptions);
 
     try {
 
         const SelectionOptionA1aUpdate = await prisma.FamilyAndFriendsSelectionOptionA1a.update({
-            where: {
-                consumer: {
-                    email: session.user.email
-                }
-            },
-            include: {
-                consumer: {
-                    select: { name: true}
-                }
-            },
             data: {
                 firstName: firstName,
                 secondName: secondName,
                 infix: infix,
-                lastName: lastName
+                lastName: lastName,
+                consumer: {email: consumerEmail}
             },
         });
 
@@ -41,6 +32,7 @@ export const UPDATE = async (request) => {
                     "InfoPerson has been updated!", 
                     { status: 201, }
                 );
+                
             } else {
                 return new NextResponse (
                     "You are unauthorized to update infoPerson!",
