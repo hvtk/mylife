@@ -14,8 +14,9 @@ import { GoBackTo } from '@/components/selections/only-single-text-and-link-fiel
 
 import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 import { OptionsToSelectAndInfoSelectionNamesUpdateData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesUpdateData'
-import { InfoSectionANameInputTemplate } from '@/components/selections/selectionOptions/selectionOptionA/update/input-template/InfoSectionANameInputTemplate'
 import { ConsumerEmailUpdate } from '@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmailUpdate'
+import { SelectionOptionA1aUpdate } from '@/components/selections/selectionOptions/selectionOptionA/update/input-fields/SelectionOptionA1aUpdate'
+import { InfoSectionANameUpdate } from '@/components/selections/selectionOptions/selectionOptionA/update/input-fields/infoSectionA/InfoSectionANameUpdate'
 
 export default async function InfoSectionA1aUpdateData() {
 
@@ -101,19 +102,9 @@ export default async function InfoSectionA1aUpdateData() {
                   <ConsumerEmailUpdate>
                     {session.user.email}
                   </ConsumerEmailUpdate>
-                  {
-                    infoSectionA1aData.map((FamilyAndFriendsSelectionOptionA1a) => {
-                      return (
-                        <InfoSectionANameInputTemplate
-                          key={FamilyAndFriendsSelectionOptionA1a.firstName}
-                          firstName={FamilyAndFriendsSelectionOptionA1a.firstName}
-                          secondName={FamilyAndFriendsSelectionOptionA1a.secondName}
-                          infix={FamilyAndFriendsSelectionOptionA1a.infix}
-                          lastName={FamilyAndFriendsSelectionOptionA1a.lastName}
-                        />
-                      )
-                    })
-                  }
+                  <SelectionOptionA1aUpdate>
+                    <InfoSectionANameUpdate />
+                  </SelectionOptionA1aUpdate>
                 </div>
               </div>
             </div>

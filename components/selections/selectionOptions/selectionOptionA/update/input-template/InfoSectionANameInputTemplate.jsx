@@ -18,22 +18,22 @@ export function InfoSectionANameInputTemplate(props) {
     const [lastName, setLastName] = useState('');
 
     const changeFirstName = (e) => {
-        e.preventDefault();
+        
         setFirstName(e.target.firstName);
     }
 
     const changeSecondName = (e) => {
-        e.preventDefault();
+        
         setSecondName(e.target.secondName);       
     }
 
     const changeInfix = (e) => {
-        e.preventDefault();
+        
         setInfix(e.target.infix); 
     }
 
     const changeLastName = (e) => {
-        e.preventDefault();
+        
         setLastName(e.target.lastName);
     }
 

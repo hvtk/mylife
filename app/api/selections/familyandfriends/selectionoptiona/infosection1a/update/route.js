@@ -9,7 +9,7 @@ import { getServerSession } from "next-auth"
 
 export const UPDATE = async (request) => {
 
-    const { firstName, secondName, infix, lastName, consumerEmail} = await request.json();
+    const { firstName, secondName, infix, lastName} = await request.json();
 
     const session = await getServerSession(authOptions);
 
@@ -21,7 +21,6 @@ export const UPDATE = async (request) => {
                 secondName: secondName,
                 infix: infix,
                 lastName: lastName,
-                consumer: {email: consumerEmail},
             },
         });
 

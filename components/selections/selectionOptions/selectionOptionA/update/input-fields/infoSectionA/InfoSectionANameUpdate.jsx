@@ -1,5 +1,3 @@
-
-
 import prisma from '@/app/lib/prisma'
 
 import { authOptions } from '@/app/api/auth/[...nextauth]/route'
@@ -7,7 +5,7 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import { getServerSession } from 'next-auth'
 
 
-export async function InfoSectionANameUpdate() {
+export async function InfoSectionANameUpdate({value1, onChange1, value2, onChange2, value3, onChange3, value4, onChange4,}) {
 
     const session = await getServerSession(authOptions)
   
@@ -43,10 +41,9 @@ export async function InfoSectionANameUpdate() {
                             name="FirstName"
                             className='form-control' 
                             id="FirstName"
-                            placeholder="Henk"
-                            defaultValue={FamilyAndFriendsSelectionOptionA1a.firstName}
-                            
-                            
+                            placeholder={FamilyAndFriendsSelectionOptionA1a.firstName}
+                            value={value1}
+                            onChange={onChange1}
                         />
                     </div>
                 </div>
@@ -64,8 +61,9 @@ export async function InfoSectionANameUpdate() {
                                name="SecondName"
                                className='form-control' 
                                id="SecondName"
-                               placeholder="Diederik"
-                               defaultValue={FamilyAndFriendsSelectionOptionA1a.secondName}
+                               placeholder={FamilyAndFriendsSelectionOptionA1a.secondName}
+                               value={value2}
+                               onChange={onChange2}
                         />
                     </div>
                 </div>
@@ -83,8 +81,9 @@ export async function InfoSectionANameUpdate() {
                                name="Infix"
                                className='form-control' 
                                id="Infix"
-                               placeholder="van 't"
-                               defaultValue={FamilyAndFriendsSelectionOptionA1a.infix}
+                               placeholder={FamilyAndFriendsSelectionOptionA1a.infix}
+                               value={value3}
+                               onChange={onChange3}
                         />
                     </div>
                 </div>
@@ -102,8 +101,9 @@ export async function InfoSectionANameUpdate() {
                                name="LastName"
                                className='form-control' 
                                id="LastName"
-                               placeholder="Kruijs"
-                               defaultValue={FamilyAndFriendsSelectionOptionA1a.lastName}
+                               placeholder={FamilyAndFriendsSelectionOptionA1a.lastName}
+                               value={value4}
+                               onChange={onChange4}
                         />
                     </div>
                 </div>
