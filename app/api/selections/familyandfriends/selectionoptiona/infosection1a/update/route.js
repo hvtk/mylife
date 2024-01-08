@@ -7,20 +7,27 @@ import { NextResponse } from "next/server"
 import { getServerSession } from "next-auth"
 
 
-export const UPDATE = async (request) => {
+export const PUT = async (request) => {
 
-    const { firstName, secondName, infix, lastName} = await request.json();
+    const { firstName, secondName, infix, lastName, consumerEmail} = await request.json();
 
     const session = await getServerSession(authOptions);
 
     try {
 
         const SelectionOptionA1aUpdate = await prisma.FamilyAndFriendsSelectionOptionA1a.update({
+            where: {
+                consumer: {
+                    email: session.user.email
+                }
+            },
+            
             data: {
                 firstName: firstName,
                 secondName: secondName,
                 infix: infix,
                 lastName: lastName,
+                consumer: { connect: {email: consumerEmail} },
             },
         });
 

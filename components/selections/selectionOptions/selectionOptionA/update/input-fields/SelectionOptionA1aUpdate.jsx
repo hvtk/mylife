@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 import { SaveOptionA } from "@/components/selections/buttons/SaveOptionA"
+import { ConsumerEmail } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmail"
 
 export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, onChange2, value3, onChange3, value4, onChange4 }) {
 
@@ -19,7 +20,7 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
 
     const changeFirstName = (e) => {
         
-        setFirstName(e.target.firstName);
+        setFirstName(e.target.value);
     }
 
     value1=firstName;
@@ -27,7 +28,7 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
 
     const changeSecondName = (e) => {
         
-        setSecondName(e.target.secondName);       
+        setSecondName(e.target.value);       
     }
 
     value2=secondName;
@@ -35,7 +36,7 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
 
     const changeInfix = (e) => {
         
-        setInfix(e.target.infix); 
+        setInfix(e.target.value); 
     }
 
     value3=infix;
@@ -43,7 +44,7 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
 
     const changeLastName = (e) => {
         
-        setLastName(e.target.lastName);
+        setLastName(e.target.value);
     }
 
     value4=lastName;
@@ -52,11 +53,11 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
     const SelectionOptionA1aUpdateData = async (e) => {
         e.preventDefault();
 
-        
-        const firstName = e.target[0].value;
-        const secondName = e.target[1].value;
-        const infix = e.target[2].value;
-        const lastName = e.target[3].value;
+        const consumerEmail = e.target[0].value;
+        const firstName = e.target[1].value;
+        const secondName = e.target[2].value;
+        const infix = e.target[3].value;
+        const lastName = e.target[4].value;
 
         try {
         
@@ -66,7 +67,7 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    
+                    consumerEmail,
                     firstName,
                     secondName,
                     infix,
@@ -74,7 +75,8 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
                 }),
             });
 
-            res.status === 201 && router.push("/selectionFamilyAndFriends")
+            // res.status === 201 && router.push("/selectionFamilyAndFriends")
+            res.status === 201 && router.refresh();
     
         } catch (err) {
             setErr(true);
@@ -86,7 +88,8 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
         <>
             <form onSubmit={SelectionOptionA1aUpdateData}
                   className='row w-95'  
-                >  
+                > 
+                <ConsumerEmail/> 
                 {children}
                 <div className='row'>
                     <SaveOptionA>

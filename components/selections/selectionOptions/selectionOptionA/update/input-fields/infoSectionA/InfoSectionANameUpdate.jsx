@@ -5,7 +5,7 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import { getServerSession } from 'next-auth'
 
 
-export async function InfoSectionANameUpdate({value1, onChange1, value2, onChange2, value3, onChange3, value4, onChange4,}) {
+export async function InfoSectionANameUpdate({value1, onChange1, value2, onChange2, value3, onChange3, value4, onChange4}) {
 
     const session = await getServerSession(authOptions)
   

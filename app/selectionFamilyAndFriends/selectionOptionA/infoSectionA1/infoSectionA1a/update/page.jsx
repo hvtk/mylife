@@ -1,5 +1,3 @@
-import prisma from '@/app/lib/prisma'
-
 import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 
 import { getServerSession } from 'next-auth'
@@ -14,26 +12,12 @@ import { GoBackTo } from '@/components/selections/only-single-text-and-link-fiel
 
 import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 import { OptionsToSelectAndInfoSelectionNamesUpdateData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesUpdateData'
-import { ConsumerEmailUpdate } from '@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmailUpdate'
 import { SelectionOptionA1aUpdate } from '@/components/selections/selectionOptions/selectionOptionA/update/input-fields/SelectionOptionA1aUpdate'
 import { InfoSectionANameUpdate } from '@/components/selections/selectionOptions/selectionOptionA/update/input-fields/infoSectionA/InfoSectionANameUpdate'
 
 export default async function InfoSectionA1aUpdateData() {
 
   const session = await getServerSession(authOptions)
-
-  const infoSectionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
-    where: {
-        consumer: {
-            email: session.user.email
-        }
-    },
-    include: {
-      consumer: {
-        select: { name: true}
-      }
-    },
-  })
 
   return (
 
@@ -99,9 +83,6 @@ export default async function InfoSectionA1aUpdateData() {
                       UPDATE NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
-                  <ConsumerEmailUpdate>
-                    {session.user.email}
-                  </ConsumerEmailUpdate>
                   <SelectionOptionA1aUpdate>
                     <InfoSectionANameUpdate />
                   </SelectionOptionA1aUpdate>
