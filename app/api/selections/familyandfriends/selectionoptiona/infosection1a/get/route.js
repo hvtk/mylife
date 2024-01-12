@@ -7,7 +7,7 @@ import { NextResponse } from "next/server"
 import { getServerSession } from "next-auth"
 
 
-export const READ = async (request) => {
+export const GET = async () => {
 
     const session = await getServerSession(authOptions);
 
@@ -20,9 +20,9 @@ export const READ = async (request) => {
                 }
             },
             include: {
-              consumer: {
-                select: { name: true}
-              }
+                consumer: {
+                    select: { name: true}
+                }
             },
           })
 
@@ -53,17 +53,3 @@ export const READ = async (request) => {
         );
     }
 }
-
-
-const infoSectionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
-    where: {
-        consumer: {
-            email: session.user.email
-        }
-    },
-    include: {
-      consumer: {
-        select: { name: true}
-      }
-    },
-  })

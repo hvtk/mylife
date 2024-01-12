@@ -16,6 +16,7 @@ import { GoBackTo } from '@/components/selections/only-single-text-and-link-fiel
 import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 import { OptionsToSelectAndInfoSelectionNamesData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesData'
 
+
 export default async function InfoSectionA1aGetData() {
 
   const session = await getServerSession(authOptions)

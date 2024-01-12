@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 import { SaveOptionA } from "@/components/selections/buttons/SaveOptionA"
-import { ConsumerEmail } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmail"
+import { ConsumerEmailUpdate } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmailUpdate"
 
 export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, onChange2, value3, onChange3, value4, onChange4 }) {
 
@@ -53,11 +53,10 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
     const SelectionOptionA1aUpdateData = async (e) => {
         e.preventDefault();
 
-        const consumerEmail = e.target[0].value;
-        const firstName = e.target[1].value;
-        const secondName = e.target[2].value;
-        const infix = e.target[3].value;
-        const lastName = e.target[4].value;
+        const firstName = e.target[0].value;
+        const secondName = e.target[1].value;
+        const infix = e.target[2].value;
+        const lastName = e.target[3].value;
 
         try {
         
@@ -67,7 +66,6 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    consumerEmail,
                     firstName,
                     secondName,
                     infix,
@@ -89,7 +87,7 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
             <form onSubmit={SelectionOptionA1aUpdateData}
                   className='row w-95'  
                 > 
-                <ConsumerEmail/> 
+                <ConsumerEmailUpdate/> 
                 {children}
                 <div className='row'>
                     <SaveOptionA>
