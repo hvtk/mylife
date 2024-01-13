@@ -1,4 +1,4 @@
-import prisma from '@/app/lib/prisma'
+import prisma from '@/prisma/prisma-client/prisma'
 
 import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 

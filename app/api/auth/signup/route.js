@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs"
 import { NextResponse } from "next/server"
 
 // The code for the prisma client with no limitation 
-import prisma from "@/app/lib/prisma"
+import prisma from '@/prisma/prisma-client/prisma'
 
 export const POST = async (request) => {
 

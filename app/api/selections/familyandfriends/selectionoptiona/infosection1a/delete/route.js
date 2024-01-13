@@ -1,4 +1,4 @@
-import prisma from "@/app/lib/prisma"
+import prisma from '@/prisma/prisma-client/prisma'
 
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
@@ -26,7 +26,7 @@ export const DELETE = async (request) => {
                 consumer: {
                     email: session.user.email
                 }
-                id:
+        
             },
             include: {
               consumer: {
