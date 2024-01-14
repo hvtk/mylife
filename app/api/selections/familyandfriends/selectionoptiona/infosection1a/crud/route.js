@@ -2,37 +2,54 @@ import prisma from '@/prisma/prisma-client/prisma'
 
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
+import { NextResponse } from "next/server"
+
 import { getServerSession } from "next-auth"
 
-export const getInfoSection1aByID = async (id) => {
 
-    const infoSection1a = await prisma.FamilyAndFriendsSelectionOptionA1a.findUnique({
-        where: {
-            id,
-        },
-        include: {
-            consumer: true,
-        },
-    });
-
-    return infoSection1a;
-};
-
-export const createInfoSection1a = async (firstName, secondName, infix, lastName, session) => {
+export const GET = async () => {
 
     const session = await getServerSession(authOptions);
 
-    const newInfoSection1a = await prisma.FamilyAndFriendsSelectionOptionA1a.create({
-        data: {
-            firstName: firstName,
-            secondName: secondName,
-            infix: infix,
-            lastName: lastName,
-            consumer: { connect: {email: session?.consumer?.email} },
-        },
-    });
+    try {
 
-    const infoSection1a = await getInfoSection1aByID(newInfoSection1a.id);
+        const infoSectionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
+            where: {
+                consumer: {
+                    email: session.user.email
+                }
+            },
+            include: {
+                consumer: {
+                    select: { name: true}
+                }
+            },
+          })
 
-    return infoSection1a;    
-};
+        if (infoSectionA1aData) {
+            
+            if (session) {
+                return new NextResponse (
+                    "InfoPerson has been loaded!", 
+                    { status: 201, }
+                );
+            } else {
+                return new NextResponse (
+                    "You are unauthorized to read infoPerson!",
+                    { status: 401, });
+            }
+        
+        } else {
+            return new NextResponse (
+                "InfoPerson is not loaded!",
+                { status: 401, }
+            );
+        }
+
+    } catch (err) {
+        return new NextResponse (
+            err.message,
+            { status: 500, }
+        );
+    }
+}

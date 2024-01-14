@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 import { SaveOptionA } from "@/components/selections/buttons/SaveOptionA"
-import { ConsumerEmailUpdate } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmailUpdate"
+import { ConsumerEmail } from "@/components/selections/selectionOptions/selectionOptionA/create/input-fields/ConsumerEmail"
 
 export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, onChange2, value3, onChange3, value4, onChange4 }) {
 
@@ -62,7 +62,7 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
         try {
         
             const res = await fetch("/api/selections/familyandfriends/selectionoptiona/infosection1a/update", {
-                method: "POST",
+                method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -75,8 +75,7 @@ export function SelectionOptionA1aUpdate({children, value1, onChange1, value2, o
                 }),
             });
 
-            // res.status === 201 && router.push("/selectionFamilyAndFriends")
-            res.status === 201 && router.refresh();
+            res.status === 201 && router.push("/selectionFamilyAndFriends")
     
         } catch (err) {
             setErr(true);

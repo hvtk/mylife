@@ -7,52 +7,56 @@ import { NextResponse } from "next/server"
 import { getServerSession } from "next-auth"
 
 
-// export const GET = async (request, { params }) => {
+export const GET = async () => {
 
-//     const session = await getServerSession(authOptions);
+    const session = await getServerSession(authOptions);
 
-//     try {
+    try {
 
-//         const { id } = params;
+        const infoSectionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
+            where: {
+                consumer: {
+                    email: session.user.email
+                }
+            },
+            include: {
+                consumer: {
+                    select: { name: true}
+                }
+            },
+          })
 
-//         const SelectionOptionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findUnique({
-//             where: {
-//                 id
-//             }
-//           });
-
-//         if (SelectionOptionA1aData) {
+        if (infoSectionA1aData) {
             
-//             if (session) {
-//                 return new NextResponse (
-//                     "InfoPerson has been found!", 
-//                     { status: 201, }
-//                 );
-//             } else {
-//                 return new NextResponse (
-//                     "You are unauthorized to get infoPerson!",
-//                     { status: 401, });
-//             }
+            if (session) {
+                return new NextResponse (
+                    "InfoPerson has been found!", 
+                    { status: 201, }
+                );
+            } else {
+                return new NextResponse (
+                    "You are unauthorized to read infoPerson!",
+                    { status: 401, });
+            }
         
-//         } else {
-//             return new NextResponse (
-//                 "InfoPerson is not found!",
-//                 { status: 401, }
-//             );
-//         }
+        } else {
+            return new NextResponse (
+                "InfoPerson is not found!",
+                { status: 401, }
+            );
+        }
 
-//     } catch (err) {
-//         return new NextResponse (
-//             err.message,
-//             { status: 500, }
-//         );
-//     }
-// }
+    } catch (err) {
+        return new NextResponse (
+            err.message,
+            { status: 500, }
+        );
+    }
+}
 
+export const PUT = async (request, id ) => {
 
-export const PUT = async (request) => {
-
-    const { firstName, secondName, infix, lastName} = await request.json();
+    const { firstName, secondName, infix, lastName, consumerEmail} = await request.json();
 
     const session = await getServerSession(authOptions);
 
@@ -60,13 +64,14 @@ export const PUT = async (request) => {
 
         const SelectionOptionA1aUpdate = await prisma.FamilyAndFriendsSelectionOptionA1a.update({
             where: {
-                id: request.query.id,
+                id,
             },
             data: {
                 firstName: firstName,
                 secondName: secondName,
                 infix: infix,
                 lastName: lastName,
+                consumer: { connect: {email: consumerEmail} },
             },
         });
 
