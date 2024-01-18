@@ -1,55 +1,30 @@
+// /api/selections/familyandfriends/selectionoptiona/infosection1a/crud
 import prisma from '@/prisma/prisma-client/prisma'
-
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 import { NextResponse } from "next/server"
 
-import { getServerSession } from "next-auth"
+export async function POST(request) {
 
+    const json = await request.json()
 
+    const infoSectionA1aDataCreate = await prisma.FamilyAndFriendsSelectionOptionA1a.create({
+        data: json
+    })
+    
+    return new NextResponse(JSON.stringify(infoSectionA1aDataCreate), { status: 201})
+}
+
+// Get all infoSection1aData from all users
 export const GET = async () => {
 
-    const session = await getServerSession(authOptions);
+  try {
+    const getInfoSection1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany();
 
-    try {
-
-        const infoSectionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
-            where: {
-                consumer: {
-                    email: session.user.email
-                }
-            },
-            include: {
-                consumer: {
-                    select: { name: true}
-                }
-            },
-          })
-
-        if (infoSectionA1aData) {
-            
-            if (session) {
-                return new NextResponse (
-                    "InfoPerson has been loaded!", 
-                    { status: 201, }
-                );
-            } else {
-                return new NextResponse (
-                    "You are unauthorized to read infoPerson!",
-                    { status: 401, });
-            }
-        
-        } else {
-            return new NextResponse (
-                "InfoPerson is not loaded!",
-                { status: 401, }
-            );
-        }
-
-    } catch (err) {
-        return new NextResponse (
-            err.message,
-            { status: 500, }
-        );
-    }
-}
+    return new NextResponse(JSON.stringify(getInfoSection1aData, { status: 200 }));
+  } catch (err) {
+    return new NextResponse(
+      JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
+    );
+  }
+};
+  

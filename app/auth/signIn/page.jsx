@@ -1,21 +1,9 @@
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
-
-import { getServerSession } from 'next-auth'
-
-import { redirect } from 'next/navigation'
-
 import { FormSignIn } from '@/components/signIn/FormSignIn'
 import { FormMylifeImage } from '@/components/self-contained-items/FormMylifeImage'
 
 
 export default async function SignIn() {
 
-  const session = await getServerSession(authOptions);
-
-    if(session) {
-        redirect('/homepage')
-    }
-    
   return (
     <>
       <div className='container min-vw-100 bg-success'>

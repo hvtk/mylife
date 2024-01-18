@@ -90,8 +90,8 @@ model FamilyAndFriendsSelectionOptionA1a {
   secondName  String?
   infix       String?
   lastName    String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA1b {
@@ -103,8 +103,8 @@ model FamilyAndFriendsSelectionOptionA1b {
   address     String?
   postalCode  String?
   city        String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA1c {
@@ -116,8 +116,8 @@ model FamilyAndFriendsSelectionOptionA1c {
   phone       String?
   phoneMobile String?
   instagram   String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA2a {
@@ -128,8 +128,8 @@ model FamilyAndFriendsSelectionOptionA2a {
   secondName  String?
   infix       String?
   lastName    String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA2b {
@@ -141,8 +141,8 @@ model FamilyAndFriendsSelectionOptionA2b {
   address     String?
   postalCode  String?
   city        String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA2c {
@@ -154,8 +154,8 @@ model FamilyAndFriendsSelectionOptionA2c {
   phone       String?
   phoneMobile String?
   instagram   String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA3a {
@@ -166,8 +166,8 @@ model FamilyAndFriendsSelectionOptionA3a {
   secondName  String?
   infix       String?
   lastName    String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA3b {
@@ -179,8 +179,8 @@ model FamilyAndFriendsSelectionOptionA3b {
   address     String?
   postalCode  String?
   city        String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA3c {
@@ -192,8 +192,8 @@ model FamilyAndFriendsSelectionOptionA3c {
   phone       String?
   phoneMobile String?
   instagram   String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA4a {
@@ -204,8 +204,8 @@ model FamilyAndFriendsSelectionOptionA4a {
   secondName  String?
   infix       String?
   lastName    String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA4b {
@@ -217,8 +217,8 @@ model FamilyAndFriendsSelectionOptionA4b {
   address     String?
   postalCode  String?
   city        String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 model FamilyAndFriendsSelectionOptionA4c {
@@ -230,8 +230,8 @@ model FamilyAndFriendsSelectionOptionA4c {
   phone       String?
   phoneMobile String?
   instagram   String?
-  consumerId  Int
-  consumer    User        @relation(fields: [consumerId], references: [id])
+  consumerEmail  String
+  consumer    User        @relation(fields: [consumerEmail], references: [email])
 }
 
 

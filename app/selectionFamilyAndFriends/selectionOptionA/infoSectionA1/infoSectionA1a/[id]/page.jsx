@@ -1,4 +1,4 @@
-import prisma from '@/prisma/prisma-client/prisma'
+// import prisma from '@/prisma/prisma-client/prisma'
 
 import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 
@@ -17,22 +17,37 @@ import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 import { OptionsToSelectAndInfoSelectionNamesData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesData'
 
 
-export default async function InfoSectionA1aGetData() {
+const getData = async (id) => {
+  const res = await fetch(`http://localhost:3000/api/selections/familyandfriends/selectionoptiona/infosection1a/crud/${id}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
+
+  return res.json();
+}
+export default async function InfoSectionA1aGetData({params}) {
 
   const session = await getServerSession(authOptions)
   
-  const infoSectionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
-    where: {
-        consumer: {
-            email: session.user.email
-        }
-    },
-    include: {
-      consumer: {
-        select: { name: true}
-      }
-    },
-  })
+  // const infoSectionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
+  //   where: {
+  //       consumer: {
+  //           email: session.user.email
+  //       }
+  //   },
+  //   include: {
+  //     consumer: {
+  //       select: { name: true}
+  //     }
+  //   },
+  // })
+
+  const { id } = params;
+
+  const data = await getData(id);
   
   return (
 
@@ -98,7 +113,7 @@ export default async function InfoSectionA1aGetData() {
                       DATA NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
-                  {
+                  {/* {
                     infoSectionA1aData.map((FamilyAndFriendsSelectionOptionA1a) => {
                       return (
                         <SelectionOptionA1aRead
@@ -110,7 +125,13 @@ export default async function InfoSectionA1aGetData() {
                         />
                       )
                     })
-                  }
+                  } */}
+                  <SelectionOptionA1aRead>
+                    firstName={data.firstName}
+                    secondName={data.secondName}
+                    infix={data.infix}
+                    lastName={data.lastName}
+                  </SelectionOptionA1aRead>
                 </div>
               </div>
             </div>
