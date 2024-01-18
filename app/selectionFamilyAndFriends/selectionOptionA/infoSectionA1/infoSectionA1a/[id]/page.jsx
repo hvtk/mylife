@@ -18,6 +18,7 @@ import { OptionsToSelectAndInfoSelectionNamesData } from '@/components/selection
 
 
 const getData = async (id) => {
+
   const res = await fetch(`http://localhost:3000/api/selections/familyandfriends/selectionoptiona/infosection1a/crud/${id}`, {
     cache: "no-store",
   });
