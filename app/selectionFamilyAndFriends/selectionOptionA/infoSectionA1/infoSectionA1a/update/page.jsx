@@ -1,4 +1,4 @@
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+import { handler } from '@/app/api/auth/[...nextauth]/route'
 
 import { getServerSession } from 'next-auth'
 
@@ -17,7 +17,7 @@ import { InfoSectionANameUpdate } from '@/components/selections/selectionOptions
 
 export default async function InfoSectionA1aUpdateData() {
 
-  const session = await getServerSession(authOptions)
+  const session = await getServerSession(handler)
 
   return (
 

@@ -27,5 +27,5 @@ export async function GET(request) {
       },
     })
 
-    return NextResponse.json(infoSectionA1aData)
+    return NextResponse.json(infoSectionA1aData);
 }

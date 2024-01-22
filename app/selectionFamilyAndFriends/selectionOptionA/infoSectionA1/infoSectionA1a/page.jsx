@@ -1,6 +1,4 @@
-// import prisma from '@/prisma/prisma-client/prisma'
-
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+import { handler } from '@/app/api/auth/[...nextauth]/route'
 
 import { getServerSession } from 'next-auth'
 
@@ -17,39 +15,37 @@ import selectImageFamily from '@/public/assets/images/selections/family.jpg'
 import { OptionsToSelectAndInfoSelectionNamesData } from '@/components/selections/selectionOptions/selectionOptionA/optionsToSelect-InfoSelectionNamesData'
 
 
-const getData = async (id) => {
+// async function getData() {
 
-  const res = await fetch(`http://localhost:3000/api/selections/familyandfriends/selectionoptiona/infosection1a/crud/${id}`, {
-    cache: "no-store",
-  });
+//   const res = await fetch("http://localhost:3000/api/selections/familyandfriends/selectionoptiona/infosection1a/read", 
+//   { cache: 'no-store'});
 
-  if (!res.ok) {
-    throw new Error("Failed");
-  }
+//   if(!res.ok) {
+//     throw new Error("Failed to fetch data")
+//   }
 
-  return res.json();
-}
-export default async function InfoSectionA1aGetData({params}) {
+//   return res.json();
+// }
 
-  const session = await getServerSession(authOptions)
+export default async function InfoSectionA1aGetData() {
+
+  const session = await getServerSession(handler)
+
+  // const infoSectionA1aData = await getData();
   
-  // const infoSectionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
-  //   where: {
-  //       consumer: {
-  //           email: session.user.email
-  //       }
-  //   },
-  //   include: {
-  //     consumer: {
-  //       select: { name: true}
-  //     }
-  //   },
-  // })
+  const infoSectionA1aData = await prisma.FamilyAndFriendsSelectionOptionA1a.findMany({
+    where: {
+        consumer: {
+            email: session.user.email
+        }
+    },
+    include: {
+      consumer: {
+        select: { name: true}
+      }
+    },
+  })
 
-  const { id } = params;
-
-  const data = await getData(id);
-  
   return (
 
     <>
@@ -114,7 +110,7 @@ export default async function InfoSectionA1aGetData({params}) {
                       DATA NAME FIRST PERSON "Those who raised you"
                     </InfoSectionNameInput>
                   </div>
-                  {/* {
+                  {
                     infoSectionA1aData.map((FamilyAndFriendsSelectionOptionA1a) => {
                       return (
                         <SelectionOptionA1aRead
@@ -126,13 +122,16 @@ export default async function InfoSectionA1aGetData({params}) {
                         />
                       )
                     })
-                  } */}
-                  <SelectionOptionA1aRead>
-                    firstName={data.firstName}
-                    secondName={data.secondName}
-                    infix={data.infix}
-                    lastName={data.lastName}
-                  </SelectionOptionA1aRead>
+                  }
+                  
+                      {/* <SelectionOptionA1aRead
+                        key={infoSectionA1aData.firstName}
+                        firstName={infoSectionA1aData.firstName}
+                        secondName={infoSectionA1aData.secondName}
+                        infix={infoSectionA1aData.infix}
+                        lastName={infoSectionA1aData.lastName}
+                      />
+                   */}
                 </div>
               </div>
             </div>

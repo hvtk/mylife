@@ -1,6 +1,4 @@
-
-
-export function SelectionOptionA1aRead({firstName, secondName, infix, lastName}) {
+export function InfoSectionANameData({firstName, secondName, infix, lastName}) {
 
     return (
         <>

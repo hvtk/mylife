@@ -12,7 +12,7 @@ datasource db {
 }
 
 model User {
-  id              Int        @id @default(autoincrement())
+  id              String     @id @default(cuid())
   createdAt       DateTime   @default(now())
   updatedAt       DateTime   @updatedAt
   email           String?    @unique
@@ -36,16 +36,16 @@ model User {
 }
 
 model Profile {
-  id         Int       @id @default(autoincrement())
+  id         String    @id @default(cuid())
   bio        String?
   consumer   User      @relation(fields: [consumerId], references: [id], onDelete: Cascade)
-  consumerId Int       @unique
+  consumerId String    @unique
 }
 
 //Account creation in the database is automatic and happens when the user is logging in for the first time with a privider (using Auth.js)
 model Account {
-  id                  Int     @id @default(autoincrement())
-  consumerId          Int
+  id                  String     @id @default(cuid())
+  consumerId          String
   type                String
   provider            String
   providerAccountId   String
@@ -64,9 +64,9 @@ model Account {
 
 //The session model is used for database sessions. It is not used if JSON Web Tokens are enabled. (see Auth.js)
 model Session {
-  id            Int       @id @default(autoincrement())
+  id            String    @id @default(cuid())
   sessionToken  String    @unique
-  consumerId    Int
+  consumerId    String
   expires       DateTime
   consumer      User      @relation(fields: [consumerId], references: [id], onDelete: Cascade)
 }
@@ -83,7 +83,7 @@ model VerificationToken {
 // Models for selection 'Family and Friends'
 
 model FamilyAndFriendsSelectionOptionA1a {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   firstName   String?
@@ -95,7 +95,7 @@ model FamilyAndFriendsSelectionOptionA1a {
 }
 
 model FamilyAndFriendsSelectionOptionA1b {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   land        String?
@@ -108,7 +108,7 @@ model FamilyAndFriendsSelectionOptionA1b {
 }
 
 model FamilyAndFriendsSelectionOptionA1c {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   birthday    String?
@@ -121,7 +121,7 @@ model FamilyAndFriendsSelectionOptionA1c {
 }
 
 model FamilyAndFriendsSelectionOptionA2a {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   firstName   String?
@@ -133,7 +133,7 @@ model FamilyAndFriendsSelectionOptionA2a {
 }
 
 model FamilyAndFriendsSelectionOptionA2b {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   land        String?
@@ -146,7 +146,7 @@ model FamilyAndFriendsSelectionOptionA2b {
 }
 
 model FamilyAndFriendsSelectionOptionA2c {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   birthday    String?
@@ -159,7 +159,7 @@ model FamilyAndFriendsSelectionOptionA2c {
 }
 
 model FamilyAndFriendsSelectionOptionA3a {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   firstName   String?
@@ -171,7 +171,7 @@ model FamilyAndFriendsSelectionOptionA3a {
 }
 
 model FamilyAndFriendsSelectionOptionA3b {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   land        String?
@@ -184,7 +184,7 @@ model FamilyAndFriendsSelectionOptionA3b {
 }
 
 model FamilyAndFriendsSelectionOptionA3c {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   birthday    String?
@@ -197,7 +197,7 @@ model FamilyAndFriendsSelectionOptionA3c {
 }
 
 model FamilyAndFriendsSelectionOptionA4a {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   firstName   String?
@@ -209,7 +209,7 @@ model FamilyAndFriendsSelectionOptionA4a {
 }
 
 model FamilyAndFriendsSelectionOptionA4b {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   land        String?
@@ -222,7 +222,7 @@ model FamilyAndFriendsSelectionOptionA4b {
 }
 
 model FamilyAndFriendsSelectionOptionA4c {
-  id          Int         @id @default(autoincrement())
+  id          String      @id @default(cuid())
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   birthday    String?

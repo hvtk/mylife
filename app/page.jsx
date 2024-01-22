@@ -1,4 +1,4 @@
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+import { handler } from '@/app/api/auth/[...nextauth]/route'
 
 import { getServerSession } from 'next-auth'
 
@@ -10,7 +10,7 @@ import { HeaderBase } from '@/components/header/HeaderBase'
 
 export default async function MylifeIntroPage() {
 
-  const session = await getServerSession(authOptions);
+  const session = await getServerSession(handler);
 
     if(session) {
         redirect('/homepage')

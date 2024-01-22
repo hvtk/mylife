@@ -1,4 +1,4 @@
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { handler } from '@/app/api/auth/[...nextauth]/route';
 
 import { getServerSession } from 'next-auth'
 
@@ -9,7 +9,7 @@ import { FormMylifeImage } from '@/components/self-contained-items/FormMylifeIma
 
 export default async function SignUp() {
 
-  const session = await getServerSession(authOptions);
+  const session = await getServerSession(handler);
 
     if(session) {
         redirect('/homepage')
